@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Genefood Reporter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+
+  $(function () {
+    $("#checkPlus").click(function (event) {
+      $('#checkBase').not(this).prop('checked', this.checked);
+    });
+  });
+
+  $(function () {
+    $("#checkMamma").click(function (event) {
+      $('#checkVita').not(this).prop('checked', this.checked);
+      $('#checkPlus').not(this).prop('checked', this.checked);
+      $('#checkBase').not(this).prop('checked', this.checked);
+    });
+  });
+
+  $(function () {
+    $("#checkVita").click(function (event) {
+      $('#checkPlus').not(this).prop('checked', this.checked);
+      $('#checkBase').not(this).prop('checked', this.checked);
+    });
+  });
+
+  $(function () {
+    $("#checkSport").click(function (event) {
+      $('#checkVita').not(this).prop('checked', this.checked);
+      $('#checkPlus').not(this).prop('checked', this.checked);
+      $('#checkBase').not(this).prop('checked', this.checked);
+    });
+  });  
+
+  $(function () {
+    $("#checkAgeing").click(function (event) {
+      $('#checkSport').not(this).prop('checked', this.checked);
+      $('#checkVita').not(this).prop('checked', this.checked);
+      $('#checkPlus').not(this).prop('checked', this.checked);
+      $('#checkBase').not(this).prop('checked', this.checked);
+    });
+  });  
+
+</script>
+
+<style>
+    .container {
+        max-width: 1000px;
+    }
+</style>
+
+</head>
+<body>
+<div class="container" style="max-width: 1200px; margin-top:50px">
+    <!-- <h1 style="text-align: center"><a href="/">Genefood</a></h1> -->
+    <div id="logo" style="text-align: center;">
+      <img src="static/logoAI.png" width="400" height="400">
+    </div>
+    <br>
+    <br>
+    <div align="center">
+      <button class="btn btn-success" type="submit" onclick="window.open('static/esempio_paziente_completo.xlsx')">Download Template Paziente</button>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="col-12">
+
+            <form id="fileform" method="POST" action="" style="display: inline; margin-top: 60px;" enctype="multipart/form-data" >
+              <div class="form-row align-items-center justify-content-center" style="margin-top: 10px; margin-bottom: 30px;">
+                <label style="padding-right: 19px; margin-bottom:0; padding-left: 90px;" for="input_file">File Excel da refertare:</label>
+                <div style="display: inline-flex; vertical-align: middle;">
+                  <input type="file" class="form-control-file" name="input_file" id="input_file" accept=".csv, .xls, .xlsx" required>
+                </div>
+              </div>
+              <div class="form-row justify-content-center" style="margin-top: 10px; margin-bottom: 30px;">
+                    <p style="display: table-cell">
+                        <div style="vertical-align: sub; " class="form-check-inline">
+                          <label class="form-check-label">
+                            <input id="checkBase" type="checkbox" class="form-check-input" name="optcheck" value="Base">Base
+                          </label>
+                        </div>
+                        <div style="vertical-align: sub; " class="form-check-inline">
+                          <label class="form-check-label">
+                            <input id="checkPlus" type="checkbox" class="form-check-input" name="optcheck" value="Plus">Plus
+                          </label>
+                        </div>
+                        <div style="vertical-align: sub; " class="form-check-inline">
+                          <label class="form-check-label">
+                            <input id="checkVita" type="checkbox" class="form-check-input" name="optcheck" value="Vita">Vita
+                          </label>
+                        </div>
+                        <div style="vertical-align: sub; " class="form-check-inline">
+                          <label class="form-check-label">
+                            <input id="checkSport" type="checkbox" class="form-check-input" name="optcheck" value="Sport" >Sport
+                          </label>
+                        </div>
+                        <div style="vertical-align: sub; " class="form-check-inline">
+                          <label class="form-check-label">
+                            <input id="checkAgeing" type="checkbox" class="form-check-input" name="optcheck" value="Ageing" >Ageing
+                          </label>
+                        </div>
+                        <div style="vertical-align: sub; " class="form-check-inline">
+                          <label class="form-check-label">
+                            <input id="checkMamma" type="checkbox" class="form-check-input" name="optcheck" value="Mamma">Mamma
+                          </label>
+                        </div>
+                        <div style="vertical-align: sub; " class="form-check-inline">
+                          <label class="form-check-label">
+                            <input id="checkJunior" type="checkbox" class="form-check-input" name="optcheck" value="Junior">Junior
+                          </label>
+                        </div>
+                    </p>
+              </div>
+                    <p style="text-align: center;"><input class="btn btn-primary submitlist"  id="submitlist" type="submit" name="Submit_file" value="Report"></p>
+            </form>
+        </div>
+
+</div>
+
+
+</body>
+</html>

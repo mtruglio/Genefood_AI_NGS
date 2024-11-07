@@ -1,0 +1,2477 @@
+[
+    {
+        "id_paziente": "Junior+Sindromemetabolica_NonEvidente",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (NonEvidente)"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, filetto di salmone, filetto di tonno, pesce spada, polpettine di pesce bianco o azzurro, burger di pesce bianco o azzurro, salmone affumicato"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, arista di maiale, polpettine di carne bianca, hamburger di carne bianca, bresaola, arrosto di pollo o tacchino"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di mandorla, latte di avena, yogurt di soia, latte di cocco, formaggio di mandorle, formaggio di anacardi, tofu, tempeh, burger vegetale, polpette vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Fiocchi di latte, ricotta, primo sale, mozzarella di bufala, formaggi spalmabili light, stracchino, feta"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini, lenticchie rosse, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata di 2 uova intere, al tegamino, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, sardine, trota, sgombro fresco, pesce panato"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, fesa di tacchino prosciutto crudo, prosciutto cotto, cotoletta di carne bianca, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Yogurt di cocco, formaggio di soia, tofu affumicato, seitan, burger vegetali, salsa di soia, affettati vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri (Cottage, Quark), formaggio di grana e formaggi duri di montagna, sottilette, formaggi spalmabili"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": ""
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta ogni 7 giorni",
+                        "items": "Filetto di carne rossa, hamburger di manzo, roast beef, salsicce, coppa, wurstel, mortadella, salame, speck, carne essiccata, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi vegetali ad alto contenuto di grassi, creme vegetali, panna vegetale, gelati vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Provolone, Scamorze, Caprino a crosta fiorita e stagionata, Taleggio Fontina, burrata, stracciatella"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, legumi in salamoia"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Pasta di semola, pasta di semola integrale, orzo mondato, farro, kamut, riso rosso, riso venere, riso basmati, riso thai, riso selvatico, riso integrale, mais bianco"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi, chia, cous cous"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya, mandarino, arance, ananas, banane, pompelmo"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Orzo perlato, segale, avena, avena integrale, mais giallo, miglio, cracker, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, fichi freschi, ciliegie, mele, pere, melone bianco, cocco"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Riso bianco a chicco lungo, grissini, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, nespole, melone giallo, anguria"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": ""
+                    }
+                }
+            },
+            "Verdure": ""
+        },
+        "Diagnosi": "Il tuo profilo genetico non ha evidenziato nessuna predisposizione genetica relativa alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è minore rispetto agli individui predisposti geneticamente. È comunque importante regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia di prediligere alimenti ricchi di fibre, proteine, carboidrati complessi, acidi grassi monoinsaturi e polinsaturi, vitamine e sali minerali."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_NonEvidente+Latt",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (NonEvidente)",
+            "Intolleranza al lattosio"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, filetto di salmone, filetto di tonno, pesce spada, polpettine di pesce bianco o azzurro, burger di pesce bianco o azzurro, salmone affumicato"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, arista di maiale, polpettine di carne bianca, hamburger di carne bianca, bresaola, arrosto di pollo o tacchino"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di mandorla, latte di avena, yogurt di soia, latte di cocco, formaggio di mandorle, formaggio di anacardi, tofu, tempeh, burger vegetale, polpette vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio, reggiano, pecorino, mozzarella senza lattosio, formaggi spalmabili senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini, lenticchie rosse, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata di 2 uova intere, al tegamino, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, sardine, trota, sgombro fresco, pesce panato"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, fesa di tacchino prosciutto crudo, prosciutto cotto, cotoletta di carne bianca, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Yogurt di cocco, formaggio di soia, tofu affumicato, seitan, burger vegetali, salsa di soia, affettati vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, fiordilatte senza lattosio, sottilette senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": ""
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta ogni 7 giorni",
+                        "items": "Filetto di carne rossa, hamburger di manzo, roast beef, salsicce, coppa, wurstel, mortadella, salame, speck, carne essiccata, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi vegetali ad alto contenuto di grassi, creme vegetali, panna vegetale, gelati vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Scamorze, Caprino a crosta fiorita e stagionata, burrata, formaggi spalmabili, stracciatella mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, legumi in salamoia"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Pasta di semola, pasta di semola integrale, orzo mondato, farro, kamut, riso rosso, riso venere, riso basmati, riso thai, riso selvatico, riso integrale, mais bianco"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi, chia, cous cous"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya, mandarino, arance, ananas, banane, pompelmo"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Orzo perlato, segale, avena, avena integrale, mais giallo, miglio, cracker, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, fichi freschi, ciliegie, mele, pere, melone bianco, cocco"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Riso bianco a chicco lungo, grissini, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, nespole, melone giallo, anguria"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": ""
+                    }
+                }
+            },
+            "Verdure": ""
+        },
+        "Diagnosi": "Il tuo profilo genetico non ha evidenziato nessuna predisposizione genetica relativa alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è minore rispetto agli individui predisposti geneticamente. È comunque importante regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia di prediligere alimenti ricchi di fibre, proteine, carboidrati complessi, acidi grassi monoinsaturi e polinsaturi, vitamine e sali minerali. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio. La tua probabilità di sviluppare questa intolleranza è più alta rispetto alla popolazione media. L’intolleranza al lattosio è l’incapacità di digerire lo zucchero Lattosio a causa di una carenza dell’enzima digestivo Lattasi. Ciò può causare sintomi gastrointestinali come diarrea e crampi addominali. Trattandosi di predisposizione genetica e non di diagnosi di intolleranza al lattosio è possibile, ma non consigliato, assumere alimenti contenenti lattosio. Invece, è strettamente raccomandato attenersi alle indicazioni della tabella sottostante relativa all’assunzione di Proteine. Per avere una diagnosi di Intolleranza al Lattosio è consigliato eseguire il Breath Test."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_NonEvidente+Latt+Glut",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (NonEvidente)",
+            "Intolleranza al lattosio",
+            "Intolleranza al glutine"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, filetto di salmone, filetto di tonno, pesce spada, polpettine di pesce bianco o azzurro, burger di pesce bianco o azzurro, salmone affumicato"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, arista di maiale, polpettine di carne bianca, hamburger di carne bianca, bresaola, arrosto di pollo o tacchino"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di mandorla, latte di avena, yogurt di soia, latte di cocco, formaggio di mandorle, formaggio di anacardi, tofu, tempeh, burger vegetale, polpette vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio, reggiano, pecorino, mozzarella senza lattosio, formaggi spalmabili senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini, lenticchie rosse, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata di 2 uova intere, al tegamino, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, sardine, trota, sgombro fresco, pesce panato"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, fesa di tacchino prosciutto crudo, prosciutto cotto, cotoletta di carne bianca, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Yogurt di cocco, formaggio di soia, tofu affumicato, seitan, burger vegetali, salsa di soia, affettati vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, fiordilatte senza lattosio, sottilette senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": ""
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta ogni 7 giorni",
+                        "items": "Filetto di carne rossa, hamburger di manzo, roast beef, salsicce, coppa, wurstel, mortadella, salame, speck, carne essiccata, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi vegetali ad alto contenuto di grassi, creme vegetali, panna vegetale, gelati vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Scamorze, Caprino a crosta fiorita e stagionata, burrata, formaggi spalmabili, stracciatella mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, legumi in salamoia"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Riso rosso, riso venere, riso basmati, riso thai, mais bianco, miglio"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi, chia, cous cous"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya, mandarino, arance, ananas, banane, pompelmo"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Mais giallo, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, fichi freschi, ciliegie, mele, pere, melone bianco, cocco"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Riso bianco a chicco lungo, pasta di semola, pasta di semola integrale, orzo, farro, grissini, crackers, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, nespole, melone giallo, anguria"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": ""
+                    }
+                }
+            },
+            "Verdure": ""
+        },
+        "Diagnosi": "Il tuo profilo genetico non ha evidenziato nessuna predisposizione genetica relativa alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è minore rispetto agli individui predisposti geneticamente. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. Nei bambini, non esiste una definizione specifica adatta alla loro età. Tuttavia, si cerca di diagnosticarla utilizzando gli stessi criteri applicati agli adulti, oppure adottando criteri personalizzati per i giovani pazienti. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. È importante anche regolare l’introito calorico, prestando attenzione a non superare il fabbisogno energetico. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio e alla Celiachia. La tua probabilità di sviluppare queste intolleranze è più alta rispetto alla popolazione media. L’intolleranza al lattosio è l’incapacità di digerire lo zucchero Lattosio a causa di una carenza dell’enzima digestivo Lattasi. Ciò può causare sintomi gastrointestinali come diarrea e crampi addominali. Trattandosi di predisposizione genetica e non di diagnosi di intolleranza al lattosio è possibile, ma non consigliato, assumere alimenti contenenti lattosio. Invece, è strettamente raccomandato attenersi alle indicazioni della tabella sottostante relativa all’assunzione di Proteine. Per avere una diagnosi di Intolleranza al Lattosio è consigliato eseguire il Breath Test. La celiachia o morbo celiaco è una malattia autoimmune cronica causata da una reazione anomala alla gliadina, proteina del glutine contenuta in molti cereali; la malattia celiaca si sviluppa in individui geneticamente predisposti. In particolare, lo sviluppo della celiachia è associato in letteratura scientifica alla presenza di specifiche varianti di geni del sistema immunitario, le glicoproteine HLA (Capittini C, et. al. Medicina (Kaunas). 2019 May 22;55(5):190.) Nel suo caso essendo emersa, dai test genetici, una predisposizione alla intolleranza al glutine, la seguente tabella relativa all’assunzione dei CARBOIDRATI esclude, dalla dieta alimentare i cibi che lo contengono. Ciò è utilissimo per prevenire l’insorgenza della patologia da intolleranza ma non deve essere seguito pedissequamente se non dopo consiglio del proprio medico, dopo aver verificato l’eventuale manifestazione clinica della predisposizione (che si chiama celiachia). Questo può essere fatto mediante l’esecuzione dei test sugli anticorpi specifici (Anticorpi antiendomisio IgA + IgG - Anti transglutaminasi IgA + IgG - Antigliadina IgA + IgG) oppure, se la situazione clinica lo richiedesse, il suo medico prescriverà la gastroscopia con biopsia diagnostica. Se da questi test emergesse già l’esistenza della manifestazione clinica della sua predisposizione (quindi si diagnosticasse in atto una celiachia) sarà il medico curante a stabilire in quale misura (anche assoluta) andrà seguita la seguente tabella di privazione degli alimenti contenenti glutine."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Lieve",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Lieve)"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco (es: merluzzo o sogliola), filetto di salmone, filetto di tonno, pesce spada, polpettine di pesce bianco o azzurro"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, arista di maiale, polpettine di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zuccheri, latte di mandorla, latte di cocco, yogurt di soia senza zuccheri, tofu, tempeh, burger vegetali, formaggio di mandorle, polpette vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Fiocchi di latte, ricotta, primo sale, mozzarella, formaggi spalmabili light, stracchino"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, al tegamino, in camicia, sode, strapazzate"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, sardine, trota, sgombro fresco, burger di pesce bianco o azzurro, salmone affumicato"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, arrosto di pollo o tacchino, fesa di tacchino bresaola, prosciutto crudo, prosciutto cotto, cotoletta di carne bianca, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, latte di avena, latte di soia, yogurt di soia, seitan, affettati vegetali, salsa di soia senza sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri (Cottage, Quark), formaggio di grana e formaggi duri di montagna, feta, mozzarella di bufala, sottilette"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": "Uovo fritto"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Filetto di carne rossa, hamburger di manzo, roast beef, salsicce, coppa, wurstel, mortadella, salame, speck, carne essiccata, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Burger vegetali fritti, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Provolone, Scamorze, Caprino a crosta fiorita e stagionata, Taleggio Fontina, burrata, formaggi spalmabili, stracciatella"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Pasta di semola, pasta di semola integrale, orzo mondato, farro, kamut, riso rosso, riso venere, riso basmati, riso thai, riso selvatico, riso integrale, mais bianco"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi, chia"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya, banane"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Orzo perlato, segale, avena, avena integrale, mais giallo, miglio, cracker, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Cous cous, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, ananas, cocco"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Riso bianco a chicco lungo, grissini, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchupe e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una lieve predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. Nei bambini, non esiste una definizione specifica adatta alla loro età. Tuttavia, si cerca di diagnosticarla utilizzando gli stessi criteri applicati agli adulti, oppure adottando criteri personalizzati per i giovani pazienti. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il fabbisogno energetico."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Medio",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Medio)"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, polpettine di pesce bianco o azzurro"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, polpette di carne bianca, arista di maiale"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zuccheri aggiunti, yogurt di soia senza zuccheri aggiunti, latte di mandorla, latte di cocco, bevanda di avena, tofu, tempeh, yogurt di mandorla"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Fiocchi di latte, ricotta, primo sale, mozzarella light, formaggi spalmabili light"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, strapazzate, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), filetto di tonno o salmone, alici, salmone affumicato, tonno in scatola, burger di pesce bianco o azzurro, trota, sgombro fresco"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, prosciutto crudo, prosciutto cotto, fesa di tacchino, bresaola, nuggets di pollo, cotoletta di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, formaggio di mandorle, formaggio di anacardi, yogurt di cocco, bevanda di riso senza zucchero, affettati vegetali, polpette vegetali, burger vegetali, salsa di soia senza sale, seitan"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri (Cottage, Quark), feta, sottilette, stracchino, mozzarella di bufala"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": "Uovo fritto, al tegamino"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), anguilla, aringa, sgombro in scatola"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, roast beef, salsicce, wurstel, salame, mortadella, coppa, speck, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Bevande di soia con zuccheri aggiunti, burger vegetali fritti, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Provolone, Scamorze, Caprino a crosta fiorita e stagionata, Taleggio Fontina, Burrata, Stracciatella, formaggi spalmabili"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Pasta di semola integrale, orzo, farro, riso rosso, riso venere, riso basmati, riso thai, riso selvatico, riso integrale"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, cocco, ribes rosso, frutti di bosco, mirtilli, papaya"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Orzo perlato, segale, avena, mais giallo, pasta di semola, miglio, kamut, cracker, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Chia, cous cous, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, pesche bianche, ananas, banane"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco, grissini, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno, pesce spada"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchupe e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una media predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Inoltre è consigliata anche la riduzione del sale a < 2 g al giorno, considerando anche quello già presente negli alimenti. La riduzione di sale è un’ottima prevenzione contro l’ipertensione."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Lieve+Glut",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Lieve)",
+            "Intolleranza al glutine"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco (es: merluzzo o sogliola), filetto di salmone, filetto di tonno, pesce spada, polpettine di pesce bianco o azzurro"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, arista di maiale, polpettine di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zuccheri, latte di mandorla, latte di cocco, yogurt di soia senza zuccheri, tofu, tempeh, burger vegetali, formaggio di mandorle, polpette vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Fiocchi di latte, ricotta, primo sale, mozzarella, formaggi spalmabili light, stracchino"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, al tegamino, in camicia, sode, strapazzate"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, sardine, trota, sgombro fresco, burger di pesce bianco o azzurro, salmone affumicato"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, arrosto di pollo o tacchino, fesa di tacchino bresaola, prosciutto crudo, prosciutto cotto, cotoletta di carne bianca, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, latte di avena, latte di soia, yogurt di soia, seitan, affettati vegetali, salsa di soia senza sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri (Cottage, Quark), formaggio di grana e formaggi duri di montagna, feta, mozzarella di bufala, sottilette"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": "Uovo fritto"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Filetto di carne rossa, hamburger di manzo, roast beef, salsicce, coppa, wurstel, mortadella, salame, speck, carne essiccata, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Burger vegetali fritti, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Provolone, Scamorze, Caprino a crosta fiorita e stagionata, Taleggio Fontina, burrata, formaggi spalmabili, stracciatella"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Riso rosso, riso venere, riso basmati, riso thai, mais bianco"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi, chia"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya, banane"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Mais giallo, miglio, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Cous cous, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, ananas, cocco"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Riso bianco a chicco lungo, pasta di semola, pasta di semola integrale, orzo, farro, grissini, crackers, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchupe e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una lieve predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. Nei bambini, non esiste una definizione specifica adatta alla loro età. Tuttavia, si cerca di diagnosticarla utilizzando gli stessi criteri applicati agli adulti, oppure adottando criteri personalizzati per i giovani pazienti. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il fabbisogno energetico. Il tuo profilo genetico ha evidenziato una predisposizione genetica alla sensibilità al Glutine. La tua probabilità di sviluppare questa intolleranza è più alta rispetto alla popolazione media. La celiachia o morbo celiaco è una malattia autoimmune cronica causata da una reazione anomala alla gliadina, proteina del glutine contenuta in molti cereali; la malattia celiaca si sviluppa in individui geneticamente predisposti. In particolare, lo sviluppo della celiachia è associato in letteratura scientifica alla presenza di specifiche varianti di geni del sistema immunitario, le glicoproteine HLA (Capittini C, et. al. Medicina (Kaunas). 2019 May 22;55(5):190.) Essendo emersa, dai test genetici, una predisposizione all’intolleranza al glutine, la seguente tabella relativa all’assunzione dei CARBOIDRATI esclude, dalla dieta alimentare i cibi che lo contengono. Ciò è utilissimo per prevenire l’insorgenza della patologia da intolleranza ma non deve essere seguito pedissequamente se non dopo consiglio del proprio medico, dopo aver verificato l’eventuale manifestazione clinica della predisposizione (che si chiama celiachia). Questo può essere fatto mediante l’esecuzione dei test sugli anticorpi specifici (Anticorpi antiendomisio IgA + IgG - Anti transglutaminasi IgA + IgG - Antigliadina IgA + IgG) oppure, se la situazione clinica lo richiedesse, il suo medico prescriverà la gastroscopia con biopsia diagnostica. Se da questi test emergesse già l’esistenza della manifestazione clinica della sua predisposizione (quindi si diagnosticasse in atto una celiachia) sarà il medico curante a stabilire in quale misura (anche assoluta) andrà seguita la seguente tabella di privazione degli alimenti contenenti glutine."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Medio+Latt",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Medio)",
+            "Intolleranza al lattosio"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, polpettine di pesce bianco o azzurro"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, polpette di carne bianca, arista di maiale"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zuccheri aggiunti, yogurt di soia senza zuccheri aggiunti, latte di mandorla, latte di cocco, bevanda di avena, tofu, tempeh, yogurt di mandorla"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio, reggiano, pecorino, caprino senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, strapazzate, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), filetto di tonno o salmone, alici, salmone affumicato, tonno in scatola, burger di pesce bianco o azzurro, trota, sgombro fresco"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, prosciutto crudo, prosciutto cotto, fesa di tacchino, bresaola, nuggets di pollo, cotoletta di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, formaggio di mandorle, formaggio di anacardi, yogurt di cocco, bevanda di riso senza zucchero, affettati vegetali, polpette vegetali, burger vegetali, salsa di soia senza sale, seitan"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, mozzarella senza lattosio, fiordilatte senza lattosio, sottilette senza lattosio, formaggi spalmabili senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Uovo fritto, al tegamino"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), anguilla, aringa, sgombro in scatola"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, roast beef, salsicce, wurstel, salame, mortadella, coppa, speck, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Bevande di soia con zuccheri aggiunti, burger vegetali fritti, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Scamorze, Caprino a crosta fiorita e stagionata, burrata, formaggi spalmabili, stracciatella mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Pasta di semola integrale, orzo, farro, riso rosso, riso venere, riso basmati, riso thai, riso selvatico, riso integrale"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, cocco, ribes rosso, frutti di bosco, mirtilli, papaya"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Orzo perlato, segale, avena, mais giallo, pasta di semola, miglio, kamut, cracker, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Chia, cous cous, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, pesche bianche, ananas, banane"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco, grissini, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno, pesce spada"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchupe e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una media predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Inoltre è consigliata anche la riduzione del sale a < 2 g al giorno, considerando anche quello già presente negli alimenti. La riduzione di sale è un’ottima prevenzione contro l’ipertensione. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio. La tua probabilità di sviluppare questa intolleranza è più alta rispetto alla popolazione media. L’intolleranza al lattosio è l’incapacità di digerire lo zucchero Lattosio a causa di una carenza dell’enzima digestivo Lattasi. Ciò può causare sintomi gastrointestinali come diarrea e crampi addominali. Trattandosi di predisposizione genetica e non di diagnosi di intolleranza al lattosio è possibile, ma non consigliato, assumere alimenti contenenti lattosio. Invece, è strettamente raccomandato attenersi alle indicazioni della tabella sottostante relativa all’assunzione di Proteine. Per avere una diagnosi di Intolleranza al Lattosio è consigliato eseguire il Breath Test."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Medio+Latt+Glut",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Medio)",
+            "Intolleranza al lattosio",
+            "Intolleranza al glutine"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, polpettine di pesce bianco o azzurro"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, polpette di carne bianca, arista di maiale"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zuccheri aggiunti, yogurt di soia senza zuccheri aggiunti, latte di mandorla, latte di cocco, bevanda di avena, tofu, tempeh, yogurt di mandorla"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio, reggiano, pecorino"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, strapazzate, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), filetto di tonno o salmone, alici, salmone affumicato, tonno in scatola, burger di pesce bianco o azzurro, trota, sgombro fresco"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, prosciutto crudo, prosciutto cotto, fesa di tacchino, bresaola, nuggets di pollo, cotoletta di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, formaggio di mandorle, formaggio di anacardi, yogurt di cocco, bevanda di riso senza zucchero, affettati vegetali, polpette vegetali, burger vegetali, salsa di soia senza sale, seitan"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, mozzarella senza lattosio, fiordilatte senza lattosio, sottilette senza lattosio, formaggi spalmabili senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": "Uovo fritto, al tegamino"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), anguilla, aringa, sgombro in scatola"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, roast beef, salsicce, wurstel, salame, mortadella, coppa, speck, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Bevande di soia con zuccheri aggiunti, burger vegetali fritti, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Scamorze, Caprino a crosta fiorita e stagionata, burrata, formaggi spalmabili, stracciatella mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Riso rosso, riso venere, riso basmati, riso thai, riso selvatico"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, cocco, ribes rosso, frutti di bosco, mirtilli, papaya"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Segale, avena, mais giallo, pasta di semola integrale, miglio, kamut, cracker, patate, patate dolci, orzo, farro"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Chia, cous cous, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, pesche bianche, ananas, banane"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco, grissini, gallette di mais, gallette di riso, pasta di semola, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno, pesce spada"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchupe e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una media predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Inoltre è consigliata anche la riduzione del sale a < 2 g al giorno, considerando anche quello già presente negli alimenti. La riduzione di sale è un’ottima prevenzione contro l’ipertensione. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio e alla Celiachia. La tua probabilità di sviluppare queste intolleranze è più alta rispetto alla popolazione media. L’intolleranza al lattosio è l’incapacità di digerire lo zucchero Lattosio a causa di una carenza dell’enzima digestivo Lattasi. Ciò può causare sintomi gastrointestinali come diarrea e crampi addominali. Trattandosi di predisposizione genetica e non di diagnosi di intolleranza al lattosio è possibile, ma non consigliato, assumere alimenti contenenti lattosio. Invece, è strettamente raccomandato attenersi alle indicazioni della tabella sottostante relativa all’assunzione di Proteine. Per avere una diagnosi di Intolleranza al Lattosio è consigliato eseguire il Breath Test. La celiachia o morbo celiaco è una malattia autoimmune cronica causata da una reazione anomala alla gliadina, proteina del glutine contenuta in molti cereali; la malattia celiaca si sviluppa in individui geneticamente predisposti. In particolare, lo sviluppo della celiachia è associato in letteratura scientifica alla presenza di specifiche varianti di geni del sistema immunitario, le glicoproteine HLA (Capittini C, et. al. Medicina (Kaunas). 2019 May 22;55(5):190.) Nel suo caso essendo emersa, dai test genetici, una predisposizione alla intolleranza al glutine, la seguente tabella relativa all’assunzione dei CARBOIDRATI esclude, dalla dieta alimentare i cibi che lo contengono. Ciò è utilissimo per prevenire l’insorgenza della patologia da intolleranza ma non deve essere seguito pedissequamente se non dopo consiglio del proprio medico, dopo aver verificato l’eventuale manifestazione clinica della predisposizione (che si chiama celiachia). Questo può essere fatto mediante l’esecuzione dei test sugli anticorpi specifici (Anticorpi antiendomisio IgA + IgG - Anti transglutaminasi IgA + IgG - Antigliadina IgA + IgG) oppure, se la situazione clinica lo richiedesse, il suo medico prescriverà la gastroscopia con biopsia diagnostica. Se da questi test emergesse già l’esistenza della manifestazione clinica della sua predisposizione (quindi si diagnosticasse in atto una celiachia) sarà il medico curante a stabilire in quale misura (anche assoluta) andrà seguita la seguente tabella di privazione degli alimenti contenenti glutine."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Lieve+Latt",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Lieve)",
+            "Intolleranza al lattosio"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco (es: merluzzo o sogliola), filetto di salmone, filetto di tonno, pesce spada, polpettine di pesce bianco o azzurro"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, arista di maiale, polpettine di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zuccheri, latte di mandorla, latte di cocco, yogurt di soia senza zuccheri, tofu, tempeh, burger vegetali, formaggio di mandorle, polpette vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio, reggiano, pecorino, mozzarella senza lattosio, formaggi spalmabili senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, al tegamino, in camicia, sode, strapazzate"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, sardine, trota, sgombro fresco, burger di pesce bianco o azzurro, salmone affumicato"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, arrosto di pollo o tacchino, fesa di tacchino bresaola, prosciutto crudo, prosciutto cotto, cotoletta di carne bianca, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, latte di avena, latte di soia, yogurt di soia, seitan, affettati vegetali, salsa di soia senza sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, fiordilatte senza lattosio, sottilette senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": "Uovo fritto"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Filetto di carne rossa, hamburger di manzo, roast beef, salsicce, coppa, wurstel, mortadella, salame, speck, carne essiccata, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Burger vegetali fritti, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Scamorze, Caprino a crosta fiorita e stagionata, burrata, formaggi spalmabili, stracciatella mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Pasta di semola, pasta di semola integrale, orzo mondato, farro, kamut, riso rosso, riso venere, riso basmati, riso thai, riso selvatico, riso integrale, mais bianco"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi, chia"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya, banane"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Orzo perlato, segale, avena, avena integrale, mais giallo, miglio, cracker, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Cous cous, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, ananas, cocco"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Riso bianco a chicco lungo, grissini, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchupe e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una lieve predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. Nei bambini, non esiste una definizione specifica adatta alla loro età. Tuttavia, si cerca di diagnosticarla utilizzando gli stessi criteri applicati agli adulti, oppure adottando criteri personalizzati per i giovani pazienti. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il fabbisogno energetico. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio. La tua probabilità di sviluppare questa intolleranza è più alta rispetto alla popolazione media. L’intolleranza al lattosio è l’incapacità di digerire lo zucchero Lattosio a causa di una carenza dell’enzima digestivo Lattasi. Ciò può causare sintomi gastrointestinali come diarrea e crampi addominali. Trattandosi di predisposizione genetica e non di diagnosi di intolleranza al lattosio è possibile, ma non consigliato, assumere alimenti contenenti lattosio. Invece, è strettamente raccomandato attenersi alle indicazioni della tabella sottostante relativa all’assunzione di Proteine. Per avere una diagnosi di Intolleranza al Lattosio è consigliato eseguire il Breath Test."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Alto+Latt",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Alto)",
+            "Intolleranza al lattosio"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, polpettine di pesce bianco o azzurro, pesce spada"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, polpette di carne bianca, arista di maiale"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zucchero, yogurt di soia senza zucchero, tofu, tempeh, latte di mandorla senza zucchero, latte di avena senza zucchero, yogurt di cocco senza zucchero"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Frittata, strapazzate, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), filetto di tonno o salmone, alici, salmone affumicato, tonno in scatola, burger di pesce bianco o azzurro, trota, sgombro fresco"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, prosciutto crudo magro, bresaola, cotoletta di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, formaggio di mandorle, formaggio di anacardi, yogurt di mandorla senza zucchero, latte di cocco senza zucchero, bevanda di riso senza zucchero, affettati di origine vegetale, salsa di soia senza sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, mozzarella senza lattosio, fiordilatte senza lattosio, formaggi spalmabili senza lattosio, reggiano, pecorino, caprino senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Uovo al tegamino"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), anguilla, aringa, sgombro in scatola, pesce impanato"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, roast beef, salsicce, wurstel, salame, mortadella, coppa, speck, cotoletta di carne rossa, prosciutto cotto, fesa di tacchino, prosciutto crudo, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi vegetali ad alto contenuto di grassi, yogurt vegetali zuccherati, seitan,  creme vegetali, panna vegetale, gelati vegetali, burger o polpette panati di origine vegetale, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Scamorze, Caprino, burrata, formaggi spalmabili, stracciatella mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone, sottilette senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uovo fritto"
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Pasta di semola integrale, farro, riso rosso, riso venere, riso basmati, riso thai, riso selvatico, riso integrale, cracker integrali"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Orzo, segale, avena, mais giallo, pasta di semola, miglio, kamut, cracker"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Chia, cous cous, gallette di grano saraceno, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, ananas, banana"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco, patate, patate dolci, grissini, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle, cocco"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno, pesce spada"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchup e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato un’alta predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Inoltre è consigliata anche la riduzione del sale a < 2 g al giorno, considerando anche quello già presente negli alimenti. La riduzione di sale è un’ottima prevenzione contro l’ipertensione. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio. La tua probabilità di sviluppare questa intolleranza è più alta rispetto alla popolazione media. L’intolleranza al lattosio è l’incapacità di digerire lo zucchero Lattosio a causa di una carenza dell’enzima digestivo Lattasi. Ciò può causare sintomi gastrointestinali come diarrea e crampi addominali. Trattandosi di predisposizione genetica e non di diagnosi di intolleranza al lattosio è possibile, ma non consigliato, assumere alimenti contenenti lattosio. Invece, è strettamente raccomandato attenersi alle indicazioni della tabella sottostante relativa all’assunzione di Proteine. Per avere una diagnosi di Intolleranza al Lattosio è consigliato eseguire il Breath Test."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Medio+Glut",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Medio)",
+            "Intolleranza al glutine"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, polpettine di pesce bianco o azzurro"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, polpette di carne bianca, arista di maiale"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zuccheri aggiunti, yogurt di soia senza zuccheri aggiunti, latte di mandorla, latte di cocco, bevanda di avena, tofu, tempeh, yogurt di mandorla"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Fiocchi di latte, ricotta, primo sale, mozzarella light, formaggi spalmabili light"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, strapazzate, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), filetto di tonno o salmone, alici, salmone affumicato, tonno in scatola, burger di pesce bianco o azzurro, trota, sgombro fresco"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, prosciutto crudo, prosciutto cotto, fesa di tacchino, bresaola, nuggets di pollo, cotoletta di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, formaggio di mandorle, formaggio di anacardi, yogurt di cocco, bevanda di riso senza zucchero, affettati vegetali, polpette vegetali, burger vegetali, salsa di soia senza sale, seitan"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri (Cottage, Quark), feta, sottilette, stracchino, mozzarella di bufala"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": "Uovo fritto, al tegamino"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), anguilla, aringa, sgombro in scatola"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, roast beef, salsicce, wurstel, salame, mortadella, coppa, speck, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Bevande di soia con zuccheri aggiunti, burger vegetali fritti, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Provolone, Scamorze, Caprino a crosta fiorita e stagionata, Taleggio Fontina, Burrata, Stracciatella, formaggi spalmabili"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Riso rosso, riso venere, riso basmati, riso thai, riso selvatico"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, cocco, ribes rosso, frutti di bosco, mirtilli, papaya"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Segale, avena, mais giallo, pasta di semola integrale, miglio, kamut, cracker, patate, patate dolci, orzo, farro"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Chia, cous cous, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, pesche bianche, ananas, banane"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco, grissini, gallette di mais, gallette di riso, pasta di semola, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno, pesce spada"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchupe e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una media predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Inoltre è consigliata anche la riduzione del sale a < 2 g al giorno, considerando anche quello già presente negli alimenti. La riduzione di sale è un’ottima prevenzione contro l’ipertensione. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza alla Celiachia. La tua probabilità di sviluppare questa intolleranza è più alta rispetto alla popolazione media. La celiachia o morbo celiaco è una malattia autoimmune cronica causata da una reazione anomala alla gliadina, proteina del glutine contenuta in molti cereali; la malattia celiaca si sviluppa in individui geneticamente predisposti. In particolare, lo sviluppo della celiachia è associato in letteratura scientifica alla presenza di specifiche varianti di geni del sistema immunitario, le glicoproteine HLA (Capittini C, et. al. Medicina (Kaunas). 2019 May 22;55(5):190.) Nel suo caso essendo emersa, dai test genetici, una predisposizione alla intolleranza al glutine, la seguente tabella relativa all’assunzione dei CARBOIDRATI esclude, dalla dieta alimentare i cibi che lo contengono. Ciò è utilissimo per prevenire l’insorgenza della patologia da intolleranza ma non deve essere seguito pedissequamente se non dopo consiglio del proprio medico, dopo aver verificato l’eventuale manifestazione clinica della predisposizione (che si chiama celiachia). Questo può essere fatto mediante l’esecuzione dei test sugli anticorpi specifici (Anticorpi antiendomisio IgA + IgG - Anti transglutaminasi IgA + IgG - Antigliadina IgA + IgG) oppure, se la situazione clinica lo richiedesse, il suo medico prescriverà la gastroscopia con biopsia diagnostica. Se da questi test emergesse già l’esistenza della manifestazione clinica della sua predisposizione (quindi si diagnosticasse in atto una celiachia) sarà il medico curante a stabilire in quale misura (anche assoluta) andrà seguita la seguente tabella di privazione degli alimenti contenenti glutine."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Alto+Glut",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Alto)",
+            "Intolleranza al glutine"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, polpettine di pesce bianco o azzurro, pesce spada"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, polpette di carne bianca, arista di maiale"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zucchero, yogurt di soia senza zucchero, tofu, tempeh, latte di mandorla senza zucchero, latte di avena senza zucchero, yogurt di cocco senza zucchero"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Fiocchi di latte, ricotta, primo sale, mozzarella, formaggi spalmabili light"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, strapazzate, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), filetto di tonno o salmone, alici, salmone affumicato, tonno in scatola, burger di pesce bianco o azzurro, trota, sgombro fresco"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, prosciutto crudo magro, bresaola, cotoletta di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, formaggio di mandorle, formaggio di anacardi, yogurt di mandorla senza zucchero, latte di cocco senza zucchero, bevanda di riso senza zucchero, affettati di origine vegetale, salsa di soia senza sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri (Cottage, Quark), feta, sottilette, stracchino"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": "Uovo al tegamino"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), anguilla, aringa, sgombro in scatola, pesce impanato"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, roast beef, salsicce, wurstel, salame, mortadella, coppa, speck, cotoletta di carne rossa, prosciutto cotto, fesa di tacchino, prosciutto crudo, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi vegetali ad alto contenuto di grassi, yogurt vegetali zuccherati, seitan,  creme vegetali, panna vegetale, gelati vegetali, burger o polpette panati di origine vegetale, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Provolone, Scamorze, Caprino, Taleggio Fontina, Burrata, Stracciatella, formaggi spalmabili"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": "Uovo fritto"
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Riso rosso, riso venere, riso basmati, riso thai, riso selvatico"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Avena, mais giallo, miglio, cracker senza glutine, patate dolci, patate"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Chia, cous cous, gallette di grano saraceno, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, ananas, cocco, banana"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco a chicco lungo, grissini, gallette di mais, farro, orzo, pasta di semola, pasta di semola integrale, kamut, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno, pesce spada"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchup e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato un’alta predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Inoltre è consigliata anche la riduzione del sale a < 2 g al giorno, considerando anche quello già presente negli alimenti. La riduzione di sale è un’ottima prevenzione contro l’ipertensione. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza alla Celiachia. La tua probabilità di sviluppare questa intolleranza è più alta rispetto alla popolazione media. La celiachia o morbo celiaco è una malattia autoimmune cronica causata da una reazione anomala alla gliadina, proteina del glutine contenuta in molti cereali; la malattia celiaca si sviluppa in individui geneticamente predisposti. In particolare, lo sviluppo della celiachia è associato in letteratura scientifica alla presenza di specifiche varianti di geni del sistema immunitario, le glicoproteine HLA (Capittini C, et. al. Medicina (Kaunas). 2019 May 22;55(5):190.) Nel suo caso essendo emersa, dai test genetici, una predisposizione alla intolleranza al glutine, la seguente tabella relativa all’assunzione dei CARBOIDRATI esclude, dalla dieta alimentare i cibi che lo contengono. Ciò è utilissimo per prevenire l’insorgenza della patologia da intolleranza ma non deve essere seguito pedissequamente se non dopo consiglio del proprio medico, dopo aver verificato l’eventuale manifestazione clinica della predisposizione (che si chiama celiachia). Questo può essere fatto mediante l’esecuzione dei test sugli anticorpi specifici (Anticorpi antiendomisio IgA + IgG - Anti transglutaminasi IgA + IgG - Antigliadina IgA + IgG) oppure, se la situazione clinica lo richiedesse, il suo medico prescriverà la gastroscopia con biopsia diagnostica. Se da questi test emergesse già l’esistenza della manifestazione clinica della sua predisposizione (quindi si diagnosticasse in atto una celiachia) sarà il medico curante a stabilire in quale misura (anche assoluta) andrà seguita la seguente tabella di privazione degli alimenti contenenti glutine."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Lieve+Latt+Glut",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Lieve)",
+            "Intolleranza al lattosio",
+            "Intolleranza al glutine"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco (es: merluzzo o sogliola), filetto di salmone, filetto di tonno, pesce spada, polpettine di pesce bianco o azzurro"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, arista di maiale, polpettine di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zuccheri, latte di mandorla, latte di cocco, yogurt di soia senza zuccheri, tofu, tempeh, burger vegetali, formaggio di mandorle, polpette vegetali"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio, reggiano, pecorino"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, al tegamino, in camicia, sode, strapazzate"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, sardine, trota, sgombro fresco, burger di pesce bianco o azzurro, salmone affumicato"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, arrosto di pollo o tacchino, fesa di tacchino bresaola, prosciutto crudo, prosciutto cotto, cotoletta di carne bianca, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, latte di avena, latte di soia, yogurt di soia, seitan, affettati vegetali, salsa di soia senza sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, mozzarella senza lattosio, fiordilatte senza lattosio, sottilette senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": "Uovo fritto"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Filetto di carne rossa, hamburger di manzo, roast beef, salsicce, coppa, wurstel, mortadella, salame, speck, carne essiccata, cotoletta di carne rossa"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Burger vegetali fritti, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Scamorze, Caprino a crosta fiorita e stagionata, burrata, formaggi spalmabili, stracciatella mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Riso rosso, riso venere, riso basmati, riso thai, mais bianco"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, pasta di legumi, chia"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya, banane"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Mais giallo, miglio, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Cous cous, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, ananas, cocco"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 1-2 volte a settimana",
+                        "items": "Riso bianco a chicco lungo, pasta di semola, pasta di semola integrale, orzo, farro, grissini, crackers, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchupe e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una lieve predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. Nei bambini, non esiste una definizione specifica adatta alla loro età. Tuttavia, si cerca di diagnosticarla utilizzando gli stessi criteri applicati agli adulti, oppure adottando criteri personalizzati per i giovani pazienti. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il fabbisogno energetico. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio e alla Celiachia. La tua probabilità di sviluppare queste intolleranze è più alta rispetto alla popolazione media. L’intolleranza al lattosio è l’incapacità di digerire lo zucchero Lattosio a causa di una carenza dell’enzima digestivo Lattasi. Ciò può causare sintomi gastrointestinali come diarrea e crampi addominali. Trattandosi di predisposizione genetica e non di diagnosi di intolleranza al lattosio è possibile, ma non consigliato, assumere alimenti contenenti lattosio. Invece, è strettamente raccomandato attenersi alle indicazioni della tabella sottostante relativa all’assunzione di Proteine. Per avere una diagnosi di Intolleranza al Lattosio è consigliato eseguire il Breath Test. La celiachia o morbo celiaco è una malattia autoimmune cronica causata da una reazione anomala alla gliadina, proteina del glutine contenuta in molti cereali; la malattia celiaca si sviluppa in individui geneticamente predisposti. In particolare, lo sviluppo della celiachia è associato in letteratura scientifica alla presenza di specifiche varianti di geni del sistema immunitario, le glicoproteine HLA (Capittini C, et. al. Medicina (Kaunas). 2019 May 22;55(5):190.) Nel suo caso essendo emersa, dai test genetici, una predisposizione alla intolleranza al glutine, la seguente tabella relativa all’assunzione dei CARBOIDRATI esclude, dalla dieta alimentare i cibi che lo contengono. Ciò è utilissimo per prevenire l’insorgenza della patologia da intolleranza ma non deve essere seguito pedissequamente se non dopo consiglio del proprio medico, dopo aver verificato l’eventuale manifestazione clinica della predisposizione (che si chiama celiachia). Questo può essere fatto mediante l’esecuzione dei test sugli anticorpi specifici (Anticorpi antiendomisio IgA + IgG - Anti transglutaminasi IgA + IgG - Antigliadina IgA + IgG) oppure, se la situazione clinica lo richiedesse, il suo medico prescriverà la gastroscopia con biopsia diagnostica. Se da questi test emergesse già l’esistenza della manifestazione clinica della sua predisposizione (quindi si diagnosticasse in atto una celiachia) sarà il medico curante a stabilire in quale misura (anche assoluta) andrà seguita la seguente tabella di privazione degli alimenti contenenti glutine."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Alto",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Alto)"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, polpettine di pesce bianco o azzurro, pesce spada"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, polpette di carne bianca, arista di maiale"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zucchero, yogurt di soia senza zucchero, tofu, tempeh, latte di mandorla senza zucchero, latte di avena senza zucchero, yogurt di cocco senza zucchero"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Fiocchi di latte, ricotta, primo sale, mozzarella, formaggi spalmabili light"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, strapazzate, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), filetto di tonno o salmone, alici, salmone affumicato, tonno in scatola, burger di pesce bianco o azzurro, trota, sgombro fresco"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, prosciutto crudo magro, bresaola, cotoletta di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, formaggio di mandorle, formaggio di anacardi, yogurt di mandorla senza zucchero, latte di cocco senza zucchero, bevanda di riso senza zucchero, affettati di origine vegetale, salsa di soia senza sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri (Cottage, Quark), feta, sottilette, stracchino"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": "Uovo al tegamino"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), anguilla, aringa, sgombro in scatola, pesce impanato"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, roast beef, salsicce, wurstel, salame, mortadella, coppa, speck, cotoletta di carne rossa, prosciutto cotto, fesa di tacchino, prosciutto crudo, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi vegetali ad alto contenuto di grassi, yogurt vegetali zuccherati, seitan,  creme vegetali, panna vegetale, gelati vegetali, burger o polpette panati di origine vegetale, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Provolone, Scamorze, Caprino, Taleggio Fontina, Burrata, Stracciatella, formaggi spalmabili"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": "Uovo fritto"
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Pasta di semola integrale, farro, riso rosso, riso venere, riso basmati, riso thai, riso selvatico, riso integrale, cracker integrali"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Orzo, segale, avena, mais giallo, pasta di semola, miglio, kamut, cracker"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Chia, cous cous, gallette di grano saraceno, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, ananas, cocco, banana"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco, patate, patate dolci, grissini, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno, pesce spada"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchupe e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato un’alta predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Inoltre è consigliata anche la riduzione del sale a < 2 g al giorno, considerando anche quello già presente negli alimenti. La riduzione di sale è un’ottima prevenzione contro l’ipertensione."
+    },
+    {
+        "id_paziente": "Junior+Sindromemetabolica_Alto+Latt+Glut",
+        "condizioni": [
+            "Junior",
+            "Sindrome metabolica (Alto)",
+            "Intolleranza al lattosio",
+            "Intolleranza al glutine"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Seppia, polpo, calamari, pesce bianco, polpettine di pesce bianco o azzurro, pesce spada"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, agnello, polpette di carne bianca, arista di maiale"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Latte di soia senza zucchero, yogurt di soia senza zucchero, tofu, tempeh, latte di mandorla senza zucchero, latte di avena senza zucchero, yogurt di cocco senza zucchero"
+                    },
+                    "LATTICINI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (borlotti, cannellini, neri) ceci, lenticchie comuni, lupini"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Frittata, strapazzate, in camicia, sode"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), filetto di tonno o salmone, alici, salmone affumicato, tonno in scatola, burger di pesce bianco o azzurro, trota, sgombro fresco"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, prosciutto crudo magro, bresaola, cotoletta di carne bianca, hamburger di carne bianca"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi freschi semi-magri vegetali, ricotta di soia, formaggio di mandorle, formaggio di anacardi, yogurt di mandorla senza zucchero, latte di cocco senza zucchero, bevanda di riso senza zucchero, affettati di origine vegetale, salsa di soia senza sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, mozzarella senza lattosio, fiordilatte senza lattosio, formaggi spalmabili senza lattosio, reggiano, pecorino, caprino senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame, fagioli bianchi"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": "Uovo al tegamino"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), anguilla, aringa, sgombro in scatola, pesce impanato"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, roast beef, salsicce, wurstel, salame, mortadella, coppa, speck, cotoletta di carne rossa, prosciutto cotto, fesa di tacchino, prosciutto crudo, nuggets di pollo"
+                    },
+                    "ALIMENTI DI ORIGINE VEGETALE": {
+                        "items": "Formaggi vegetali ad alto contenuto di grassi, yogurt vegetali zuccherati, seitan,  creme vegetali, panna vegetale, gelati vegetali, burger o polpette panati di origine vegetale, salsa di soia con sale"
+                    },
+                    "LATTICINI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Scamorze, Caprino, burrata, formaggi spalmabili, stracciatella mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone, sottilette senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": "Uovo fritto"
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Riso rosso, riso venere, riso basmati, riso thai, riso selvatico"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Fragole, pesche bianche, lamponi, ribes rosso, frutti di bosco, mirtilli, papaya"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Avena, mais giallo, miglio, cracker senza glutine, patate dolci, patate"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Chia, cous cous, gallette di grano saraceno, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, arance, ananas, cocco, banana"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco a chicco lungo, grissini, gallette di mais, farro, orzo, pasta di semola, pasta di semola integrale, kamut, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, pesche gialle"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pesce come: salmone, tonno, pesce spada"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": "Ketchup e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURIE POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: spinaci, cavolo riccio, bietole, lattuga romana, rucola, broccoli, cavolfiore, cavoletti di Bruxelles, cavolo cappuccio, rapa, zucchine, cetrioli, peperoni, asparagi, funghi, sedano, melanzane, pomodori, carote. Per limitare il rischio di insorgenza di Sindrome Metabolica, è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico dell’intero pasto e promuove la funzionalità del fegato."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato un’alta predisposizione genetica alla Sindrome Metabolica. Ciò vuol dire che la tua probabilità di sviluppare questa patologia è più alta rispetto alla popolazione media. La sindrome metabolica è una condizione caratterizzata dalla combinazione di diversi fattori di rischio metabolico, come obesità addominale, ipertensione, iperglicemia, e dislipidemia. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi (es: pasta, pane, ecc..), lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Inoltre è consigliata anche la riduzione del sale a < 2 g al giorno, considerando anche quello già presente negli alimenti. La riduzione di sale è un’ottima prevenzione contro l’ipertensione. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio e alla Celiachia. La tua probabilità di sviluppare queste intolleranze è più alta rispetto alla popolazione media. L’intolleranza al lattosio è l’incapacità di digerire lo zucchero Lattosio a causa di una carenza dell’enzima digestivo Lattasi. Ciò può causare sintomi gastrointestinali come diarrea e crampi addominali. Trattandosi di predisposizione genetica e non di diagnosi di intolleranza al lattosio è possibile, ma non consigliato, assumere alimenti contenenti lattosio. Invece, è strettamente raccomandato attenersi alle indicazioni della tabella sottostante relativa all’assunzione di Proteine. Per avere una diagnosi di Intolleranza al Lattosio è consigliato eseguire il Breath Test. La celiachia o morbo celiaco è una malattia autoimmune cronica causata da una reazione anomala alla gliadina, proteina del glutine contenuta in molti cereali; la malattia celiaca si sviluppa in individui geneticamente predisposti. In particolare, lo sviluppo della celiachia è associato in letteratura scientifica alla presenza di specifiche varianti di geni del sistema immunitario, le glicoproteine HLA (Capittini C, et. al. Medicina (Kaunas). 2019 May 22;55(5):190.) Nel suo caso essendo emersa, dai test genetici, una predisposizione alla intolleranza al glutine, la seguente tabella relativa all’assunzione dei CARBOIDRATI esclude, dalla dieta alimentare i cibi che lo contengono. Ciò è utilissimo per prevenire l’insorgenza della patologia da intolleranza ma non deve essere seguito pedissequamente se non dopo consiglio del proprio medico, dopo aver verificato l’eventuale manifestazione clinica della predisposizione (che si chiama celiachia). Questo può essere fatto mediante l’esecuzione dei test sugli anticorpi specifici (Anticorpi antiendomisio IgA + IgG - Anti transglutaminasi IgA + IgG - Antigliadina IgA + IgG) oppure, se la situazione clinica lo richiedesse, il suo medico prescriverà la gastroscopia con biopsia diagnostica. Se da questi test emergesse già l’esistenza della manifestazione clinica della sua predisposizione (quindi si diagnosticasse in atto una celiachia) sarà il medico curante a stabilire in quale misura (anche assoluta) andrà seguita la seguente tabella di privazione degli alimenti contenenti glutine."
+    }
+]

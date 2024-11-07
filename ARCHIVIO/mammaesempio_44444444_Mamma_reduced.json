@@ -1,0 +1,516 @@
+[
+    {
+        "id_paziente": "T2D_Lieve+Cardio_NonEvidente+Peso_Lieve+Latt",
+        "condizioni": [
+            "Predisposizione al diabete di tipo 2 (Lieve)",
+            "Predisposizione malattie cardiovascolari (NonEvidente)",
+            "Predisposizione all'aumento di peso (Lieve)",
+            "Intolleranza al lattosio"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Sardine, seppia, polpo, calamari, pesce bianco, filetto di tonno, filetto di salmone, pesce spada"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, arista di maiale (evitare le parti grasse o con la pelle)"
+                    },
+                    "LATTICINI": {
+                        "dosage": "Latte e yogurt: possibile consumarli anche tutti i giorni, 1-3 volte al giorno. C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio, reggiano, pecorino"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (neri, borlotti, cannellini, bianchi), ceci, lenticchie comuni, lupini, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Uova sode, al tegamino, frittata, uova strapazzate, alla coque, in camicia"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, tonno sott’olio, salmone affumicato"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, bresaola, arrosto di tacchino o di pollo, carne bovina in gelatina a ridotto contenuto di sale, roast beef, prosciutto crudo"
+                    },
+                    "LATTICINI": {
+                        "dosage": "Latte e yogurt: possibile consumarli anche tutti i giorni, 1-3 volte al giorno. T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, mozzarella senza lattosio, fiordilatte senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": "Tuorlo d’uovo senza albume"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, fesa di tacchino, prosciutto cotto, speck, wurstel, coppa, mortadella, salame, salsiccia"
+                    },
+                    "LATTICINI": {
+                        "dosage": "Latte e yogurt: possibile consumarli anche tutti i giorni, 1-3 volte al giorno. S: max 1 volta a settimana",
+                        "items": "Mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Orzo mondato, kamut, riso rosso, riso basmati, riso thai, mais bianco, pasta di semola, pasta di semola integrale"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, chia, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Fragole, pesche bianche, lamponi, cocco, ribes rosso, frutti di bosco, mirtilli, papaya, ananas, arance"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Orzo perlato, farro, segale, avena, riso venere, crackers senza sale, patate, patate dolci"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pasta di riso, pasta di mais, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, pesche gialle, banane, anguria, confetture senza zuccheri aggiunti"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco, miglio, mais giallo, grissini, crackers, gallette di mais, gallette di riso, merendine e dolci in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, marmellate o confetture ad alto contenuto di zuccheri, frutta candita o disidratata"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURI E POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURI E POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Ketchup e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURI E POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati grassi, formaggi grassi, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: sedano, finocchi, prezzemolo, spinaci, cavolo, crescione, zucca, broccoli, cicoria, carciofi, aglio, cipolla, porri, barbabietola rossa, lattuga, melanzane, cavoletti di Bruxelles, radicchio, iceberg, pomodori, verza. Queste tipologie di verdura è ricca di beta-carotene e di fibre, utile alla regolazione del controllo glicemico e all’aumento di sazietà post prandiale. In linea generale è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico, promuove la funzionalità del fegato e favorisce un minor accumulo di tessuto adiposo."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una predisposizione genetica lieve al diabete di tipo 2 ed una lieve predisposizione genetica all’aumento di peso . Ciò vuol dire che la tua probabilità di sviluppare queste patologie è più alta rispetto alla popolazione media. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi, lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio. La tua probabilità di sviluppare questa intolleranza è più alta rispetto alla popolazione media."
+    },
+    {
+        "id_paziente": "T2D_Lieve+Cardio_NonEvidente+Peso_Lieve+Latt+Glut",
+        "condizioni": [
+            "Predisposizione al diabete di tipo 2 (Lieve)",
+            "Predisposizione malattie cardiovascolari (NonEvidente)",
+            "Predisposizione all'aumento di peso (Lieve)",
+            "Intolleranza al lattosio",
+            "Intolleranza al glutine"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Sardine, seppia, polpo, calamari, pesce bianco, filetto di tonno, filetto di salmone, pesce spada"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, arista di maiale (evitare le parti grasse o con la pelle)"
+                    },
+                    "LATTICINI": {
+                        "dosage": "Latte e yogurt: possibile consumarli anche tutti i giorni, 1-3 volte al giorno. C: max 3 volte a settimana",
+                        "items": "Latte delattosato, yogurt bianco senza lattosio, fiocchi di latte senza lattosio, ricotta senza lattosio, primo sale senza lattosio, reggiano, pecorino"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (neri, borlotti, cannellini, bianchi), ceci, lenticchie comuni, lupini, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Uova sode, al tegamino, frittata, uova strapazzate, alla coque, in camicia"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, tonno sott’olio, salmone affumicato"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, bresaola, arrosto di tacchino o di pollo, carne bovina in gelatina a ridotto contenuto di sale, roast beef, prosciutto crudo"
+                    },
+                    "LATTICINI": {
+                        "dosage": "Latte e yogurt: possibile consumarli anche tutti i giorni, 1-3 volte al giorno. T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri possibilmente senza lattosio, mozzarella senza lattosio, fiordilatte senza lattosio"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": "Tuorlo d’uovo senza albume"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, fesa di tacchino, prosciutto cotto, speck, wurstel, coppa, mortadella, salame, salsiccia"
+                    },
+                    "LATTICINI": {
+                        "dosage": "Latte e yogurt: possibile consumarli anche tutti i giorni, 1-3 volte al giorno. S: max 1 volta a settimana",
+                        "items": "Mozzarella di bufala, feta, brie, stracchino, taleggio, fontina e provolone"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola ricchi di sale"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Riso rosso, riso venere, riso basmati, riso thai, mais bianco, miglio, pane senza glutine"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, chia, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Fragole, pesche bianche, lamponi, cocco, ribes rosso, frutti di bosco, mirtilli, papaya, ananas, arance"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Mais giallo, gallette di mais giallo, gallette di riso"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pasta di riso, pasta di mais, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, pesche gialle, banane, anguria, confetture senza zuccheri aggiunti"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco, pasta di semola, orzo, farro, patate, patate dolci, grissini, merendine e dolci in genere, pane con glutine in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, marmellate o confetture ad alto contenuto di zuccheri, frutta candita o disidratata"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURI E POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURI E POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Ketchup e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURI E POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati grassi, formaggi grassi, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: sedano, finocchi, prezzemolo, spinaci, cavolo, crescione, zucca, broccoli, cicoria, carciofi, aglio, cipolla, porri, barbabietola rossa, lattuga, melanzane, cavoletti di Bruxelles, radicchio, iceberg, pomodori, verza. Queste tipologie di verdura è ricca di beta-carotene e di fibre, utile alla regolazione del controllo glicemico e all’aumento di sazietà post prandiale. In linea generale è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico, promuove la funzionalità del fegato e favorisce un minor accumulo di tessuto adiposo."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una predisposizione genetica lieve al diabete di tipo 2 ed una lieve predisposizione genetica all’aumento di peso . Ciò vuol dire che la tua probabilità di sviluppare queste patologie è più alta rispetto alla popolazione media. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi, lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Lattosio e alla Celiachia. La tua probabilità di sviluppare queste intolleranze è più alta rispetto alla popolazione media. L’intolleranza al lattosio è l’incapacità di digerire lo zucchero Lattosio a causa di una carenza dell’enzima digestivo Lattasi. Ciò può causare sintomi gastrointestinali come diarrea e crampi addominali. Trattandosi di predisposizione genetica e non di diagnosi di intolleranza al lattosio è possibile, ma non consigliato, assumere alimenti contenenti lattosio. Invece, è strettamente raccomandato attenersi alle indicazioni della tabella sottostante relativa all’assunzione di Proteine. Per avere una diagnosi di Intolleranza al Lattosio è consigliato eseguire il Breath Test. La celiachia o morbo celiaco è una malattia autoimmune cronica causata da una reazione anomala alla gliadina, proteina del glutine contenuta in molti cereali; la malattia celiaca si sviluppa in individui geneticamente predisposti. In particolare, lo sviluppo della celiachia è associato in letteratura scientifica alla presenza di specifiche varianti di geni del sistema immunitario, le glicoproteine HLA (Capittini C, et. al. Medicina (Kaunas). 2019 May 22;55(5):190.) Nel suo caso essendo emersa, dai test genetici, una predisposizione alla intolleranza al glutine, la seguente tabella relativa all’assunzione dei CARBOIDRATI esclude, dalla dieta alimentare i cibi che lo contengono. Ciò è utilissimo per prevenire l’insorgenza della patologia da intolleranza ma non deve essere seguito pedissequamente se non dopo consiglio del proprio medico, dopo aver verificato l’eventuale manifestazione clinica della predisposizione (che si chiama celiachia). Questo può essere fatto mediante l’esecuzione dei test sugli anticorpi specifici (Anticorpi antiendomisio IgA + IgG - Anti transglutaminasi IgA + IgG - Antigliadina IgA + IgG) oppure, se la situazione clinica lo richiedesse, il suo medico prescriverà la gastroscopia con biopsia diagnostica. Se da questi test emergesse già l’esistenza della manifestazione clinica della sua predisposizione (quindi si diagnosticasse in atto una celiachia) sarà il medico curante a stabilire in quale misura (anche assoluta) andrà seguita la seguente tabella di privazione degli alimenti contenenti glutine."
+    },
+    {
+        "id_paziente": "T2D_Lieve+Cardio_NonEvidente+Peso_Lieve+Glut",
+        "condizioni": [
+            "Predisposizione al diabete di tipo 2 (Lieve)",
+            "Predisposizione malattie cardiovascolari (NonEvidente)",
+            "Predisposizione all'aumento di peso (Lieve)",
+            "Intolleranza al glutine"
+        ],
+        "raccomandazioni": {
+            "Proteine": {
+                "Consigliati": {
+                    "PESCE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Sardine, seppia, polpo, calamari, pesce bianco"
+                    },
+                    "CARNE": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Tacchino, pollo, vitello, coniglio, arista di maiale (evitare le parti grasse o con la pelle)"
+                    },
+                    "LATTICINI": {
+                        "dosage": "Latte e yogurt: possibile consumarli anche tutti i giorni, 1-3 volte al giorno. C: max 3 volte a settimana",
+                        "items": "Latte parzialmente o totalmente scremato, yogurt bianco, fiocchi di latte, ricotta di pecora o vaccina, primo sale"
+                    },
+                    "LEGUMI": {
+                        "dosage": "C: max 3 volte a settimana",
+                        "items": "Piselli, fave, fagioli (neri, borlotti, cannellini, bianchi), ceci, lenticchie comuni, lupini, lenticchie rosse"
+                    },
+                    "UOVA": {
+                        "dosage": "C: max 2 volte a settimana",
+                        "items": "Uova sode, al tegamino, frittata, uova strapazzate, alla coque, in camicia"
+                    }
+                },
+                "Tollerati": {
+                    "PESCE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Crostacei (es: aragoste, scampi, astici, gamberi), tonno al naturale, tonno sott’olio, salmone affumicato, filetto di tonno, filetto di salmone, pesce spada"
+                    },
+                    "CARNE": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Hamburger o macinato di pollo/tacchino/vitello, bresaola, arrosto di tacchino o di pollo, carne bovina in gelatina a ridotto contenuto di sale, roast beef, prosciutto crudo"
+                    },
+                    "LATTICINI": {
+                        "dosage": "Latte e yogurt: possibile consumarli anche tutti i giorni, 1-3 volte al giorno. T: max 2 volte a settimana",
+                        "items": "Formaggi freschi semi- magri (Cottage, Quark), ricotta di vacca, formaggio di grana e formaggi duri di montagna, feta, mozzarella di bufala, fiordilatte"
+                    },
+                    "LEGUMI": {
+                        "dosage": "T: max 2 volte a settimana",
+                        "items": "Edamame"
+                    },
+                    "UOVA": {
+                        "dosage": "T: max 1 volta a settimana",
+                        "items": "Tuorlo d’uovo senza albume"
+                    }
+                },
+                "Sconsigliati": {
+                    "PESCE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Uova di tutti i tipi di pesce (caviale, bottarga, uova di salmone), sgombro in scatola, anguilla, aringa"
+                    },
+                    "CARNE": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Filetto di carne rossa, fesa di tacchino, prosciutto cotto, speck, wurstel, coppa, mortadella, salame, salsiccia"
+                    },
+                    "LATTICINI": {
+                        "dosage": "Latte e yogurt: possibile consumarli anche tutti i giorni, 1-3 volte al giorno. S: max 1 volta a settimana",
+                        "items": "Caciotta, Edam, Caciocavallo, Provolone, Scamorze, Formaggi spalmabili, Burrata, Gorgonzola, Brie, Yogurt alla frutta"
+                    },
+                    "LEGUMI": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Legumi in scatola ricchi di sale"
+                    },
+                    "UOVA": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                }
+            },
+            "Carboidrati": {
+                "Consigliati": {
+                    "CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Riso rosso, riso venere, riso basmati, riso thai, mais bianco, miglio, pane senza glutine"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "C: max 3-4 volte a settimana",
+                        "items": "Grano saraceno, quinoa, amaranto, canapa, chia, pasta di legumi"
+                    },
+                    "FRUTTA": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Fragole, pesche bianche, lamponi, cocco, ribes rosso, frutti di bosco, mirtilli, papaya, ananas, arance"
+                    }
+                },
+                "Tollerati": {
+                    "CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Mais giallo, gallette di mais giallo, gallette di riso"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Pasta di riso, pasta di mais, gallette di grano saraceno"
+                    },
+                    "FRUTTA": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Albicocche, pompelmo, pesche gialle, banane, anguria, confetture senza zuccheri aggiunti"
+                    }
+                },
+                "Sconsigliati": {
+                    "CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Riso bianco, pasta di semola, orzo, farro, patate, patate dolci, grissini, merendine e dolci in genere, pane con glutine in genere"
+                    },
+                    "PSEUDO-CEREALI": {
+                        "dosage": "S: max 2 volte a settimana",
+                        "items": "Merendine e dolci in genere"
+                    },
+                    "FRUTTA": {
+                        "dosage": "S: max 1 volta a settimana",
+                        "items": "Cachi, uva, fichi, ciliegie, mele, pere, nespole, melone, anguria, marmellate o confetture ad alto contenuto di zuccheri, frutta candita o disidratata"
+                    }
+                }
+            },
+            "Lipidi": {
+                "Consigliati": {
+                    "GRASSI MONOINSATURI E POLINSATURI": {
+                        "dosage": "C: anche tutti i giorni",
+                        "items": "Frutta secca, olive, avocado, olio extra vergine di oliva, cocco fresco, cioccolato fondente all’85%"
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "",
+                        "items": ""
+                    }
+                },
+                "Tollerati": {
+                    "GRASSI MONOINSATURI E POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "T: max 2-3 volte a settimana",
+                        "items": "Ketchup e Senape"
+                    }
+                },
+                "Sconsigliati": {
+                    "GRASSI MONOINSATURI E POLINSATURI": {
+                        "dosage": "",
+                        "items": ""
+                    },
+                    "GRASSI SATURI": {
+                        "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati grassi, formaggi grassi, fritture, maionese"
+                    }
+                }
+            },
+            "Verdure": "Verdure consigliate in base al tuo profilo genetico: sedano, finocchi, prezzemolo, spinaci, cavolo, crescione, zucca, broccoli, cicoria, carciofi, aglio, cipolla, porri, barbabietola rossa, lattuga, melanzane, cavoletti di Bruxelles, radicchio, iceberg, pomodori, verza. Queste tipologie di verdura è ricca di beta-carotene e di fibre, utile alla regolazione del controllo glicemico e all’aumento di sazietà post prandiale. In linea generale è consigliato un consumo di verdura > 300gr al giorno, suddiviso tra il pranzo e la cena. Una verdura cruda prima del pasto (lattuga, rucola, finocchio, sedano, cetriolo, radicchio) aiuta ad abbassare l’indice glicemico, promuove la funzionalità del fegato e favorisce un minor accumulo di tessuto adiposo."
+        },
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una predisposizione genetica lieve al diabete di tipo 2 ed una lieve predisposizione genetica all’aumento di peso . Ciò vuol dire che la tua probabilità di sviluppare queste patologie è più alta rispetto alla popolazione media. È molto importante quindi regolare l’assunzione di zuccheri e di carboidrati raffinati per mantenere il controllo glicemico e insulinico nella norma ed evitare l’accumulo di tessuto adiposo. A livello alimentare si consiglia la riduzione di zuccheri semplici (es: carboidrati raffinati, bevande zuccherate, frutta, ecc..) e un giusto apporto di carboidrati complessi, lipidi e proteine. È importante anche regolare l’introito calorico, prestando attenzione a non superare il proprio fabbisogno energetico. Il tuo profilo genetico ha evidenziato una predisposizione genetica all’Intolleranza al Glutine. La tua probabilità di sviluppare questa intolleranza è più alta rispetto alla popolazione media. La celiachia o morbo celiaco è una malattia autoimmune cronica causata da una reazione anomala alla gliadina, proteina del glutine contenuta in molti cereali; la malattia celiaca si sviluppa in individui geneticamente predisposti. In particolare, lo sviluppo della celiachia è associato in letteratura scientifica alla presenza di specifiche varianti di geni del sistema immunitario, le glicoproteine HLA (Capittini C, et. al. Medicina (Kaunas). 2019 May 22;55(5):190.) Nel suo caso essendo emersa, dai test genetici, una predisposizione alla intolleranza al glutine, la seguente tabella relativa all’assunzione dei CARBOIDRATI esclude, dalla dieta alimentare i cibi che lo contengono. Ciò è utilissimo per prevenire l’insorgenza della patologia da intolleranza ma non deve essere seguito pedissequamente se non dopo consiglio del proprio medico, dopo aver verificato l’eventuale manifestazione clinica della predisposizione (che si chiama celiachia). Questo può essere fatto mediante l’esecuzione dei test sugli anticorpi specifici (Anticorpi antiendomisio IgA + IgG - Anti transglutaminasi IgA + IgG - Antigliadina IgA + IgG) oppure, se la situazione clinica lo richiedesse, il suo medico prescriverà la gastroscopia con biopsia diagnostica. Se da questi test emergesse già l’esistenza della manifestazione clinica della sua predisposizione (quindi si diagnosticasse in atto una celiachia) sarà il medico curante a stabilire in quale misura (anche assoluta) andrà seguita la seguente tabella di privazione degli alimenti contenenti glutine."
+    },
+    {
+        "id_paziente": "Caffeina_Lento",
+        "condizioni": "Predisposizione genetica all’elevata sensibilità alla Caffeina (metabolizzatore lento)",
+        "raccomandazioni": "Consigli alimentari in base al tuo profilo genetico: È necessario limitare l’assunzione di caffè a 2 tazzine al giorno",
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una predisposizione genetica all’elevata sensibilità alla Caffeina (metabolizzatore lento). I tuoi geni hanno dimostrato un’alta sensibilità alla caffeina, ovvero il tuo organismo impiega più tempo per metabolizzare la caffeina e questo potrebbe avere effetti negativi sulla tua salute. Per molti anni la letteratura ha cercato di definire il rischio o il vantaggio di tale assunzione nei veloci metabolizzatori della caffeina. Circa un decennio fa, il Dr. Ahmed El- Sohemy, professore nel dipartimento di scienze nutrizionali dell’Università di Toronto, notò come la caffeina avesse un effetto diverso sul genoma delle persone. In particolare il Dr. El- Sohemy e i Suoi colleghi reclutarono 4000 adulti, di cui circa 2000 che avevano avuto in precedenza un infarto. Analizzando il loro genoma e il loro consumo di caffeina, scoprirono che per i metabolizzatori lenti il consumo maggiore di 3-4 tazzine di caffè al giorno aumenta del 36% il rischio di infarto. Inoltre è possibile, a causa del tuo profilo genetico. che tu percepisca in modo più lieve l’effetto eccitante."
+    },
+    {
+        "id_paziente": "Emocromatosi_True",
+        "condizioni": "Predisposizione genetica ad elevati livelli di Ferro",
+        "raccomandazioni": "Consigli alimentari in base al tuo profilo genetico: È consigliato consumare moderatamente questi alimenti particolarmente ricchi in Ferro: Manzo, pollo Frumento, avena Legumi, soia secca Rucola, basilico Pistacchi, anacardi Pepe nero, menta, rosmarino, prezzemolo Cacao amaro in polvere, tè in foglie, cioccolato fondente",
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una predisposizione genetica ad elevati livelli di Ferro. Il tuo profilo genetico ha evidenziato una predisposizione genetica ad un accumulo dei livelli di Ferro. Nel tuo caso la predisposizione all’accumulo di Ferro è legata ad una mutazione del gene HFE, che codifica per una proteina “sensore”, importante nella regolazione dell'assorbimento del ferro. In condizioni normali questa proteina si trova sulla superficie delle cellule del tratto intestinali dove regola l’assorbimento di ferro. La mutazione del gene HFE, in particolare la mutazione nota come C282Y, determina la produzione di una proteina alterata che non si esprime sulla superficie delle cellule intestinali e, non regolando l’assorbimento di ferro, determina una maggior concentrazione di ferro circolante. Un’altra mutazione nota come H63D determina la produzione di una proteina in grado di esprimersi sulla superficie delle cellule intestinali ma non di svolgere la funzione di sensore, portando cosi anch’essa ad un sovraccarico di ferro. Anche se l'alterazione del gene HFE è presente in entrambi i sessi senza distinzione, i maschi manifestano i sintomi in modo molto più frequente e più grave delle donne. La ragione è da ricercarsi nella perdita di sangue dovuta alle mestruazioni, e nelle gravidanze, fattori che riducono la quantità di ferro presente nell'organismo. L’età di esordio della malattia varia dai 30 ai 50 anni. Un accumulo di ferro può avere diverse conseguenze per l’organismo, può portare ad esempio ad una condizione di Emocromatosi. Questa patologia se severa e non trattata può dare danni al fegato, accumulo di ferro nel cuore, diabete mellito, artropatie, osteoporosi, ipogonadismo ipogonadotropo, affaticamento cronico e iperpigmentazione cutanea. Il fabbisogno medio giornaliero di Ferro è dai 6 mg ai 10 mg al giorno. Durante la gravidanza aumenta fino a 22 mg al giorno. È importante non superare questa dose raccomandata giornaliera."
+    },
+    {
+        "id_paziente": "LowVitaminB9_True",
+        "condizioni": "Predisposizione genetica alla carenza di Acido Folico (Vitamina B9)",
+        "raccomandazioni": "Consigli alimentari in base al tuo profilo genetico: Sono strettamente consigliati alimenti ricchi di folati, come: Verdure a foglia verde: spinaci, broccoli, asparagi, lattuga, scarola, carciofi Legumi: fagioli e piselli Frutta: kiwi, fragole, arance, limoni Alimenti di origine animale: frattaglie, uova NB: se taluno degli alimenti sopra citati risulta consigliato nel tuo profilo evitalo ugualmente. Prediligi i rimanenti.",
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una predisposizione genetica alla carenza di Acido Folico (vitamina B9) Il tuo profilo genetico ha evidenziato una predisposizione alla carenza di Vitamina B9, ovvero di Acido Folico. La Vitamina B9 è di fondamentale importante per diversi processi: produzione di nuove cellule, sintesi del DNA e di proteine, formazione di emoglobina e per i tessuti embrionali. Gli studi dimostrano quanto sia essenziale l’acido folico per la prevenzione di malformazioni congenite, in particolare quelle a carico del tubo neurale. Inoltre una carenza di Acido Folico può portare a elevati livello dell’amminoacido Omocisteina, associato al rischio di malattie cardiovascolari e infarti. A livello genetico, l’aumento di Omocisteina è correlato ad un errore dell’enzima Metiltetrafolato Reduttasi (MTHFR). L’assunzione di acido folico naturale attraverso l’alimentazione non può da sola sopperire all’errore dell’enzima MTHFR, in quanto non ancora trasformato nel suo metabolita attivo: il Metilfolato. Pertanto è necessaria una integrazione di Metilfolato in misura maggiore, in particolare se il difetto enzimatico emerge in omozigosi"
+    },
+    {
+        "id_paziente": "LowZinc_True",
+        "condizioni": "Predisposizione genetica alla carenza di Zinco",
+        "raccomandazioni": "Consigli alimentari in base al tuo profilo genetico: Sono strettamente consigliati alimenti ricchi di folati, come: Agnello, manzo (massimo 1-2 volte a settimana) Funghi Semi di zucca, semi di grano tostati, semi di sesamo Arachidi, noci Cioccolato fondente amaro",
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una predisposizione genetica alla carenza di Zinco. Lo Zinco è necessario per il funzionamento di diversi ormoni, inclusi quelli della tiroide, l'insulina, gli ormoni sessuali e l'ormone della crescita. Le alterazioni genetiche ricercate hanno rivelato una alterata sintesi delle proteine trasportatrici dello Zinco. È un componente di centinaia di complessi enzimatici coinvolti nel metabolismo di proteine, lipidi, carboidrati e acidi nucleici. È essenziale per il corretto sviluppo di unghie, denti, ossa. È importante anche per la salute dei capelli, della pelle, dei muscoli e del fegato. Una carenza di Zinco può avere conseguenze, oltre che su pelle, unghie e capelli, anche sul sistema immunitario. Le difese immunitarie si abbassano rendendo l'organismo più esposto ad infezioni e malattie. Gli studi dimostrano che durante la gravidanza lo zinco contribuisce allo sviluppo del cervello fetale e facilita il parto alla madre. Il fabbisogno medio giornaliero di Zinco è di circa 8 mg al giorno. Durante la gravidanza aumenta a 9 mg al giorno."
+    },
+    {
+        "id_paziente": "Sodium_High",
+        "condizioni": "Predisposizione genetica all'ipertensione da eccesso di Sodio",
+        "raccomandazioni": "Consigli alimentari in base al tuo profilo genetico: Si sconsigliano i seguenti alimenti, particolarmente ricchi in Sodio Soia Affettati (speck, prosciutto crudo e cotto, bresaola, pancetta, salame, fesa di tacchino, mortadella) Carne bovina in gelatina o in scatola, wustel , cotechino , salsiccia di suino Salmone affumicato, aringa, storione, alici Taleggio, provolone, brie, fontina, camembert, caciotta, emmenthal, gorgonzola Minestre di verdure confezionate Salse come: ketchup, maionese, bbq NB: se taluno degli alimenti sopra citati risulta consigliato nel tuo profilo evitalo ugualmente. Prediligi i rimanenti.",
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una predisposizione genetica all’ipertensione da eccesso di Sodio e all’Ipertensione legata all’aumento del Sodio circolante per ridotta escrezione urinaria. Tale predisposizione è attribuibile alla presenza di alcune mutazioni (o polimorfismi) presenti su determinati geni, i quali regolano il metabolismo idro-elettrolitico nelle anse di Henle e nei tubuli renali. NB: l’ipertensione riconosce comunque altre cause oltre a quelle legate a tale meccanismo. Il Sodio, pur essendo uno degli elettroliti più importanti, è un minerale che deve inquadrarsi entro limiti piuttosto stabili. L’alimentazione lo può modificare e perciò bisogna porre attenzione a non esagerare con gli alimenti particolarmente sapidi. Il fabbisogno medio giornaliero raccomandato di Sodio è di 1,5 g al giorno. A livello alimentare è consigliata la riduzione del sale a < 2 g al giorno, considerando anche quello già presente negli alimenti. La riduzione di sale è un’ottima prevenzione contro l’ipertensione."
+    },
+    {
+        "id_paziente": "LowVitaminB6_True",
+        "condizioni": "Predisposizione genetica alla carenza di Vitamina B6",
+        "raccomandazioni": "Consigli alimentari in base al tuo profilo genetico: Sono strettamente consigliati alimenti ricchi di Vitamina B6 Fiocchi di crusca di grano, riso soffiato, mais, fiocchi di mais (cornflakes) Pistacchi freschi e secchi, noci, castagne Spinaci Cipolle Zafferano, salvia, origano Funghi Lenticchie, ceci Calamari, salmone, tonno Manzo, vitellone senza grasso visibile, pollo Porri e patate",
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato una predisposizione genetica alla carenza di Vitamina B6. La Vitamina B6 ha un ruolo fondamentale nel metabolismo degli amminoacidi, acidi grassi e degli zuccheri. Inoltre contribuisce alla formazione degli ormoni e dei globuli bianchi e rossi. Ha quindi un ruolo importante nel sistema immunitario, la sua funzione è quella di formare una barriera posta a difesa delle malattie. Gli studi dimostrano che, durante la gravidanza, un accumulo fisiologico di Vitamina B6, agisce come naturale antinausea. Infatti questa Vitamina modula l’equilibrio di neurotrasmettitori che a loro volta modulano il centro di controllo di nausea e vomito a livello cerebrale. Il fabbisogno medio giornaliero di Vitamina B6 è di circa a 1 mg al giorno. Durante la gravidanza aumenta a 1,6 mg al giorno, nel tuo caso vi è una maggiore necessità."
+    },
+    {
+        "id_paziente": "Gravidanza",
+        "condizioni": "Gravidanza",
+        "raccomandazioni": "Consigli alimentari in base al tuo profilo genetico: Vitamina A La supplementazione di vitamina A non è necessaria laddove l’abituale apporto giornaliero è superiore a tre volte la Recommended Daily Allowance (RDA) (ad esempio, 8000 unità internazionali o 2400 µg di retinolo equivalenti), ovvero nella maggior parte dei Paesi Sviluppati (WHO). Acido folico Le Linee Guida nazionali e internazionali consigliano la supplementazione giornaliera di acido folico (dai 400 μg/die ai 600 μg/die) , raccomandata per tutte le donne in gravidanza allo scopo di prevenire anemia materna, basso peso alla nascita, nascita pretermine e difetti del tubo neurale. Più specificatamente, la supplementazione di acido folico dovrebbe iniziare almeno trenta giorni prima del concepimento e continuare per il resto della gestazione, fondamentale soprattutto nei primi 3 mesi. Vitamine del gruppo B In gravidanza una dieta varia ed equilibrata, che soddisfi le necessità degli altri nutrienti essenziali, contiene quantità di vitamine del gruppo B sufficienti. Si raccomanda l’assunzione di 5 porzioni alla settimana di frutta e verdura, due porzioni alla settimana di legumi, assumendo occasionalmente frutta secca e di preferire i cereali integrali. Vitamina C In caso di un atteggiamento nutrizionale corretto da parte della gestante non è consigliata la supplementazione di vitamina C in gravidanza. Vitamina D La supplementazione con vitamina D in Italia non sembra essere necessaria in tutte le donne e può essere consigliata, dopo una valutazione caso per caso, solo nelle donne a rischio di ipovitaminosi per questioni ambientali o carenze alimentari. Ferro Concentrazioni emoglobiniche < 11 g/dl nel primo trimestre e < 10,5 g/dl oltre la 28° settimana dovrebbero essere valutate e trattate appropriatamente per ottimizzare la concentrazione emoglobinica prima del parto e ridurre il risc io di trasfusioni urante la gravidanza il fabbisogno giornaliero di ferro nella donna è di circa 30 mg, quasi il doppio rispetto ai 18 mg necessari a una donna non incinta Se l’anemia in gravidanza non viene curata prontamente, le conseguenze possono coinvolgere anche il bambino, con un aumento del rischio di parto prematuro e la possibilità che il nascituro abbia un peso troppo basso. È necessario informare le donne su come migliorare l’assunzione di ferro ferroso con l’alimentazione. Iodio La quota stimata per evitare la carenza è di 200 μg/die (contro i 150 μg degli adulti) secondo LARN ed EFSA, 250 μg/die secondo il documento congiunto WHO/UNICEF (già United Nations International Childrens Emergency Fund). Calcio La supplementazione di calcio a basso dosaggio non è raccomandata nelle donne normo-calcemic e È comunque raccomandata l’assunzione di 1200 mg di calcio durante la gravidanza e non, quantità che può essere facilmente raggiunta consumando quotidianamente alimenti ricchi in calcio. La supplementazione di calcio potrebbe essere raccomandata nelle donne a rischio per ipertensione/ pre-eclampsia, nel caso in cui la loro calcemia e/o la loro assunzione alimentare sia ridotta. In tali casi si raccomanda la supplementazione di 1,5-2,0 g/die di calcio dalla ventesima settimana fino al termine della gravidanza. Fosforo Al fine di garantire un adeguato sviluppo del feto sono necessari 62 mg/die di Fosforo oltre il fisiologico fabbisogno della donna, ma considerando c e l’efficienza di assorbimento aumenta tanto da coprire questa differenza, non si ritiene di modificare i livelli di riferimento rispetto a quelli della donna in età fertile. Magnesio, sodio, potassio, cloro, zinco, selenio, rame In gravidanza, una dieta varia ed equilibrata, che soddisfi le necessità degli altri nutrienti essenziali, contiene quantità sufficienti di questi elementi, pertanto non sono necessarie supplementazioni. Fibre In gravidanza si consiglia, un apporto di fibre di circa 28 g/die come nelle donne in età fertile, con preferenza per il consumo di frutta, ortaggi e cereali integrali. Acqua Per le donne in gravidanza si raccomanda una assunzione di acqua giornaliera di 2,35L contro i 2L al giorno raccomandati per la donna in età fertile.",
+        "Diagnosi": "Il tuo profilo genetico ha evidenziato: gravidanza All’inizio della gravidanza è bene valutare lo stato di nutrizionale della donna ed il suo Body Mass Index (BMI), adeguando l’apporto energetico e nutrizionale durante la gravidanza in base al BMI pregravidico e alle Raccomandazioni OMS. Il peso materno prima della gravidanza e nella prima metà della gestazione è una finestra critica per l’intervento medico, in grado di influenzare il peso neonatale alla nascita In corso di gravidanza aumenta sensibilmente il fabbisogno di proteine, mentre è pressoché invariato quello di carboidrati e di grassi (LARN). I LARN riportano livelli di assunzione raccomandati di proteine di alta qualità per la popolazione, che corrispondono a 54 g/die per una donna adulta; questi livelli devono essere incrementati di una quota compresa tra 1 g/die nel primo trimestre di gestazione, 8 g/die nel secondo trimestre e 26 g/die nel terzo trimestre. Il consumo di carboidrati semplici non dovrebbe superare il 10-12% del fabbisogno energetico. Il consumo di carboidrati complessi dovrebbe essere tra il 45-60% del fabbisogno energetico. Nella scelta dei carboidrati è utile privilegiare cereali integrali per garantire anche un adeguato apporto di fibre (IOM). Il consumo di lipidi non dovrebbe superare il 25-30% del fabbisogno energetico, con particolare attenzione ai grassi saturi che dovrebbero rimanere al di sotto del 10%. Il fabbisogno di DHA aumenta di 100-200 mg al giorno durante gravidanza (EFSA, LARN)."
+    }
+]
