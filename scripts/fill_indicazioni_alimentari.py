@@ -104,6 +104,14 @@ def fill_template_from_dict(template_path, dict_data, output_path, committent, a
         integratori_text = ''
 
     print("CONDIZIONI LISTA")
+    updated_condizioni = []
+    for condizione in dict_data.get('condizioni', []):
+        if not any(keyword in condizione for keyword in ["Predisposizione", "predisposizione", "Intolleranza"]):
+            updated_condizioni.append(f"Paziente riferisce: {condizione}")
+        else:
+            updated_condizioni.append(condizione)
+    dict_data['condizioni'] = updated_condizioni
+    
     print('\n'.join(dict_data.get('condizioni', [])))
     # Mapping placeholders to corresponding JSON keys, using empty strings for missing data
     placeholders = {
@@ -151,15 +159,15 @@ def fill_template_from_dict(template_path, dict_data, output_path, committent, a
     # Replace placeholders in the document
     def replace_text_in_paragraph(paragraph, placeholders):
         """Replaces the text in a paragraph based on the given placeholders."""
-        print("\n\n###################### TEXT REPLACEMENT ######################\n\n")
+        # print("\n\n###################### TEXT REPLACEMENT ######################\n\n")
         for placeholder, replacement in placeholders.items():
-            print("\n\n###################### BEFORE REPLACEMENT ######################")
-            print(replacement)
+            # print("\n\n###################### BEFORE REPLACEMENT ######################")
+            # print(replacement)
             # replacement = replacement.capitalize()
             replacement = replacement.replace('<NEWLINE>', '\n')
             replacement = replacement.replace('<newline>', '\n')
-            print("\n\n###################### REPLACEMENT DONE ######################")
-            print(replacement)
+            # print("\n\n###################### REPLACEMENT DONE ######################")
+            # print(replacement)
             if placeholder in paragraph.text:
                 paragraph.text = paragraph.text.replace(placeholder, replacement)
 

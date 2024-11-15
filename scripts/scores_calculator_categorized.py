@@ -148,7 +148,7 @@ def calc_scores_categorized(test_type, results, scores_tuples, debug='on'):
                                 print('########## SNP ', snp, 'corresponds to ', category)    
                                 print(snp, "found in", pz)
 
-                            if category == ['Glutine'] and pz_snps[pz][snp] != 'Normale':
+                            if category == ['Glutine'] and pz_snps[pz][snp].lower() != 'normale':
                                 final_scores[pz]['Glutine']=pz_snps[pz][snp]
                                 continue
 

@@ -46,8 +46,12 @@ def gather_data(input_file_path, input_file_path2, primary_substrings, secondary
     print('gather_data')
     print(primary_substrings)
     print(secondary_substrings)
+
     filtered_primary = filter_records_smart(input_file_path, primary_substrings)
-    filtered_secondary = filter_records_smart(input_file_path2, secondary_substrings)
+
+    filtered_secondary = []
+    if secondary_substrings:
+        filtered_secondary = filter_records_smart(input_file_path2, secondary_substrings)
     filtered_data = filtered_primary + filtered_secondary
     with open(output_file_path, 'w', encoding='utf-8') as file:
         json.dump(filtered_data, file, indent=4, ensure_ascii=False)
