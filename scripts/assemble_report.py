@@ -1244,13 +1244,15 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
 
     gather_data('./static/consolidated_data_italian_with_subcategories.json', './static/consolidated_data_italian_with_subcategories_special.json', base_condition_filter, other_conditions_filter,'./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type))
     # input("STOP")
-    ai_response = ask_claude('./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type), prompt)
+    ai_response = ask_claude('./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type), prompt, analysis_type)
     ai_response_text = ai_response[0].text
+    # with open('./static/{0}_{1}_{2}_ai_response_text.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
+    #     f.write(str(ai_response_text))
     ai_response_dict = clean_and_convert_to_dict(ai_response_text)
     
-    ## Write the dictionary to a file
-    ## with open('./static/{0}_{1}_{2}_ai_response.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
-    ##     f.write(str(ai_response_dict))
+    # Write the dictionary to a file
+    # with open('./static/{0}_{1}_{2}_ai_response_dict.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
+    #     f.write(str(ai_response_dict))
 
     # # Read the dictionary back from the file
     # with open('./static/{0}_{1}_{2}_ai_response.txt'.format(name, patient_id, analysis_type), 'r', encoding='utf-8') as f:
