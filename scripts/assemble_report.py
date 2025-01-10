@@ -1225,10 +1225,23 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     final_pdf = original_pdf.replace('_result.pdf', '.pdf')
 
     prompt = ' '.join(diete_for_AI)
-    if "glutine" not in prompt.lower() and "celiachia" not in prompt.lower():
-            diete_for_AI.append("No intolleranza al Glutine. ")
-    if "lattosio" not in prompt.lower():
-            diete_for_AI.append("No intolleranza al Lattosio. ")
+
+    template_indicazioni = 'static/Indicazioni_alimentari.docx'
+
+    if ("glutine" in prompt.lower() or "celiachia" in prompt.lower() or "celiac" in prompt.lower()) and "lattosio" in prompt.lower():
+        template_indicazioni = 'static/Indicazioni_alimentari_glut_latt.docx'
+    else:
+        if "glutine" not in prompt.lower() and "celiachia" not in prompt.lower() and "celiac" not in prompt.lower():
+                diete_for_AI.append("No intolleranza al Glutine. ")
+        else:
+            template_indicazioni = 'static/Indicazioni_alimentari_glut.docx'
+
+        if "lattosio" not in prompt.lower():
+                diete_for_AI.append("No intolleranza al Lattosio. ")
+        else:
+            template_indicazioni = 'static/Indicazioni_alimentari_latt.docx'
+    
+
         
     diete_for_AI.append("\n1. Dammi la risposta in formato JSON, senza altro testo prima o dopo. Sanifica tutti i caratteri speciali, specialmente le virgolette.\n2. La struttura del JSON in output ricalchera' quella dei JSON di esempio.\n3. Per i pazienti VEGETARIANI, la chiave \"Proteine\" in \"raccomandazioni\" non conterra' le chiavi \"CARNE\" e \"PESCE\", ma solo \"ALIMENTI DI ORIGINE VEGETALE\", \"LEGUMI\", \"LATTICINI\" e \"UOVA\". Per i pazienti VEGANI, la sezione \"Proteine\" in \"raccomandazioni\" non conterra' le chiavi \"CARNE\", \"PESCE\", \"LATTICINI\" e \"UOVA\", ma solo \"ALIMENTI DI ORIGINE VEGETALE\" e \"LEGUMI\".\n4. Nella chiave \"raccomandazioni\" aggiungi eventuali integratori (SENZA SPECIFICARE LA MARCA COMMERCIALE), dosaggio e motivazione, sotto la chiave \"Integratori\", se necessari al paziente nelle sue condizioni. \"Integratori\" sara' strutturato nel seguente modo: \"Integratori\":[{ \"tipo\", \"dosaggio\", \"motivazione\" }].\n4.1 NON PRESCRIVERE INTEGRATORI A BASE DI CROMO. \n4.2 Se prescrivi integratori a base di Omega-3, nel dosaggio inserisci la nota \"La FDA consiglia di non superare un'assunzione totale di 3 grammi al giorno di EPA e DHA combinati (acidi grassi omega-3), con un massimo di 2 grammi provenienti da integratori alimentari.\".\n5. Per la sezione \"diagnosi\", approfondisci in maniera divulgativa ma estensivamente tutti gli aspetti e le eventuali predisposizioni/intolleranze, facendo cenni anche alla genetica, ricalcando i JSON di esempio quando disponibili per una particolare condizione, e solo partendo da questo testo ricalcato eventualmente espanderlo con osservazioni scientificamente fondate. Se nel JSON di esempio sono presenti \"raccomandazioni\" relative a una certa intolleranza/condizione, riportale, e poi espandile se necessario o se pensi di poter aggiungere informazioni importanti.\n6. Se consigli dispositivi medici o trattamenti terapeutici, inseriscili SEMPRE usando la dicitura \"Oltre alla dieta e all'esercizio, potrebbe essere necessaria la prescrizione da parte di un medico specialista di {dispositivo o trattamento suggerito}\" \n7. Nomina i geni solo se gia' presenti nel file JSON di esempio per quella condizione, non aggiungere altri geni non verificati nella tua risposta. Non inserire KCNJ11 tra i geni per il diabete, perche' al momento non lo indaghiamo. Tra i geni per le malattie cardiovascolari, nomina solo APOE e MTNR1B. \n8. Non menzionare cancro o tumore nella sezione \"Diagnosi\".\n9. Dopo aver generato il JSON, validane internamente la struttura prima di fornirmelo.\n10. Espandi le liste alimenti il piu' possibile, cerca di indicare almeno 5-10 alimenti per categoria di macronutrienti e livello di tollerabilita'.\n11. Dopo aver generato le liste di alimenti, confrontale di nuovo con le \"condizioni\" del paziente e correggi eventuali incoerenze.\n12. Hai oltre 8000 token disponibili, elabora estensivamente ogni condizione nella sezione Diagnosi.")
 
@@ -1259,7 +1272,8 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     #     ai_response_dict = ast.literal_eval(f.read())
     # Parse the text as JSON
     print(ai_response_dict)
-    fill_template_from_dict('static/Indicazioni_alimentari.docx', ai_response_dict, './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type), committent, analysis_type)
+
+    fill_template_from_dict(template_indicazioni, ai_response_dict, './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type), committent, analysis_type)
 
     final_docx = './ARCHIVIO/{0}_{1}_{2}_result.docx'.format(name, patient_id, analysis_type)
     merge_docx(['./ARCHIVIO/{0}_{1}_{2}_genetics.docx'.format(name, patient_id, analysis_type), './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type)], final_docx)
