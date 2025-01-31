@@ -9,10 +9,10 @@ rules = {
         'Low Vitamin D':[3,1000], 
         'Low Vitamin B9':[4,1000]},
     'Plus':{
-        'Sens. Alcol' : [1, 999],
-        'Fruttosio':[2,1000], 
+        'Sens. Alcol' : [2, 999],
+        'Fruttosio':[3,1000], 
         'Lattosio':[1,1000],  
-        'Nichel':[2,1000], 
+        'Nichel':[4,1000], 
         'Caffeina':{'Lento':[-999,-1], 'Veloce':[1,999]},
         'Glutine':[1,1000]},
     'Vita':{

@@ -124,10 +124,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali , margarine vegetali idrogenate"
+                        "items": "Oli vegetali , margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato"
                     }
                 }
             },
@@ -263,7 +263,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -395,10 +395,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali , margarine vegetali idrogenate"
+                        "items": "Oli vegetali , margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato"
                     }
                 }
             },
@@ -532,10 +532,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
                     }
                 }
             },
@@ -671,7 +671,7 @@
                         "items": "Oli vegetali raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco in eccesso, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, olio di cocco in eccesso, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -804,10 +804,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -934,7 +934,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,burro, strutto, margarina, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma,burro, strutto, margarina idrogenata, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             },
@@ -1049,10 +1049,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali , margarine vegetali idrogenate"
+                        "items": "Oli vegetali , margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, salse grasse, snack fritti, cibi da fast food, dolci industriali, merendine confezionate"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, salse grasse, snack fritti, cibi da fast food, dolci industriali, merendine confezionate"
                     }
                 }
             },
@@ -1185,10 +1185,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate, alimenti fritti in oli di scarsa qualità"
+                        "items": "margarine vegetali, alimenti fritti in oli di scarsa qualità"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -1320,10 +1320,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, panna montata, creme spalmabili, salse grasse, snack fritti, cibi processati ricchi di grassi trans, dolci industriali"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, panna montata, creme spalmabili, salse grasse, snack fritti, cibi processati ricchi di grassi trans, dolci industriali"
                     }
                 }
             },
@@ -1458,7 +1458,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -1595,7 +1595,7 @@
                         "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero"
                     }
                 }
             },
@@ -1728,10 +1728,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -1866,7 +1866,7 @@
                         "items": "Oli vegetali raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, salse grasse, maionese, alimenti processati ricchi di grassi trans, snack fritti, fast food"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, salse grasse, maionese, alimenti processati ricchi di grassi trans, snack fritti, fast food"
                     }
                 }
             },
@@ -2003,7 +2003,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             },
@@ -2138,7 +2138,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma,burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             },
@@ -2272,10 +2272,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -2412,7 +2412,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -2546,10 +2546,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali , margarine vegetali idrogenate"
+                        "items": "Oli vegetali , margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato, snack confezionati, prodotti da forno industriali"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato, snack confezionati, prodotti da forno industriali"
                     }
                 }
             },
@@ -2685,7 +2685,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali"
+                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali"
                     }
                 }
             },
@@ -2822,7 +2822,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -2958,7 +2958,7 @@
                         "items": "Piccole quantità di burro chiarificato (ghee)"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma,burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             }
@@ -3093,7 +3093,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -3228,7 +3228,7 @@
                         "items": "Piccole quantità di burro chiarificato (ghee)"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma,burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             },
@@ -3360,10 +3360,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -3495,10 +3495,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali poco raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali poco raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, , burro, strutto, margarina, lardo, insaccati, formaggi grassi,  fritture, panna, creme vegetali, grassi idrogenati, prodotti da forno industriali, snack fritti, fast food"
+                        "items": "Olio di palma, , burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi,  fritture, panna, creme vegetali, grassi idrogenati, prodotti da forno industriali, snack fritti, fast food"
                     }
                 }
             },
@@ -3630,10 +3630,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
                     }
                 }
             },
@@ -3770,7 +3770,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali"
+                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali"
                     }
                 }
             },
@@ -3905,7 +3905,7 @@
                         "items": "Pesce come: salmone, tonno in scatola sott'olio"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, salse grasse, maionese, snack fritti, fast food"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, salse grasse, maionese, snack fritti, fast food"
                     }
                 }
             },
@@ -4041,7 +4041,7 @@
                         "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, creme spalmabili, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, creme spalmabili, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -4174,10 +4174,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
                     }
                 }
             },
@@ -4310,10 +4310,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -4449,7 +4449,7 @@
                         "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, salse grasse, maionese, snack fritti, fast food"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, salse grasse, maionese, snack fritti, fast food"
                     }
                 }
             },
@@ -4581,10 +4581,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, crema di latte, formaggi cremosi, salse grasse, snack fritti"
+                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, crema di latte, formaggi cremosi, salse grasse, snack fritti"
                     }
                 }
             },
@@ -4716,10 +4716,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate, alimenti fritti in oli di scarsa qualità"
+                        "items": "margarine vegetali, alimenti fritti in oli di scarsa qualità"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -4854,7 +4854,7 @@
                         "items": "Oli vegetali raffinati , margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, creme vegetali, salse grasse, snack fritti, cibi ultra-processati, dolci industriali, gelati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, creme vegetali, salse grasse, snack fritti, cibi ultra-processati, dolci industriali, gelati"
                     }
                 }
             },
@@ -4987,10 +4987,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -5124,10 +5124,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
                     }
                 }
             },
@@ -5263,7 +5263,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -5397,10 +5397,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -5534,10 +5534,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -5674,7 +5674,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -5809,7 +5809,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, salse grasse, maionese industriale, snack fritti"
+                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, salse grasse, maionese industriale, snack fritti"
                     }
                 }
             },
@@ -5942,10 +5942,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -6077,10 +6077,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali poco raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali poco raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -6213,10 +6213,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali , margarine vegetali idrogenate"
+                        "items": "Oli vegetali , margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato, snack confezionati, prodotti da forno industriali"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato, snack confezionati, prodotti da forno industriali"
                     }
                 }
             },
@@ -6335,7 +6335,7 @@
                         "items": "Oli vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali ricche di grassi saturi, salse grasse, snack fritti"
+                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali ricche di grassi saturi, salse grasse, snack fritti"
                     }
                 }
             },
@@ -6470,7 +6470,7 @@
                         "items": "Oli vegetali raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco in eccesso, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, olio di cocco in eccesso, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -6627,7 +6627,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -6759,10 +6759,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, crema di latte, formaggi cremosi, salse grasse, snack fritti, cibi processati ricchi di grassi trans, dolci industriali, biscotti, crackers salati"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, crema di latte, formaggi cremosi, salse grasse, snack fritti, cibi processati ricchi di grassi trans, dolci industriali, biscotti, crackers salati"
                     }
                 }
             },
@@ -6898,7 +6898,7 @@
                         "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, creme spalmabili, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, creme spalmabili, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -7034,7 +7034,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma,burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             },
@@ -7167,10 +7167,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate, alimenti fritti in oli di scarsa qualità"
+                        "items": "margarine vegetali, alimenti fritti in oli di scarsa qualità"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -7285,10 +7285,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali , margarine vegetali idrogenate"
+                        "items": "Oli vegetali , margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, salse grasse, snack fritti, cibi da fast food, dolci industriali, merendine confezionate"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, salse grasse, snack fritti, cibi da fast food, dolci industriali, merendine confezionate"
                     }
                 }
             },
@@ -7421,10 +7421,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate, alimenti fritti in oli di scarsa qualità"
+                        "items": "margarine vegetali, alimenti fritti in oli di scarsa qualità"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -7556,10 +7556,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, olio di cocco in grandi quantità, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -7694,7 +7694,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -7828,10 +7828,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate, alimenti fritti in oli di scarsa qualità"
+                        "items": "margarine vegetali, alimenti fritti in oli di scarsa qualità"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -7967,7 +7967,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -8090,10 +8090,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, ketchup, maionese, panna, creme, salse grasse, creme spalmabili, snack fritti, fast food, cibi processati ricchi di grassi saturi"
+                        "items": "Olio di palma,burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, ketchup, maionese, panna, creme, salse grasse, creme spalmabili, snack fritti, fast food, cibi processati ricchi di grassi saturi"
                     }
                 }
             },
@@ -8227,10 +8227,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -8363,10 +8363,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
                     }
                 }
             },
@@ -8468,7 +8468,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,, margarina, snack fritti,  dolci industriali, creme spalmabili industriali"
+                        "items": "Olio di palma,, margarina idrogenata, snack fritti,  dolci industriali, creme spalmabili industriali"
                     }
                 }
             },
@@ -8601,10 +8601,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
                     }
                 }
             },
@@ -8740,7 +8740,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -8876,7 +8876,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, cibi fritti, snack confezionati, dolci industriali, patatine fritte"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, cibi fritti, snack confezionati, dolci industriali, patatine fritte"
                     }
                 }
             }
@@ -9002,7 +9002,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, cibi fritti, snack confezionati, dolci industriali, patatine fritte"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, cibi fritti, snack confezionati, dolci industriali, patatine fritte"
                     }
                 }
             },
@@ -9138,7 +9138,7 @@
                         "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, formaggi stagionati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero, formaggi stagionati"
                     }
                 }
             },
@@ -9273,7 +9273,7 @@
                         "items": "Oli vegetali "
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, salse grasse, maionese, snack fritti, patatine in busta, cibi da fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, salse grasse, maionese, snack fritti, patatine in busta, cibi da fast food"
                     }
                 }
             },
@@ -9410,7 +9410,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma,burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             },
@@ -9542,10 +9542,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate, alimenti fritti in oli di scarsa qualità"
+                        "items": "margarine vegetali, alimenti fritti in oli di scarsa qualità"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -9677,10 +9677,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, panna acida, creme spalmabili al cioccolato, snack fritti, patatine fritte, alimenti processati ricchi di grassi trans"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, panna acida, creme spalmabili al cioccolato, snack fritti, patatine fritte, alimenti processati ricchi di grassi trans"
                     }
                 }
             },
@@ -9812,10 +9812,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, merendine, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, merendine, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi"
                     }
                 }
             },
@@ -9947,10 +9947,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, salse grasse, snack fritti, cibi processati ricchi di grassi trans"
                     }
                 }
             },
@@ -10086,7 +10086,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma,burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             }
@@ -10218,10 +10218,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate, alimenti fritti in oli di scarsa qualità"
+                        "items": "margarine vegetali, alimenti fritti in oli di scarsa qualità"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -10354,10 +10354,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
                     }
                 }
             },
@@ -10489,10 +10489,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate, alimenti fritti in oli di scarsa qualità"
+                        "items": "margarine vegetali, alimenti fritti in oli di scarsa qualità"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -10628,7 +10628,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             },
@@ -10754,7 +10754,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, cibi fritti, snack confezionati, dolci industriali, patatine fritte"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, cibi fritti, snack confezionati, dolci industriali, patatine fritte"
                     }
                 }
             },
@@ -10888,10 +10888,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate, alimenti fritti in oli di scarsa qualità"
+                        "items": "margarine vegetali, alimenti fritti in oli di scarsa qualità"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, panna, creme, dolci industriali, snack confezionati, cibi fast food"
                     }
                 }
             },
@@ -11027,7 +11027,7 @@
                         "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme a base di latte intero"
                     }
                 }
             },
@@ -11144,10 +11144,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "margarine vegetali idrogenate"
+                        "items": "margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina,   formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata,   formaggi grassi, carboidrati raffinati, fritture, panna, creme a base di latte intero, formaggi stagionati, salse a base di panna, cibi fritti, snack confezionati"
                     }
                 }
             },
@@ -11283,7 +11283,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -11420,7 +11420,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma,  burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, cibi fritti, snack confezionati, dolci industriali, patatine fritte"
+                        "items": "Olio di palma,  burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme, salse grasse, cibi fritti, snack confezionati, dolci industriali, patatine fritte"
                     }
                 }
             },
@@ -11556,7 +11556,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali, grassi idrogenati"
                     }
                 }
             },
@@ -11692,7 +11692,7 @@
                         "items": "Oli vegetali poco raffinati"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese industriale, panna, panna montata, creme spalmabili al cioccolato, snack fritti, patatine fritte"
                     }
                 }
             },
@@ -11824,10 +11824,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali , margarine vegetali idrogenate"
+                        "items": "Oli vegetali , margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme spalmabili al cioccolato"
                     }
                 }
             },
@@ -11963,7 +11963,7 @@
                         "items": "Oli vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali ricche di grassi saturi, salse grasse, snack fritti"
+                        "items": "Olio di palma, olio di cocco raffinato, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, creme vegetali ricche di grassi saturi, salse grasse, snack fritti"
                     }
                 }
             },
@@ -12095,10 +12095,10 @@
                 },
                 "Sconsigliati": {
                     "GRASSI MONOINSATURI E POLINSATURI": {
-                        "items": "Oli vegetali raffinati, margarine vegetali idrogenate"
+                        "items": "Oli vegetali raffinati, margarine vegetali"
                     },
                     "GRASSI SATURI": {
-                        "items": "Olio di palma, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, crema di latte, formaggi cremosi, salse grasse, cibi fritti, snack confezionati, dolci industriali, creme spalmabili al cioccolato"
+                        "items": "Olio di palma, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese, panna, crema di latte, formaggi cremosi, salse grasse, cibi fritti, snack confezionati, dolci industriali, creme spalmabili al cioccolato"
                     }
                 }
             },
@@ -12757,7 +12757,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -12921,7 +12921,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -13086,7 +13086,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -13251,7 +13251,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -13417,7 +13417,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -13582,7 +13582,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -13747,7 +13747,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -13912,7 +13912,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -14077,7 +14077,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -14243,7 +14243,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -14407,7 +14407,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },
@@ -14573,7 +14573,7 @@
                     },
                     "GRASSI SATURI": {
                         "dosage": "S: max 1 volta ogni 10 giorni, meglio evitarli",
-                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
+                        "items": "Olio di palma, olio di cocco, burro, strutto, margarina idrogenata, lardo, insaccati, formaggi grassi, carboidrati raffinati, fritture, maionese"
                     }
                 }
             },

@@ -46,7 +46,7 @@ def calc_weights_dict(df):
         if genotype not in weights_dict[gene][snp]:
             weights_dict[gene][snp][genotype] = weight
         else:
-            print("error", gene, snp, genotype), "already present"
+            print("error", gene, snp, genotype, "already present")
     
     #pprint(weights_dict)
     return weights_dict

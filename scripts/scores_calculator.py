@@ -1,22 +1,22 @@
 import itertools
 rules = {
     'Peso':{
-        'alto':[20,999],
-        'medio':[15,19],
-        'lieve':[10,14],
-        'non evidente':[-1,9]
+        'alto':[19,999],
+        'medio':[15,18],
+        'lieve':[9,14],
+        'non evidente':[-1,8]
     },
     'T2D': {
-        'alto': [20, 999],
-        'medio': [15, 19],
-        'lieve': [7, 14],
+        'alto': [21, 999],
+        'medio': [14, 20],
+        'lieve': [7, 13],
         'non evidente': [-1, 6]
     },
     'Cardio': {
-        'alto': [22, 999],
-        'medio': [17, 21],
-        'lieve': [12, 16],
-        'non evidente': [-5, 11]
+        'alto': [21, 999],
+        'medio': [11, 20],
+        'lieve': [5, 10],
+        'non evidente': [-15, 4]
     }
 }
 
