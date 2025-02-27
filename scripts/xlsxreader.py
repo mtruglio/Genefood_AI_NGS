@@ -211,7 +211,7 @@ def read_query(filein, packages):
         wb = load_workbook(filename = filein)
         parsed_sheet = wb['Foglio '+p]
         # print("MAX COL",parsed_sheet.max_column)
-        rows_iter = parsed_sheet.iter_rows(min_col = 1, min_row = 3, max_col = parsed_sheet.max_column+10, max_row = 11)
+        rows_iter = parsed_sheet.iter_rows(min_col = 1, min_row = 3, max_col = parsed_sheet.max_column+10, max_row = 13)
         # if p=='Vita':
         #     for row in rows_iter:
         #         for cell in list(row):
@@ -224,7 +224,7 @@ def read_query(filein, packages):
 
         
         # re initialize iterator
-        rows_iter = parsed_sheet.iter_rows(min_col = 1, min_row = 3, max_col = parsed_sheet.max_column+10, max_row = 11)
+        rows_iter = parsed_sheet.iter_rows(min_col = 1, min_row = 3, max_col = parsed_sheet.max_column+10, max_row = 13)
         legend = []
         for row in rows_iter:
             # print(row)
@@ -243,11 +243,13 @@ def read_query(filein, packages):
             patient_code = str(pazienti[0][i])
             patient_id = str(pazienti[1][i])
             patient_name = pazienti[2][i]
-            patient_weight = pazienti[3][i]
-            patient_height = pazienti[4][i]
-            patient_lim = pazienti[6][i].lower()
-            patient_dob = pazienti[7][i]
-            patient_committent = pazienti[8][i]
+            patient_email = pazienti[3][i]
+            patient_cf = pazienti[4][i]
+            patient_weight = pazienti[5][i]
+            patient_height = pazienti[6][i]
+            patient_lim = pazienti[8][i].lower()
+            patient_dob = pazienti[9][i]
+            patient_committent = pazienti[10][i]
 
             if len(patient_code) != 8:
                 error = check_wrong_data(patient_name, p)
@@ -256,16 +258,16 @@ def read_query(filein, packages):
             
             
             if p=='Mamma':
-                patient_gest = pazienti[5][i]
-                pazienti_dict[patient_code] = {'code':patient_code, 'id':patient_id, 'name':patient_name, 'peso':patient_weight, 'altezza':patient_height, 'gestazione':patient_gest, 'lim':patient_lim, 'DOB':patient_dob, 'committent': patient_committent} 
+                patient_gest = pazienti[7][i]
+                pazienti_dict[patient_code] = {'code':patient_code, 'id':patient_id, 'name':patient_name, 'email':patient_email, 'cf':patient_cf, ':peso':patient_weight, 'altezza':patient_height, 'gestazione':patient_gest, 'lim':patient_lim, 'DOB':patient_dob, 'committent': patient_committent} 
             else:
-                patient_sex = pazienti[5][i]
-                pazienti_dict[patient_code] = {'code':patient_code, 'id':patient_id, 'name':patient_name, 'peso':patient_weight, 'altezza':patient_height, 'sesso':patient_sex, 'lim':patient_lim, 'DOB':patient_dob, 'committent': patient_committent} 
+                patient_sex = pazienti[7][i]
+                pazienti_dict[patient_code] = {'code':patient_code, 'id':patient_id, 'name':patient_name, 'email':patient_email, 'cf':patient_cf, 'peso':patient_weight, 'altezza':patient_height, 'sesso':patient_sex, 'lim':patient_lim, 'DOB':patient_dob, 'committent': patient_committent} 
         
         if p!='Condizioni':
-            sheet =  pd.read_excel(filein, sheet_name='Foglio '+p, skiprows=11, index_col=0, names=["Gene", "SNP", "WT", "alt"]+list(pazienti_dict.keys()))
+            sheet =  pd.read_excel(filein, sheet_name='Foglio '+p, skiprows=13, index_col=0, names=["Gene", "SNP", "WT", "alt"]+list(pazienti_dict.keys()))
         else:
-            sheet =  pd.read_excel(filein, sheet_name='Foglio '+p, skiprows=10, nrows=1)
+            sheet =  pd.read_excel(filein, sheet_name='Foglio '+p, skiprows=12, nrows=1)
             sheet = sheet.iloc[:, 5:]
             names=list(pazienti_dict.keys())
             sheet.columns = names
@@ -275,6 +277,7 @@ def read_query(filein, packages):
         print("THIS IS ALLRESULTS FROMM XLSXREADER for", p)
         # print(pazienti_dict)
         print(all_results[p])
+        # input("WAIT")
     if errors:
         raise ValidationError(';'.join(errors))
     return all_results

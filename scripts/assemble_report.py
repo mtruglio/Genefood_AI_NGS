@@ -1262,26 +1262,30 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     # input("STOP")
     ai_response = ask_claude('./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type), prompt, analysis_type)
     ai_response_text = ai_response[0].text
-    # with open('./static/{0}_{1}_{2}_ai_response_text.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
-    #     f.write(str(ai_response_text))
+
+    # # Write the text to a file # ONLY FOR TESTING
+    # # with open('./static/{0}_{1}_{2}_ai_response_text.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
+    # #     f.write(str(ai_response_text))
+
     ai_response_dict = clean_and_convert_to_dict(ai_response_text)
     
-    # Write the dictionary to a file
-    # with open('./static/{0}_{1}_{2}_ai_response_dict.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
-    #     f.write(str(ai_response_dict))
+    # # Write the dictionary to a file # ONLY FOR TESTING
+    # # with open('./static/{0}_{1}_{2}_ai_response_dict.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
+    # #     f.write(str(ai_response_dict))
 
-    # # Read the dictionary back from the file
-    # with open('./static/{0}_{1}_{2}_ai_response.txt'.format(name, patient_id, analysis_type), 'r', encoding='utf-8') as f:
+    # # Read the dictionary back from the file # ONLY FOR TESTING
+    # with open('./static/{0}_{1}_{2}_ai_response_dict.txt'.format(name, patient_id, analysis_type), 'r', encoding='utf-8') as f:
     #     ai_response_dict = ast.literal_eval(f.read())
     # Parse the text as JSON
-    print(ai_response_dict)
+    # print(ai_response_dict)
 
-    fill_template_from_dict(template_indicazioni, ai_response_dict, './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type), committent, analysis_type)
+    print("AI response received:", ai_response_dict)
+    return ai_response_dict, template_indicazioni, name, patient_id, analysis_type, committent
+    # fill_template_from_dict(template_indicazioni, ai_response_dict, './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type), committent, analysis_type)
 
-    final_docx = './ARCHIVIO/{0}_{1}_{2}_result.docx'.format(name, patient_id, analysis_type)
-    merge_docx(['./ARCHIVIO/{0}_{1}_{2}_genetics.docx'.format(name, patient_id, analysis_type), './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type)], final_docx)
-    # joinpdf(diete, final_pdf)
-    # os.remove(original_pdf)
+    # final_docx = './ARCHIVIO/{0}_{1}_{2}_result.docx'.format(name, patient_id, analysis_type)
+    # merge_docx(['./ARCHIVIO/{0}_{1}_{2}_genetics.docx'.format(name, patient_id, analysis_type), './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type)], final_docx)
+
     
     if button == "Invia ad Astrolabio":
         copyfile(final_pdf, os.path.join('./pseudoAstrolabio', os.path.basename(final_pdf)))

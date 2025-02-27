@@ -1,5 +1,5 @@
 #!/home/utente/miniconda3/envs/genefood/bin/python
-from flask import Flask, flash, session, render_template, request, redirect, url_for, send_file
+from flask import Flask, flash, session, render_template, request, redirect, url_for, send_file, jsonify
 from webargs.flaskparser import abort, parser
 from flask_session import Session
 import pandas as pd
@@ -16,14 +16,19 @@ from pprint import pprint
 import werkzeug
 from utils import errors
 from utils.errors import ValidationError as ValidationError
+import json
+from scripts.docx_to_pdf import convert_to, joinpdf, merge_docx
 
 debug = 'on'
 
 app = Flask(__name__)
 app.config.from_object("config.ProductionConfig")
+# app.config.from_object("config.DevelopmentConfig")
 app.register_error_handler(ValidationError, errors.handle_400_errors)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
+app.config['JSON_AS_ASCII'] = False
+app.jinja_env.policies['json.dumps_kwargs'] = {'ensure_ascii': False}
 Session(app)
 scores_peso, scores_t2d, scores_cardio, scores_mamma, notes_mamma, scores_plus, notes_plus, scores_vita, notes_vita, \
     scores_sport, notes_sport, scores_ageing, notes_ageing, scores_junior_intoll, notes_junior_intoll, scores_junior_frag, notes_junior_frag, \
@@ -272,7 +277,11 @@ def report_process(analysis_type, patient_id):
     # print(raw_results)
     print("Assembling report for ", analysis_type, patient_id)  
     name = reports[analysis_type][0][patient_id]['name']
-    assemble_report(patient_id=patient_id, analysis_type=analysis_type, raw_results=raw_results, \
+    cf = reports[analysis_type][0][patient_id]['cf']
+    email = reports[analysis_type][0][patient_id]['email']
+    session['patient_data'] = session.get('patient_data', {})
+
+    ai_response_dict, template_indicazioni, name, patient_id, analysis_type, committent = assemble_report(patient_id=patient_id, analysis_type=analysis_type, raw_results=raw_results, \
         reports=reports, scores_peso=scores_peso, scores_t2d=scores_t2d, scores_cardio=scores_cardio, \
         scores_mamma=scores_mamma, notes_mamma=notes_mamma, scores_plus=scores_plus, notes_plus=notes_plus, \
         scores_vita=scores_vita, notes_vita=notes_vita, scores_sport=scores_sport, notes_sport=notes_sport, \
@@ -284,14 +293,165 @@ def report_process(analysis_type, patient_id):
         testo_sportlong, testo_ageingshort, testo_ageinglong, testo_juniormet_short, testo_juniormet_long, testo_juniorintoll_short, \
         testo_juniorintoll_long, testo_juniorfrag_short, testo_juniorfrag_long, testo_juniorcarie_short, testo_juniorcarie_long), \
         button=clicked_button, debug=debug)
+    session['patient_data'][patient_id] = {
+    'name': name,
+    'cf': cf,
+    'email': email,
+    'ai_response_dict': ai_response_dict,
+    'template_indicazioni': template_indicazioni,
+    'analysis_type': analysis_type,
+    'committent': committent
+    }
     if clicked_button == "Download Word":
-        return send_file('ARCHIVIO/{0}_{1}_{2}_result.docx'.format(name, patient_id, analysis_type), as_attachment=True)
+        # return send_file('ARCHIVIO/{0}_{1}_{2}_result.docx'.format(name, patient_id, analysis_type), as_attachment=True)
+        return jsonify(success=True, patient_id=patient_id)
+
     elif clicked_button == "Download PDF":
         return send_file('ARCHIVIO/{0}_{1}_{2}.pdf'.format(name, patient_id, analysis_type), as_attachment=True)
     elif clicked_button == "Invia ad Astrolabio":
         print("entrato in astrolabio")
         return ('', 204)
     
+@app.route('/edit_ai_response', methods=['GET', 'POST'])
+def edit_ai_response():
+    patient_id = request.args.get('patient_id')
+    print("################# EDIT AI RESPONSE #################")
+    print(patient_id)
+    print(session.get('patient_data', {}))
+    patient_data = session.get('patient_data', {})
+    
+    if patient_id and patient_id in patient_data:
+        ai_response = patient_data[patient_id].get('ai_response_dict', {})
+        name = patient_data[patient_id].get('name', '')
+        cf = patient_data[patient_id].get('cf', '')
+        email = patient_data[patient_id].get('email', '')
+        analysis_type = patient_data[patient_id].get('analysis_type', '')
+        committent = patient_data[patient_id].get('committent', '')
+        template_indicazioni = patient_data[patient_id].get('template_indicazioni', '')
+    else:
+        # Fallback to original session variables if patient data not found
+        ai_response = session.get('ai_response_dict', {})
+        name = session.get('name', '')
+        cf = session.get('cf', '')
+        email = session.get('email', '')
+        patient_id = session.get('patient_id', '')
+        analysis_type = session.get('analysis_type', '')
+        committent = session.get('committent', '')
+        template_indicazioni = session.get('template_indicazioni', '')
+    
+    # For GET request, prepare the form
+    if request.method == 'GET':
+        if 'raccomandazioni' in ai_response:
+            json_string = json.dumps(ai_response['raccomandazioni'], indent=2, ensure_ascii=False)
+            ai_response['raccomandazioni'] = json_string
+            
+        print("NAME", name)
+        print("PATIENT ID", patient_id)
+        print("ANALYSIS TYPE", analysis_type)
+        print("COMMITTENT", committent)
+        return render_template('ai_response_edit.html', ai_response=ai_response, 
+                               name=name, patient_id=patient_id, analysis_type=analysis_type, 
+                               committent=committent, template_indicazioni=template_indicazioni)
+    
+    # For POST request, process the form submission
+    elif request.method == 'POST':
+        # Get the form data
+        updated_response = request.form.to_dict()
+        
+        # Get the original AI response dictionary to preserve all fields
+        original_ai_response = patient_data[patient_id]['ai_response_dict'].copy()
+        
+        # Update the name and patient_id if they were changed in the form
+        if 'name' in updated_response:
+            original_ai_response['name'] = updated_response['name']
+            patient_data[patient_id]['name'] = updated_response['name']
+            name = updated_response['name']
+        
+        if 'patient_id' in updated_response and updated_response['patient_id'] != patient_id:
+            # Handle potential patient_id change carefully
+            new_patient_id = updated_response['patient_id']
+            print(f"Note: Patient ID was changed from {patient_id} to {new_patient_id} but the original reference is maintained")
+        
+        # Convert the raccomandazioni string back to a dictionary
+        raccomandazioni_dict = {}
+        if 'raccomandazioni' in updated_response:
+            try:
+                raccomandazioni_dict = json.loads(updated_response['raccomandazioni'])
+                # Update only the raccomandazioni field in the original dictionary
+                original_ai_response['raccomandazioni'] = raccomandazioni_dict
+            except json.JSONDecodeError as e:
+                print(f"Error parsing JSON: {e}")
+                print("Error parsing JSON in recommendations")
+                # Keep the original raccomandazioni if parsing fails
+        
+        if 'diagnosi' in updated_response:
+            original_ai_response['Diagnosi'] = updated_response['diagnosi']
+
+        # Update other fields that might have been modified in the form
+        for key in updated_response:
+            if key not in ['name', 'patient_id', 'raccomandazioni', 'Diagnosi']:
+                original_ai_response[key] = updated_response[key]
+
+        
+        # Update the stored patient data with the modified original dictionary
+        patient_data[patient_id]['ai_response_dict'] = original_ai_response
+        
+        # Get the necessary variables for fill_template_from_dict
+        analysis_type = patient_data[patient_id].get('analysis_type', '')
+        committent = patient_data[patient_id].get('committent', '')
+        template_indicazioni = patient_data[patient_id].get('template_indicazioni', '')
+        
+        try:
+            from scripts.assemble_report import fill_template_from_dict
+            output_file = './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type)
+            fill_template_from_dict(template_indicazioni, original_ai_response, output_file, committent, analysis_type)
+            final_docx = './ARCHIVIO/{0}_{1}_{2}_result.docx'.format(name, patient_id, analysis_type)
+            merge_docx(['./ARCHIVIO/{0}_{1}_{2}_genetics.docx'.format(name, patient_id, analysis_type), 
+                        './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type)], final_docx)
+            
+            # Create and save the JSON file with the specified structure
+            json_file_path = './ARCHIVIO/{0}_{1}_{2}_result.json'.format(name, patient_id, analysis_type)
+            json_data = {
+                "Email": email,
+                "CF": cf
+            }
+            
+            # Add the raccomandazioni content but remove specified keys
+            if raccomandazioni_dict:
+                # Create a copy to avoid modifying the original dictionary
+                filtered_raccomandazioni = raccomandazioni_dict.copy()
+                
+                # Remove unwanted keys if they exist
+                if "Verdure" in filtered_raccomandazioni:
+                    filtered_raccomandazioni.pop("Verdure")
+                if "Integratori" in filtered_raccomandazioni:
+                    filtered_raccomandazioni.pop("Integratori")
+                
+                # Add the filtered dictionary to json_data
+                json_data.update(filtered_raccomandazioni)
+
+            # Write the JSON file
+            with open(json_file_path, 'w', encoding='utf-8') as json_file:
+                json.dump(json_data, json_file, indent=2, ensure_ascii=False)
+
+            print(f"JSON file created: {json_file_path}")
+            
+            # Return the file as download which will trigger the window close
+            return send_file(final_docx, as_attachment=True, 
+                            download_name="{0}_{1}_{2}_result.docx".format(name, patient_id, analysis_type))
+            
+        except Exception as e:
+            print(f"Error generating report: {e}")
+            # In case of error, return a message but don't close window
+            return render_template('ai_response_edit.html', ai_response=original_ai_response, 
+                                  name=name, patient_id=patient_id, analysis_type=analysis_type, 
+                                  committent=committent, template_indicazioni=template_indicazioni,
+                                  error_message=f"Error generating report: {str(e)}")
+    
+    return render_template('ai_response_edit.html', ai_response={}, 
+                           name='', patient_id='', analysis_type='', 
+                           committent='', template_indicazioni='')
+
 if __name__ == '__main__':
     print("HELLO")
     scores_peso, scores_t2d, scores_cardio, scores_mamma, notes_mamma, scores_plus, notes_plus, scores_vita, notes_vita, \

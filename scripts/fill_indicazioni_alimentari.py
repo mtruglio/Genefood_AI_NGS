@@ -105,7 +105,7 @@ def fill_template_from_dict(template_path, dict_data, output_path, committent, a
 
     print("CONDIZIONI LISTA")
     updated_condizioni = []
-    for condizione in dict_data.get('condizioni', []):
+    for condizione in dict_data.get('condizioni', []).split(', ') if isinstance(dict_data.get('condizioni', []), str) else dict_data.get('condizioni', []):
         if not any(keyword in condizione for keyword in ["Predisposizione", "predisposizione", "Intolleranza"]):
             updated_condizioni.append(f"Paziente riferisce: {condizione}")
         else:

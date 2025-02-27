@@ -18,7 +18,23 @@
 <script src="https://unpkg.com/jquery-resizable-columns@0.2.3/dist/jquery.resizableColumns.min.js"></script>
 <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
 <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/extensions/resizable/bootstrap-table-resizable.min.js"></script>
-
+<script>
+$(document).ready(function(){
+  $('button[name="btn"][value="Download Word"]').click(function(e) {
+    e.preventDefault();
+    var form = $(this).closest('form');
+    var actionUrl = form.attr('action');
+    // Serialize form data and append btn=Download Word
+    var data = form.serializeArray();
+    data.push({ name: "btn", value: "Download Word" });
+    $.post(actionUrl, $.param(data), function(response) {
+    window.open("{{ url_for('edit_ai_response') }}?patient_id=" + response.patient_id, "_blank");
+  }).fail(function(){
+    alert("An error occurred while processing the report.");
+  });
+  });
+});
+</script>
 <script type=text/javascript>
   function URLChange(text, textarea_name, code, targets) {
     for (let i = 0; i < targets.length; i++) {
@@ -256,7 +272,11 @@
                               {% endif %}          
                         
                         {% if r != "Junior_fragilita" and r != "Junior_intolleranze" and r != "Junior_sindrome_met" %}
-                          <input id="wordbtn" type="submit" name="btn" value="Download Word">
+                          <button id="downloadWord_{{results[r][0][pz]['code']}}" 
+                          type="button" 
+                          name="btn" 
+                          value="Download Word">Download Word</button>
+
                           <input id="pdfbtn_{{r}}_{{pz}}" type="submit" name="btn" value="Invia ad Astrolabio">
                           <input id="pdfbtn_{{r}}_{{pz}}_dl" type="submit" name="btn" value="Download PDF">
                         {% endif %}
