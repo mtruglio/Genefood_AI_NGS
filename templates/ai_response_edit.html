@@ -2,72 +2,260 @@
 <html>
 <head>
   <title>Edit AI Response</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    body { font-family: Arial, sans-serif; }
-    .form-field { margin-bottom: 15px; }
-    label { font-weight: bold; display: block; margin-bottom: 5px; }
-    input[type="text"], textarea {
-      width: 100%;
-      padding: 8px;
-      box-sizing: border-box;
+    body { 
+      font-family: Arial, sans-serif;
+      padding: 20px;
     }
-    .error { color: red; font-weight: bold; }
+    .form-field { 
+      margin-bottom: 20px; 
+    }
+    label { 
+      font-weight: bold; 
+      display: block; 
+      margin-bottom: 8px; 
+    }
+    .error { 
+      color: #dc3545; 
+      font-weight: bold; 
+      padding: 10px;
+      background-color: #f8d7da;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    .field-buttons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .field-buttons button {
+      margin-left: 10px;
+    }
+    #jsonErrorMessage {
+      color: #dc3545;
+      font-weight: bold;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f8d7da;
+      border-radius: 4px;
+      display: none;
+    }
+    .submit-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .container {
+      max-width: 1200px;
+    }
   </style>
   <script>
-    // Add this script to handle form submission and window closing
+    // Store original values when page loads
+    let originalValues = {};
+    
+    // Function to recursively unescape a JSON string
+    function recursivelyUnescapeJSON(str) {
+      // If it's not a string or doesn't look like JSON, return as is
+      if (typeof str !== 'string' || (str.trim()[0] !== '{' && str.trim()[0] !== '[' && str.trim()[0] !== '"')) {
+        return str;
+      }
+      
+      try {
+        // If the string starts with a quote and ends with a quote, it might be a quoted JSON string
+        if (str.trim()[0] === '"') {
+          // Try to parse it once to remove the outer quotes and unescape
+          const parsed = JSON.parse(str);
+          
+          // If the result is a string and looks like JSON, recursively unescape it
+          if (typeof parsed === 'string' && 
+             (parsed.trim()[0] === '{' || parsed.trim()[0] === '[' || parsed.trim()[0] === '"')) {
+            return recursivelyUnescapeJSON(parsed);
+          }
+          return parsed;
+        } 
+        
+        // It's already a proper JSON string, just parse it
+        const jsonObj = JSON.parse(str);
+        return jsonObj;
+      } catch (e) {
+        console.log("Error unescaping JSON:", e);
+        return str; // Return original if parsing fails
+      }
+    }
+    
+    // Function to fix JSON formatting
+    function fixJsonFormatting(jsonStr) {
+      try {
+        // Try to recursively unescape and parse the JSON
+        const jsonObj = recursivelyUnescapeJSON(jsonStr);
+        
+        // If we got an object, stringify it with formatting
+        if (typeof jsonObj === 'object' && jsonObj !== null) {
+          return JSON.stringify(jsonObj, null, 2);
+        }
+        
+        return jsonStr; // Return original if we couldn't get an object
+      } catch (e) {
+        console.log("Error fixing JSON formatting:", e);
+        return jsonStr; // Return original if any error occurs
+      }
+    }
+    
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.querySelector('form');
       
+      // Store original values for revert functionality
+      const raccomandazioniField = document.getElementById('raccomandazioni');
+      const diagnosiField = document.getElementById('diagnosi');
+      
+      if (raccomandazioniField) {
+        // Fix JSON formatting on page load
+        const formattedJson = fixJsonFormatting(raccomandazioniField.value);
+        raccomandazioniField.value = formattedJson;
+        
+        // Store the fixed value as original
+        originalValues.raccomandazioni = formattedJson;
+      }
+      
+      if (diagnosiField) {
+        originalValues.diagnosi = diagnosiField.value;
+      }
+      
+      // Add form submission handler with JSON validation
       form.addEventListener('submit', function(e) {
-        // Don't prevent default - we want the form to submit normally
-        // But set a timeout to close the window after the download starts
+        // First validate JSON
+        const raccomandazioniField = document.getElementById('raccomandazioni');
+        const jsonErrorMessage = document.getElementById('jsonErrorMessage');
+        
+        if (raccomandazioniField) {
+          try {
+            // Use our recursive JSON parsing to validate
+            const jsonObj = recursivelyUnescapeJSON(raccomandazioniField.value);
+            
+            // Check if we got a valid object
+            if (typeof jsonObj !== 'object' || jsonObj === null) {
+              throw new Error("Invalid JSON structure");
+            }
+            
+            jsonErrorMessage.style.display = 'none';
+            
+            // Update the field with properly formatted JSON before submitting
+            raccomandazioniField.value = JSON.stringify(jsonObj, null, 2);
+          } catch (error) {
+            // Prevent form submission
+            e.preventDefault();
+            // Show error message
+            jsonErrorMessage.textContent = 'Error: Invalid JSON format in recommendations. ' + error.message;
+            jsonErrorMessage.style.display = 'block';
+            // Scroll to the error message
+            jsonErrorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return false;
+          }
+        }
+        
+        // If JSON is valid, set a timeout to close the window after download starts
         setTimeout(function() {
           window.close();
         }, 2000); // Wait 2 seconds to ensure the download has started
       });
     });
+    
+    // Function to revert field to original value
+    function revertField(fieldId) {
+      const field = document.getElementById(fieldId);
+      if (field && originalValues[fieldId]) {
+        field.value = originalValues[fieldId];
+      }
+    }
+    
+    // Function to format JSON in the textarea
+    function formatJSON(fieldId) {
+      const field = document.getElementById(fieldId);
+      const jsonErrorMessage = document.getElementById('jsonErrorMessage');
+      
+      if (field) {
+        try {
+          // Parse the JSON to validate it
+          const jsonObj = recursivelyUnescapeJSON(field.value);
+          
+          // Check if we got a valid object
+          if (typeof jsonObj !== 'object' || jsonObj === null) {
+            throw new Error("Invalid JSON structure");
+          }
+          
+          // Format the JSON
+          field.value = JSON.stringify(jsonObj, null, 2);
+          jsonErrorMessage.style.display = 'none';
+        } catch (error) {
+          // Show error message
+          jsonErrorMessage.textContent = 'Error: Invalid JSON format. ' + error.message;
+          jsonErrorMessage.style.display = 'block';
+          // Scroll to the error message
+          jsonErrorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
   </script>
 </head>
 <body>
-  <h2>Edit AI Response</h2>
-  {% if error_message %}
-  <div class="error">{{ error_message }}</div>
-  {% endif %}
-  <form method="POST">
-    <div class="form-field">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" value="{{ name }}">
-    </div>
-    <div class="form-field">
-      <label for="patient_id">Patient ID</label>
-      <input type="text" id="patient_id" name="patient_id" value="{{ patient_id }}">
-    </div>
-    {% for key, value in ai_response.items() %}
-      {% if key == 'id_paziente' %}
-        {# Skip id_paziente #}
-      {% elif key == 'condizioni' %}
-        <div class="form-field">
-          <label for="condizioni">Condizioni</label>
-          <textarea id="condizioni" name="condizioni" rows="5">{{ value | join(', ') }}</textarea>
-        </div>
-      {% elif key == 'raccomandazioni' %}
-        <div class="form-field">
-          <label for="raccomandazioni">Raccomandazioni</label>
-          <textarea id="raccomandazioni" name="raccomandazioni" rows="30">{{ value }}</textarea>
-        </div>
-      {% elif key == 'Diagnosi' %}
-        <div class="form-field">
-          <label for="diagnosi">Diagnosi</label>
-          <textarea id="diagnosi" name="diagnosi" rows="10">{{ value }}</textarea>
-        </div>
-      {% else %}
-        <div class="form-field">
-          <label for="{{ key }}">{{ key }}</label>
-          <input type="text" id="{{ key }}" name="{{ key }}" value="{{ value }}">
-        </div>
-      {% endif %}
-    {% endfor %}
-    <button type="submit">Submit and Download</button>
-  </form>
+  <div class="container">
+    <h2 class="mb-4">Edit AI Response for {{ name }} ({{ patient_id }})</h2>
+    {% if error_message %}
+    <div class="error">{{ error_message }}</div>
+    {% endif %}
+    <form method="POST">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="{{ name }}" class="form-control">
+      </div>
+      <div class="form-field">
+        <label for="patient_id">Patient ID</label>
+        <input type="text" id="patient_id" name="patient_id" value="{{ patient_id }}" class="form-control">
+      </div>
+      {% for key, value in ai_response.items() %}
+        {% if key == 'id_paziente' %}
+          {# Skip id_paziente #}
+        {% elif key == 'condizioni' %}
+          <div class="form-field">
+            <label for="condizioni">Condizioni</label>
+            <textarea id="condizioni" name="condizioni" rows="3" class="form-control">{{ value | join(', ') }}</textarea>
+          </div>
+        {% elif key == 'raccomandazioni' %}
+          <div class="form-field">
+            <label for="raccomandazioni">Raccomandazioni</label>
+            <textarea id="raccomandazioni" name="raccomandazioni" rows="30" class="form-control">{{ value }}</textarea>
+            <div id="jsonErrorMessage"></div>
+            <div class="field-buttons">
+              <button type="button" class="btn btn-warning" onclick="formatJSON('raccomandazioni')">Check JSON</button>
+              <button type="button" class="btn btn-danger" onclick="revertField('raccomandazioni')">Revert</button>
+            </div>
+          </div>
+        {% elif key == 'Diagnosi' %}
+          <div class="form-field">
+            <label for="diagnosi">Diagnosi</label>
+            <textarea id="diagnosi" name="diagnosi" rows="10" class="form-control">{{ value }}</textarea>
+            <div class="field-buttons">
+              <button type="button" class="btn btn-danger" onclick="revertField('diagnosi')">Revert</button>
+            </div>
+          </div>
+        {% else %}
+          <div class="form-field">
+            <label for="{{ key }}">{{ key }}</label>
+            <input type="text" id="{{ key }}" name="{{ key }}" value="{{ value }}" class="form-control">
+          </div>
+        {% endif %}
+      {% endfor %}
+      <div class="text-center">
+        <button type="submit" class="btn btn-success btn-lg submit-btn">Submit and Download</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -62,7 +62,7 @@ def clean_and_convert_to_dict(data):
 
     # Step 2: Remove all other newlines in the data
     data = data.replace('\n', '')
-    print(data)
+    # print(data)
     
     # Correct JSON-style true/false/null to Python equivalents
     data = data.replace('true', 'True').replace('false', 'False').replace('null', 'None')
@@ -128,7 +128,7 @@ diz_traduttore_pop ={"Ferro Basso":"Carenza di Ferro", "Emocromatosi":'Emocromat
 
 
 def get_pz_number(patients_dict, code):
-    print(patients_dict)
+    # print(patients_dict)
     for pz in patients_dict:
         if patients_dict[pz]['code']== code:
             return pz
@@ -1261,7 +1261,9 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     gather_data('./static/consolidated_data_italian_with_subcategories.json', './static/consolidated_data_italian_with_subcategories_special.json', base_condition_filter, other_conditions_filter,'./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type))
     # input("STOP")
     ai_response = ask_claude('./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type), prompt, analysis_type)
-    ai_response_text = ai_response[0].text
+    with open('./static/{0}_{1}_{2}_ai_response_text.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
+        f.write(str(ai_response))
+    ai_response_text = ai_response[0].text if isinstance(ai_response, list) and ai_response else ai_response
 
     # # Write the text to a file # ONLY FOR TESTING
     # # with open('./static/{0}_{1}_{2}_ai_response_text.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
@@ -1273,13 +1275,13 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     # # with open('./static/{0}_{1}_{2}_ai_response_dict.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
     # #     f.write(str(ai_response_dict))
 
-    # # Read the dictionary back from the file # ONLY FOR TESTING
+    # Read the dictionary back from the file # ONLY FOR TESTING
     # with open('./static/{0}_{1}_{2}_ai_response_dict.txt'.format(name, patient_id, analysis_type), 'r', encoding='utf-8') as f:
     #     ai_response_dict = ast.literal_eval(f.read())
     # Parse the text as JSON
     # print(ai_response_dict)
 
-    print("AI response received:", ai_response_dict)
+    # print("AI response received:", ai_response_dict)
     return ai_response_dict, template_indicazioni, name, patient_id, analysis_type, committent
     # fill_template_from_dict(template_indicazioni, ai_response_dict, './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type), committent, analysis_type)
 

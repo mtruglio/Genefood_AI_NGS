@@ -22,8 +22,8 @@ from scripts.docx_to_pdf import convert_to, joinpdf, merge_docx
 debug = 'on'
 
 app = Flask(__name__)
-app.config.from_object("config.ProductionConfig")
-# app.config.from_object("config.DevelopmentConfig")
+# app.config.from_object("config.ProductionConfig")
+app.config.from_object("config.DevelopmentConfig")
 app.register_error_handler(ValidationError, errors.handle_400_errors)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
@@ -317,7 +317,7 @@ def edit_ai_response():
     patient_id = request.args.get('patient_id')
     print("################# EDIT AI RESPONSE #################")
     print(patient_id)
-    print(session.get('patient_data', {}))
+    # print(session.get('patient_data', {}))
     patient_data = session.get('patient_data', {})
     
     if patient_id and patient_id in patient_data:

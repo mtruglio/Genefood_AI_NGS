@@ -22,27 +22,35 @@
 $(document).ready(function(){
   $('button[name="btn"][value="Download Word"]').click(function(e) {
     e.preventDefault();
+    
+    // Show the loading modal
+    $('#loadingModal').modal('show');
+    
     var form = $(this).closest('form');
     var actionUrl = form.attr('action');
+    
     // Serialize form data and append btn=Download Word
     var data = form.serializeArray();
     data.push({ name: "btn", value: "Download Word" });
+    
     $.post(actionUrl, $.param(data), function(response) {
-    window.open("{{ url_for('edit_ai_response') }}?patient_id=" + response.patient_id, "_blank");
-  }).fail(function(){
-    alert("An error occurred while processing the report.");
-  });
+      // Open the AI response edit page in a new window/tab
+      var newWindow = window.open("{{ url_for('edit_ai_response') }}?patient_id=" + response.patient_id, "_blank");
+      
+      // Hide the modal once we have a response
+      $('#loadingModal').modal('hide');
+      
+      // If the window fails to open, show an alert
+      if (!newWindow || newWindow.closed || typeof newWindow.closed=='undefined') {
+        alert("The AI response editor window was blocked by your browser. Please allow popups for this site.");
+      }
+    }).fail(function(xhr, status, error){
+      // Hide modal and show error if the request fails
+      $('#loadingModal').modal('hide');
+      alert("An error occurred while processing the report: " + error);
+    });
   });
 });
-</script>
-<script type=text/javascript>
-  function URLChange(text, textarea_name, code, targets) {
-    for (let i = 0; i < targets.length; i++) {
-      target_name = textarea_name+'_'+targets[i]+'_'+code;
-      console.log(target_name);
-      document.getElementsByName(target_name)[0].value=text;
-    }
-  }
 </script>
 
 <script>
@@ -275,10 +283,10 @@ $(document).ready(function(){
                           <button id="downloadWord_{{results[r][0][pz]['code']}}" 
                           type="button" 
                           name="btn" 
-                          value="Download Word">Download Word</button>
+                          value="Download Word">Run AI</button>
 
-                          <input id="pdfbtn_{{r}}_{{pz}}" type="submit" name="btn" value="Invia ad Astrolabio">
-                          <input id="pdfbtn_{{r}}_{{pz}}_dl" type="submit" name="btn" value="Download PDF">
+                          <input id="pdfbtn_{{r}}_{{pz}}" type="submit" name="btn" value="Invia ad Astrolabio" style="display: none;">
+                          <input id="pdfbtn_{{r}}_{{pz}}_dl" type="submit" name="btn" value="Download PDF" style="display: none;">
                         {% endif %}
 
                         <script>
@@ -304,6 +312,25 @@ $(document).ready(function(){
 
 </div>
 
+<!-- Loading Modal -->
+<div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loadingModalLabel">Processing Request</h5>
+      </div>
+      <div class="modal-body text-center">
+        <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <p>Please wait while the AI generates your report...</p>
+        <div class="progress mt-3">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

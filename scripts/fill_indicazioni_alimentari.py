@@ -95,7 +95,7 @@ def fill_template_from_dict(template_path, dict_data, output_path, committent, a
 
     # Handle 'Integratori' as either a dictionary or a list of dictionaries
     # integratori_data = dict_data.get('raccomandazioni', {}).get('Integratori', {})
-    print(integratori_data)
+    # print(integratori_data)
     if isinstance(integratori_data, dict):
         integratori_text = '\n\n'.join([f"Tipo: {v.get('tipo', '')}\nDosaggio: {v.get('dosaggio', '')}\nMotivazione: {v.get('motivazione', '')}" for k, v in integratori_data.items()]) #[f"{k} ({v.get('marca', '')}, {v.get('dosaggio', '')}): {v.get('motivazione', '')}" for k, v in integratori_data.items()])
     elif isinstance(integratori_data, list):
