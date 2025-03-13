@@ -1261,8 +1261,8 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     gather_data('./static/consolidated_data_italian_with_subcategories.json', './static/consolidated_data_italian_with_subcategories_special.json', base_condition_filter, other_conditions_filter,'./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type))
     # input("STOP")
     ai_response = ask_claude('./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type), prompt, analysis_type)
-    with open('./static/{0}_{1}_{2}_ai_response_text.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
-        f.write(str(ai_response))
+    # with open('./static/{0}_{1}_{2}_ai_response_text.txt'.format(name, patient_id, analysis_type), 'w', encoding='utf-8') as f:
+    #     f.write(str(ai_response))
     ai_response_text = ai_response[0].text if isinstance(ai_response, list) and ai_response else ai_response
 
     # # Write the text to a file # ONLY FOR TESTING

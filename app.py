@@ -18,7 +18,9 @@ from utils import errors
 from utils.errors import ValidationError as ValidationError
 import json
 from scripts.docx_to_pdf import convert_to, joinpdf, merge_docx
-
+from scripts.assemble_report import fill_template_from_dict
+import zipfile
+from io import BytesIO
 debug = 'on'
 
 app = Flask(__name__)
@@ -402,7 +404,7 @@ def edit_ai_response():
         template_indicazioni = patient_data[patient_id].get('template_indicazioni', '')
         
         try:
-            from scripts.assemble_report import fill_template_from_dict
+
             output_file = './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type)
             fill_template_from_dict(template_indicazioni, original_ai_response, output_file, committent, analysis_type)
             final_docx = './ARCHIVIO/{0}_{1}_{2}_result.docx'.format(name, patient_id, analysis_type)
@@ -436,9 +438,26 @@ def edit_ai_response():
 
             print(f"JSON file created: {json_file_path}")
             
-            # Return the file as download which will trigger the window close
-            return send_file(final_docx, as_attachment=True, 
-                            download_name="{0}_{1}_{2}_result.docx".format(name, patient_id, analysis_type))
+            # Create a zip file containing both the docx and json files
+
+            # Create a BytesIO object to store the zip file
+            memory_file = BytesIO()
+            with zipfile.ZipFile(memory_file, 'w') as zf:
+                # Add the docx file to the zip
+                zf.write(final_docx, f"{name}_{patient_id}_{analysis_type}_result.docx")
+                # Add the json file to the zip
+                zf.write(json_file_path, f"{name}_{patient_id}_{analysis_type}_result.json")
+
+            # Reset the file pointer to the beginning of the BytesIO object
+            memory_file.seek(0)
+
+            # Return the zip file as a download which will trigger the window close
+            return send_file(
+                memory_file,
+                mimetype='application/zip',
+                as_attachment=True,
+                download_name=f"{name}_{patient_id}_{analysis_type}_results.zip"
+            )
             
         except Exception as e:
             print(f"Error generating report: {e}")
