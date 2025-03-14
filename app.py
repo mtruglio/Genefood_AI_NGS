@@ -321,8 +321,62 @@ def edit_ai_response():
     print(patient_id)
     # print(session.get('patient_data', {}))
     patient_data = session.get('patient_data', {})
-    
+    # print(patient_data)
+
     if patient_id and patient_id in patient_data:
+        patient_summary = patient_data[patient_id]['ai_response_dict'].get('id_paziente', '')
+        patient_conditions = patient_data[patient_id]['ai_response_dict'].get('condizioni', [])
+
+        cereali_sensitive = ''
+        latticini_sensitive = ''
+        glutine_found = (any(('glutine' in condition.lower() or 'Glutine' in condition) 
+                        for condition in patient_conditions if condition) or
+                        'Glut' in patient_summary)
+        if glutine_found:
+            cereali_sensitive = "Grano, frumento, farina 00, farina 0, farina integrale, semola, farro, kamut, orzo, malto d'orzo, estratto di malto, segale, avena, triticale, amido di frumento, crusca di frumento, pangrattato, glutine"
+
+        lattosio_found = (any(('lattosio' in condition.lower() or 'Lattosio' in condition) 
+                        for condition in patient_conditions if condition) or
+                        'Latt' in patient_summary)
+        if lattosio_found:
+            latticini_sensitive = "Latte intero, latte scremato, latte in polvere o concentrato, panna fresca, panna da cucina, panna montata, panna in polvere, burro, burro chiarificato, yogurt, crema di latte, siero di latte, latticello, lattosio, siero di latte, proteine del siero di latte, caseina, caseinato di calcio"
+        
+        # Check if raccomandazioni is a string and convert it to dict if necessary
+        if 'raccomandazioni' in patient_data[patient_id]['ai_response_dict']:
+            if isinstance(patient_data[patient_id]['ai_response_dict']['raccomandazioni'], str):
+                try:
+                    patient_data[patient_id]['ai_response_dict']['raccomandazioni'] = json.loads(
+                        patient_data[patient_id]['ai_response_dict']['raccomandazioni']
+                    )
+                except json.JSONDecodeError as e:
+                    print(f"Could not parse raccomandazioni string as JSON: {e}")
+        
+        # Now update the values if raccomandazioni is a dictionary
+        if isinstance(patient_data[patient_id]['ai_response_dict'].get('raccomandazioni'), dict):
+            # Update for lattosio
+            if lattosio_found:
+                # Ensure the path exists
+                if 'Proteine' in patient_data[patient_id]['ai_response_dict']['raccomandazioni']:
+                    if 'Sensibili' not in patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Proteine']:
+                        patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Proteine']['Sensibili'] = {}
+                    if 'LATTICINI' not in patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Proteine']['Sensibili']:
+                        patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Proteine']['Sensibili']['LATTICINI'] = {}
+                    
+                    # Set the items
+                    patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Proteine']['Sensibili']['LATTICINI']['items'] = latticini_sensitive
+            
+            # Update for glutine
+            if glutine_found:
+                # Ensure the path exists
+                if 'Carboidrati' in patient_data[patient_id]['ai_response_dict']['raccomandazioni']:
+                    if 'Sensibili' not in patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Carboidrati']:
+                        patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Carboidrati']['Sensibili'] = {}
+                    if 'CEREALI' not in patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Carboidrati']['Sensibili']:
+                        patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Carboidrati']['Sensibili']['CEREALI'] = {}
+                    
+                    # Set the items
+                    patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Carboidrati']['Sensibili']['CEREALI']['items'] = cereali_sensitive
+                    
         ai_response = patient_data[patient_id].get('ai_response_dict', {})
         name = patient_data[patient_id].get('name', '')
         cf = patient_data[patient_id].get('cf', '')
@@ -330,6 +384,7 @@ def edit_ai_response():
         analysis_type = patient_data[patient_id].get('analysis_type', '')
         committent = patient_data[patient_id].get('committent', '')
         template_indicazioni = patient_data[patient_id].get('template_indicazioni', '')
+
     else:
         # Fallback to original session variables if patient data not found
         ai_response = session.get('ai_response_dict', {})
@@ -351,6 +406,7 @@ def edit_ai_response():
         print("PATIENT ID", patient_id)
         print("ANALYSIS TYPE", analysis_type)
         print("COMMITTENT", committent)
+        # print("RACCOMANDAZIONI", ai_response['raccomandazioni'])
         return render_template('ai_response_edit.html', ai_response=ai_response, 
                                name=name, patient_id=patient_id, analysis_type=analysis_type, 
                                committent=committent, template_indicazioni=template_indicazioni)
@@ -359,7 +415,7 @@ def edit_ai_response():
     elif request.method == 'POST':
         # Get the form data
         updated_response = request.form.to_dict()
-        
+        # print("############# GOT HERE ##############")
         # Get the original AI response dictionary to preserve all fields
         original_ai_response = patient_data[patient_id]['ai_response_dict'].copy()
         
