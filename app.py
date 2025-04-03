@@ -24,8 +24,8 @@ from io import BytesIO
 debug = 'on'
 
 app = Flask(__name__)
-# app.config.from_object("config.ProductionConfig")
-app.config.from_object("config.DevelopmentConfig")
+app.config.from_object("config.ProductionConfig")
+# app.config.from_object("config.DevelopmentConfig")
 app.register_error_handler(ValidationError, errors.handle_400_errors)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
