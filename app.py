@@ -21,6 +21,8 @@ from scripts.docx_to_pdf import convert_to, joinpdf, merge_docx
 from scripts.assemble_report import fill_template_from_dict
 import zipfile
 from io import BytesIO
+import pickle
+from pathlib import Path
 debug = 'on'
 
 app = Flask(__name__)
@@ -283,7 +285,7 @@ def report_process(analysis_type, patient_id):
     email = reports[analysis_type][0][patient_id]['email']
     session['patient_data'] = session.get('patient_data', {})
 
-    ai_response_dict, template_indicazioni, name, patient_id, analysis_type, committent = assemble_report(patient_id=patient_id, analysis_type=analysis_type, raw_results=raw_results, \
+    ai_response_dict, template_indicazioni, name, patient_id, analysis_type, committent, base_conditions, other_conditions = assemble_report(patient_id=patient_id, analysis_type=analysis_type, raw_results=raw_results, \
         reports=reports, scores_peso=scores_peso, scores_t2d=scores_t2d, scores_cardio=scores_cardio, \
         scores_mamma=scores_mamma, notes_mamma=notes_mamma, scores_plus=scores_plus, notes_plus=notes_plus, \
         scores_vita=scores_vita, notes_vita=notes_vita, scores_sport=scores_sport, notes_sport=notes_sport, \
@@ -295,6 +297,7 @@ def report_process(analysis_type, patient_id):
         testo_sportlong, testo_ageingshort, testo_ageinglong, testo_juniormet_short, testo_juniormet_long, testo_juniorintoll_short, \
         testo_juniorintoll_long, testo_juniorfrag_short, testo_juniorfrag_long, testo_juniorcarie_short, testo_juniorcarie_long), \
         button=clicked_button, debug=debug)
+    
     session['patient_data'][patient_id] = {
     'name': name,
     'cf': cf,
@@ -302,7 +305,8 @@ def report_process(analysis_type, patient_id):
     'ai_response_dict': ai_response_dict,
     'template_indicazioni': template_indicazioni,
     'analysis_type': analysis_type,
-    'committent': committent
+    'committent': committent,
+    'base_conditions': base_conditions,
     }
     if clicked_button == "Download Word":
         # return send_file('ARCHIVIO/{0}_{1}_{2}_result.docx'.format(name, patient_id, analysis_type), as_attachment=True)
@@ -316,13 +320,15 @@ def report_process(analysis_type, patient_id):
     
 @app.route('/edit_ai_response', methods=['GET', 'POST'])
 def edit_ai_response():
+    with Path("static/profile2id.pkl").open("rb") as f:
+        profile2id = pickle.load(f)
     patient_id = request.args.get('patient_id')
     print("################# EDIT AI RESPONSE #################")
     print(patient_id)
     # print(session.get('patient_data', {}))
     patient_data = session.get('patient_data', {})
     # print(patient_data)
-
+    sensitivities = []
     if patient_id and patient_id in patient_data:
         patient_summary = patient_data[patient_id]['ai_response_dict'].get('id_paziente', '')
         patient_conditions = patient_data[patient_id]['ai_response_dict'].get('condizioni', [])
@@ -341,6 +347,12 @@ def edit_ai_response():
         if lattosio_found:
             latticini_sensitive = "Latte intero, latte scremato, latte in polvere o concentrato, panna fresca, panna da cucina, panna montata, panna in polvere, burro, burro chiarificato, yogurt, crema di latte, siero di latte, latticello, lattosio, siero di latte, proteine del siero di latte, caseina, caseinato di calcio"
         
+        fruttosio_found = (any(('fruttosio' in condition.lower() or 'Fruttosio' in condition) 
+                        for condition in patient_conditions if condition) or
+                        'Fruttosio' in patient_summary)
+        if fruttosio_found:
+            sensitivities.append(3)
+
         # Check if raccomandazioni is a string and convert it to dict if necessary
         if 'raccomandazioni' in patient_data[patient_id]['ai_response_dict']:
             if isinstance(patient_data[patient_id]['ai_response_dict']['raccomandazioni'], str):
@@ -355,6 +367,7 @@ def edit_ai_response():
         if isinstance(patient_data[patient_id]['ai_response_dict'].get('raccomandazioni'), dict):
             # Update for lattosio
             if lattosio_found:
+                sensitivities.append(1)
                 # Ensure the path exists
                 if 'Proteine' in patient_data[patient_id]['ai_response_dict']['raccomandazioni']:
                     if 'Sensibili' not in patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Proteine']:
@@ -367,6 +380,7 @@ def edit_ai_response():
             
             # Update for glutine
             if glutine_found:
+                sensitivities.append(2)
                 # Ensure the path exists
                 if 'Carboidrati' in patient_data[patient_id]['ai_response_dict']['raccomandazioni']:
                     if 'Sensibili' not in patient_data[patient_id]['ai_response_dict']['raccomandazioni']['Carboidrati']:
@@ -384,7 +398,7 @@ def edit_ai_response():
         analysis_type = patient_data[patient_id].get('analysis_type', '')
         committent = patient_data[patient_id].get('committent', '')
         template_indicazioni = patient_data[patient_id].get('template_indicazioni', '')
-
+        base_conditions = '+'.join(patient_data[patient_id].get('base_conditions', []))
     else:
         # Fallback to original session variables if patient data not found
         ai_response = session.get('ai_response_dict', {})
@@ -395,7 +409,9 @@ def edit_ai_response():
         analysis_type = session.get('analysis_type', '')
         committent = session.get('committent', '')
         template_indicazioni = session.get('template_indicazioni', '')
-    
+    print("BASE CONDITIONS", base_conditions)
+    print("Profile n.", profile2id.get(base_conditions, 'not found'))
+    print("SENSITIVITIES", sorted(sensitivities))
     # For GET request, prepare the form
     if request.method == 'GET':
         if 'raccomandazioni' in ai_response:
@@ -471,7 +487,9 @@ def edit_ai_response():
             json_file_path = './ARCHIVIO/{0}_{1}_{2}_result.json'.format(name, patient_id, analysis_type)
             json_data = {
                 "Email": email,
-                "CF": cf
+                "CF": cf,
+                "codProfilo": profile2id.get(base_conditions, 'not found'),
+                "codSensibilita": sorted(sensitivities)
             }
             
             # Add the raccomandazioni content but remove specified keys

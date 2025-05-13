@@ -1277,10 +1277,10 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     # with open('./static/{0}_{1}_{2}_ai_response_dict.txt'.format(name, patient_id, analysis_type), 'r', encoding='utf-8') as f:
     #     ai_response_dict = ast.literal_eval(f.read())
     # Parse the text as JSON
-    # print(ai_response_dict)
+    print(ai_response_dict)
 
     # print("AI response received:", ai_response_dict)
-    return ai_response_dict, template_indicazioni, name, patient_id, analysis_type, committent
+    return ai_response_dict, template_indicazioni, name, patient_id, analysis_type, committent, base_condition_filter, other_conditions_filter
     # fill_template_from_dict(template_indicazioni, ai_response_dict, './ARCHIVIO/{0}_{1}_{2}_indicazioni.docx'.format(name, patient_id, analysis_type), committent, analysis_type)
 
     # final_docx = './ARCHIVIO/{0}_{1}_{2}_result.docx'.format(name, patient_id, analysis_type)
