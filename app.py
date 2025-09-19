@@ -17,6 +17,7 @@ import werkzeug
 from utils import errors
 from utils.errors import ValidationError as ValidationError
 import json
+import subprocess
 from scripts.docx_to_pdf import convert_to, joinpdf, merge_docx
 from scripts.assemble_report import fill_template_from_dict
 import zipfile
@@ -512,6 +513,21 @@ def edit_ai_response():
 
             print(f"JSON file created: {json_file_path}")
             
+            # Sending the JSON to the Genefood app backend
+            URL = "https://jpoaxndblvkndhjccird.supabase.co/functions/v1/importUserData"
+            TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impwb2F4bmRibHZrbmRoamNjaXJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAzODYzNjksImV4cCI6MjA1NTk2MjM2OX0.yB21Rq6IIx50HXCMqHMv9GzAt3R2cySYptT0G5QxEz0'
+
+            cmd = [
+                "curl", "-sSL", "-X", "POST", URL,
+                "-H", f"Authorization: Bearer {TOKEN}",
+                "-H", "Content-Type: application/json",
+                "--data-binary", f"@{json_file_path}",
+            ]
+
+            result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+            print("curl exit code:", result.returncode)
+            print("stdout:", result.stdout)
+            print("stderr:", result.stderr)
             # Create a zip file containing both the docx and json files
 
             # Create a BytesIO object to store the zip file
