@@ -253,6 +253,11 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
 
             if committent == 'Genessere':
                 cell_r.add_picture("static/header_logos/intestazione_genessere.png", width=Inches(2.55))
+                print("Inserted genessere logo")
+            
+            elif committent == 'Braincare':
+                cell_r.add_picture("static/header_logos/intestazione_braincare.png", width=Inches(2.55))
+                print("Inserted braincare logo")
             else:
                 if analysis_type == "Junior_carie":
                      cell_r.add_picture("static/header_logos/logo_Base.png".format(analysis_type), width=Inches(1.19))
@@ -277,6 +282,8 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     #ADD TITLE
     if committent == "Genessere":
         replace_in_paragraph(document, 'test_title', 'Genessere') 
+    elif committent == "Braincare":
+        replace_in_paragraph(document, 'test_title', 'Braincare')
     elif committent == "Altamedica":
         replace_in_paragraph(document, 'test_title', 'GENEFOOD {}'.format(titles_dict[analysis_type].upper())) 
         

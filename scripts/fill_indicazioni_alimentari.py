@@ -74,6 +74,10 @@ def add_image_to_header(doc, analysis_type, committent):
         # Add the appropriate image based on the 'committent'
         if committent == 'Genessere':
             cell_r.add_picture(f"{static_path}/header_logos/intestazione_genessere.png", width=Inches(2.55))
+            print("inserted Genessere logo")
+        elif committent == 'Braincare':
+            cell_r.add_picture(f"{static_path}/header_logos/intestazione_braincare.png", width=Inches(2.55))
+            print("inserted Braincare logo")
         else:
             cell_r.add_picture(f"{static_path}/header_logos/logo_{analysis_type}.png", width=Inches(1.19))
 
