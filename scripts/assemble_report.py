@@ -258,6 +258,14 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
             elif committent == 'Braincare':
                 cell_r.add_picture("static/header_logos/intestazione_braincare.png", width=Inches(2.55))
                 print("Inserted braincare logo")
+            elif committent == 'Longevia':
+                cell_r.add_picture("static/header_logos/intestazione_longevia.png", width=Inches(2.55))
+            elif committent == 'IkonAcilia':
+                cell_r.add_picture("static/header_logos/intestazione_ikonacilia.png", width=Inches(2.55))
+            elif committent == 'IkonCasalPalocco':
+                cell_r.add_picture("static/header_logos/intestazione_ikoncasalpalocco.png", width=Inches(2.55))
+            elif committent == 'IkonFiumicino':
+                cell_r.add_picture("static/header_logos/intestazione_ikonfiumicino.png", width=Inches(2.55))
             else:
                 if analysis_type == "Junior_carie":
                      cell_r.add_picture("static/header_logos/logo_Base.png".format(analysis_type), width=Inches(1.19))
@@ -284,7 +292,7 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
         replace_in_paragraph(document, 'test_title', 'Genessere') 
     elif committent == "Braincare":
         replace_in_paragraph(document, 'test_title', 'Braincare')
-    elif committent == "Altamedica":
+    else:
         replace_in_paragraph(document, 'test_title', 'GENEFOOD {}'.format(titles_dict[analysis_type].upper())) 
         
 
@@ -1208,7 +1216,10 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
                                 # if debug=='on':
                                 #     print(inline[i].text)
                                 if 'footernote' in inline[i].text:
-                                    text = inline[i].text.replace('footernote', "Paziente: {0} - Referto emesso il {1} dal Centro Altamedica di Roma".format(name, date))
+                                    if committent == 'Longevia':
+                                        text = inline[i].text.replace('footernote', "Paziente: {0} - Referto emesso il {1}".format(name, date))
+                                    else:
+                                        text = inline[i].text.replace('footernote', "Paziente: {0} - Referto emesso il {1} dal Centro Altamedica di Roma".format(name, date))
                                     inline[i].text = text
 
 

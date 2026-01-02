@@ -78,6 +78,14 @@ def add_image_to_header(doc, analysis_type, committent):
         elif committent == 'Braincare':
             cell_r.add_picture(f"{static_path}/header_logos/intestazione_braincare.png", width=Inches(2.55))
             print("inserted Braincare logo")
+        elif committent == 'Longevia':
+            cell_r.add_picture(f"{static_path}/header_logos/intestazione_longevia.png", width=Inches(2.55))
+        elif committent == 'IkonAcilia':
+            cell_r.add_picture(f"{static_path}/header_logos/intestazione_ikonacilia.png", width=Inches(2.55))
+        elif committent == 'IkonCasalPalocco':
+            cell_r.add_picture(f"{static_path}/header_logos/intestazione_ikoncasalpalocco.png", width=Inches(2.55))
+        elif committent == 'IkonFiumicino':
+            cell_r.add_picture(f"{static_path}/header_logos/intestazione_ikonfiumicino.png", width=Inches(2.55))
         else:
             cell_r.add_picture(f"{static_path}/header_logos/logo_{analysis_type}.png", width=Inches(1.19))
 
