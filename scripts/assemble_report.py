@@ -254,18 +254,9 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
             if committent == 'Genessere':
                 cell_r.add_picture("static/header_logos/intestazione_genessere.png", width=Inches(2.55))
                 print("Inserted genessere logo")
-            
             elif committent == 'Braincare':
                 cell_r.add_picture("static/header_logos/intestazione_braincare.png", width=Inches(2.55))
                 print("Inserted braincare logo")
-            elif committent == 'Longevia':
-                cell_r.add_picture("static/header_logos/intestazione_longevia.png", width=Inches(2.55))
-            elif committent == 'IkonAcilia':
-                cell_r.add_picture("static/header_logos/intestazione_ikonacilia.png", width=Inches(2.55))
-            elif committent == 'IkonCasalPalocco':
-                cell_r.add_picture("static/header_logos/intestazione_ikoncasalpalocco.png", width=Inches(2.55))
-            elif committent == 'IkonFiumicino':
-                cell_r.add_picture("static/header_logos/intestazione_ikonfiumicino.png", width=Inches(2.55))
             else:
                 if analysis_type == "Junior_carie":
                      cell_r.add_picture("static/header_logos/logo_Base.png".format(analysis_type), width=Inches(1.19))
@@ -276,7 +267,16 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
             ht1=htab_cells[1]
             ht0.vertical_alignment = WD_ALIGN_VERTICAL.TOP
             cell_p, cell_f, cell_r = paragraph_format_run(ht1)
-            cell_r.add_picture("static/header_logos/intestazione_altamedica.png", width=Inches(3.33))
+            if committent == 'Longevia':
+                cell_r.add_picture("static/header_logos/intestazione_longevia.png", width=Inches(2.55))
+            elif committent == 'IkonAcilia':
+                cell_r.add_picture("static/header_logos/intestazione_ikonacilia.png", width=Inches(2.55))
+            elif committent == 'IkonCasalPalocco':
+                cell_r.add_picture("static/header_logos/intestazione_ikoncasalpalocco.png", width=Inches(2.55))
+            elif committent == 'IkonFiumicino':
+                cell_r.add_picture("static/header_logos/intestazione_ikonfiumicino.png", width=Inches(2.55))
+            else:
+                cell_r.add_picture("static/header_logos/intestazione_altamedica.png", width=Inches(3.33))
             cell_p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
             htable.allow_autofit = True
             ht1.alignment = WD_ALIGN_PARAGRAPH.RIGHT

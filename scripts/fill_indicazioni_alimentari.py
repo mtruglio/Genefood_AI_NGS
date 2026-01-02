@@ -78,7 +78,14 @@ def add_image_to_header(doc, analysis_type, committent):
         elif committent == 'Braincare':
             cell_r.add_picture(f"{static_path}/header_logos/intestazione_braincare.png", width=Inches(2.55))
             print("inserted Braincare logo")
-        elif committent == 'Longevia':
+        else:
+            cell_r.add_picture(f"{static_path}/header_logos/logo_{analysis_type}.png", width=Inches(1.19))
+
+        # Right cell
+        ht1 = htab_cells[1]
+        ht1.vertical_alignment = WD_ALIGN_VERTICAL.TOP
+        cell_p, cell_f, cell_r = paragraph_format_run(ht1)
+        if committent == 'Longevia':
             cell_r.add_picture(f"{static_path}/header_logos/intestazione_longevia.png", width=Inches(2.55))
         elif committent == 'IkonAcilia':
             cell_r.add_picture(f"{static_path}/header_logos/intestazione_ikonacilia.png", width=Inches(2.55))
@@ -87,13 +94,7 @@ def add_image_to_header(doc, analysis_type, committent):
         elif committent == 'IkonFiumicino':
             cell_r.add_picture(f"{static_path}/header_logos/intestazione_ikonfiumicino.png", width=Inches(2.55))
         else:
-            cell_r.add_picture(f"{static_path}/header_logos/logo_{analysis_type}.png", width=Inches(1.19))
-
-        # Right cell
-        ht1 = htab_cells[1]
-        ht1.vertical_alignment = WD_ALIGN_VERTICAL.TOP
-        cell_p, cell_f, cell_r = paragraph_format_run(ht1)
-        cell_r.add_picture(f"{static_path}/header_logos/intestazione_altamedica.png", width=Inches(3.33))
+            cell_r.add_picture(f"{static_path}/header_logos/intestazione_altamedica.png", width=Inches(3.33))
         cell_p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
         
         # Set autofit for the table
