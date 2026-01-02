@@ -3,56 +3,83 @@ import json
 import re
 
 def ask_claude(json_file, prompt, analysis_type):
-    if analysis_type == "Ageing":
-        mod = "claude-3-5-sonnet-20241022"
-        headers={}
-    else:
-        mod="claude-3-5-sonnet-20240620"
-        headers={"anthropic-beta": "max-tokens-3-5-sonnet-2024-07-15"}
+    mod = "claude-sonnet-4-5-20250929"
+    headers = {}
     
     with open(json_file, 'r') as file:
         json_content = json.load(file)
     print("JSON LOADED")
-    # Convert the JSON content back to a string
+    
     json_string = json.dumps(json_content)
+    print(f"JSON string length: {len(json_string)} characters")
+    
     client = anthropic.Anthropic(
-        # defaults to os.environ.get("ANTHROPIC_API_KEY")
         api_key="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",
     )
     
-    # Create a streaming message
-    with client.messages.stream(
-        model=mod,
-        max_tokens=8192,
-        temperature=0.2,
-        system=f"Sei un esperto dietologo. Sei parte di un servizio che costruisce piani nutrizionali in base al profilo genetico delle persone. Il file json seguente e' la tua esperienza, basata su decine di casi passati. Il formato in cui sono scritte le indicazioni e' lo stesso che userai per generarne di nuove (json). Puoi aggiungere alimenti a tua discrezione, ma sempre attenendoti strettamente alle condizioni del paziente che ti indico. Non inferire condizioni non esplicitamente fornite (ad esempio intolleranze laddove non sono specificate). Se possibile, cerca il caso piu' vicino al paziente nel json che hai memorizzato, e parti da li' per fare le necessarie modifiche. A questo scopo, puoi valutare la \"vicinanza\" basandoti sulle condizioni presenti nel campo \"condizioni\" in ogni record nel JSON. Per creare la sezione \"Diagnosi\", attingi alle diagnosi molto dettagliate che trovi nei record del JSON, combinandole in maniera sensata in un testo esteso e altrettanto dettagliato.Ricorda: intolleranza al glutine non implica automaticamente intolleranza al lattosio, a meno che non sia esplicitamente scritto nel profilo paziente. Dopo aver generato il piano nutrizionale, accertati che non ci siano contraddizioni (ad esempio lo stesso alimento tra i Consigliati, Tollerati e Sconsigliati), e in caso risolvile. Ora leggi il json, imparalo, non fare altro e aspetta una mia richiesta.Il file JSON:<data>{json_string}</data>",
-        messages=[
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": prompt
-                    }
-                ]
-            }
-        ],
-        extra_headers=headers
-    ) as stream:
-        # Initialize an empty string to collect the complete response
+    system_prompt = f"Sei un esperto dietologo. Sei parte di un servizio che costruisce piani nutrizionali in base al profilo genetico delle persone. Il file json seguente e' la tua esperienza, basata su decine di casi passati. Il formato in cui sono scritte le indicazioni e' lo stesso che userai per generarne di nuove (json). Puoi aggiungere alimenti a tua discrezione, ma sempre attenendoti strettamente alle condizioni del paziente che ti indico. Non inferire condizioni non esplicitamente fornite (ad esempio intolleranze laddove non sono specificate). Se possibile, cerca il caso piu' vicino al paziente nel json che hai memorizzato, e parti da li' per fare le necessarie modifiche. A questo scopo, puoi valutare la \"vicinanza\" basandoti sulle condizioni presenti nel campo \"condizioni\" in ogni record nel JSON. Per creare la sezione \"Diagnosi\", attingi alle diagnosi molto dettagliate che trovi nei record del JSON, combinandole in maniera sensata in un testo esteso e altrettanto dettagliato. Ricorda: intolleranza al glutine non implica automaticamente intolleranza al lattosio, a meno che non sia esplicitamente scritto nel profilo paziente. Dopo aver generato il piano nutrizionale, accertati che non ci siano contraddizioni (ad esempio lo stesso alimento tra i Consigliati, Tollerati e Sconsigliati), e in caso risolvile. Il file JSON:<data>{json_string}</data>"
+    
+    try:
         full_response = ""
         
-        # Process each text chunk as it arrives
-        for text in stream.text_stream:
-            # Add the current chunk to our full response
-            full_response += text
+        # Create a streaming message
+        with client.messages.stream(
+            model=mod,
+            max_tokens=16000,
+            temperature=0.3,
+            system=system_prompt,
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": prompt
+                        }
+                    ]
+                }
+            ],
+            extra_headers=headers
+        ) as stream:
+            print("Streaming started...")
+            
+            # IMPORTANTE: raccogli TUTTO lo stream prima di uscire dal context manager
+            for text in stream.text_stream:
+                full_response += text
+                if len(full_response) % 100 == 0:
+                    print(f"Received {len(full_response)} characters so far...")
         
-        # Clean the response - remove markdown code block markers
-        cleaned_response = clean_json_response(full_response)
+        # Ora siamo FUORI dal context manager, lo stream è completo
+        print(f"\nTotal response length: {len(full_response)} characters")
         
-        # Return the cleaned response
-        return cleaned_response
-
+        if not full_response:
+            print("WARNING: Empty response received from Claude!")
+            return None
+        
+        # Mostra i primi 500 caratteri per debug
+        print(f"Response preview: {full_response[:500]}...")
+        
+        # Clean the response
+        try:
+            cleaned_response = clean_json_response(full_response)
+            print(f"Cleaned response length: {len(str(cleaned_response))} characters")
+            return cleaned_response
+        except Exception as clean_error:
+            print(f"ERROR in clean_json_response: {clean_error}")
+            print(f"Returning raw response instead")
+            # Ritorna la risposta raw se clean fallisce
+            return full_response
+            
+    except anthropic.APIError as e:
+        print(f"API Error: {e}")
+        print(f"Status code: {e.status_code}")
+        return None
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
+    
 def clean_json_response(response):
     """
     Clean the response by removing markdown code block delimiters
