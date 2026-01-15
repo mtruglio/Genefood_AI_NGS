@@ -1,6 +1,25 @@
 import anthropic
 import json
 import re
+import os
+
+def get_api_key():
+    # First try environment variable
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+    if api_key:
+        return api_key
+    
+    # Fallback: look for .env in project root
+    # script is in scripts/, so root is ../
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    env_path = os.path.join(base_dir, '.env')
+    
+    if os.path.exists(env_path):
+        with open(env_path, 'r') as f:
+            for line in f:
+                if line.strip().startswith("ANTHROPIC_API_KEY="):
+                    return line.strip().split("=", 1)[1].strip().strip('"').strip("'")
+    return None
 
 def ask_claude(json_file, prompt, analysis_type):
     mod = "claude-sonnet-4-5-20250929"
@@ -13,8 +32,13 @@ def ask_claude(json_file, prompt, analysis_type):
     json_string = json.dumps(json_content)
     print(f"JSON string length: {len(json_string)} characters")
     
+    api_key = get_api_key()
+    if not api_key:
+        print("ERROR: ANTHROPIC_API_KEY not found in environment or .env file")
+        return None
+
     client = anthropic.Anthropic(
-        api_key="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",
+        api_key=api_key,
     )
     
     system_prompt = f"Sei un esperto dietologo. Sei parte di un servizio che costruisce piani nutrizionali in base al profilo genetico delle persone. Il file json seguente e' la tua esperienza, basata su decine di casi passati. Il formato in cui sono scritte le indicazioni e' lo stesso che userai per generarne di nuove (json). Puoi aggiungere alimenti a tua discrezione, ma sempre attenendoti strettamente alle condizioni del paziente che ti indico. Non inferire condizioni non esplicitamente fornite (ad esempio intolleranze laddove non sono specificate). Se possibile, cerca il caso piu' vicino al paziente nel json che hai memorizzato, e parti da li' per fare le necessarie modifiche. A questo scopo, puoi valutare la \"vicinanza\" basandoti sulle condizioni presenti nel campo \"condizioni\" in ogni record nel JSON. Per creare la sezione \"Diagnosi\", attingi alle diagnosi molto dettagliate che trovi nei record del JSON, combinandole in maniera sensata in un testo esteso e altrettanto dettagliato. Ricorda: intolleranza al glutine non implica automaticamente intolleranza al lattosio, a meno che non sia esplicitamente scritto nel profilo paziente. Dopo aver generato il piano nutrizionale, accertati che non ci siano contraddizioni (ad esempio lo stesso alimento tra i Consigliati, Tollerati e Sconsigliati), e in caso risolvile. Il file JSON:<data>{json_string}</data>"
