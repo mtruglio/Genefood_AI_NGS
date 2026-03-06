@@ -94,6 +94,23 @@ $(document).ready(function(){
       vertical-align: middle;
       border-top: 1px solid #dee2e6;
   }
+
+  .warning-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-width: 180px;
+  }
+
+  .warning-chip {
+    font-size: 11px;
+    font-weight: 600;
+    cursor: help;
+  }
+
+  .warning-chip-ok {
+    cursor: default;
+  }
 </style>
 
 </head>
@@ -127,7 +144,7 @@ $(document).ready(function(){
     <div class="tab-content" id="pills-tabContent">
       {% for r in results %}
 
-        {% set codes = results[r][1].keys()|list %}
+        {% set ids = results[r][1].keys()|list %}
         {% if loop.index ==1 %}
           <div class="tab-pane fade show active" id="pills-{{r}}" role="tabpanel" aria-labelledby="pills-{{r}}-tab">
         {% else %}
@@ -138,11 +155,14 @@ $(document).ready(function(){
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Nome</th>
+                  <th scope="col">Id</th>
                   <th scope="col">Codice</th>
 
-                  {% for col in results[r][1][codes[0]] %}
+
+                  {% for col in results[r][1][ids[0]] %}
                           <th scope="col">{{col}}</th>
                   {% endfor %}
+                  <th scope="col">Warnings</th>
                   <th scope="col">Report</th>
                 </tr>
 
@@ -152,135 +172,160 @@ $(document).ready(function(){
                         <tr>
                           <th scope="row">{{ loop.index }}</th>
                           <td>{{results[r][0][pz]['name'].lower().capitalize()}}</td>
+                          <td>{{results[r][0][pz]['id']}}</td>
                           <td>{{results[r][0][pz]['code']}}</td>
-                          {% for col in results[r][1][codes[0]] %}
+
+                          {% for col in results[r][1][ids[0]] %}
                             <td>{{results[r][2][pz][col]}} ({{results[r][1][pz][col]}})</td>
                           {% endfor %}
                           <td>
-                            <form id="{{results[r][0][pz]['code']}}_form" action="{{ url_for('report_process', analysis_type=r, patient_id=results[r][0][pz]['code']) }}" method="POST">
+                            {% set warning_patient = pz|string %}
+                            {% set row_not_found = not_found.get(r, {}).get(warning_patient) %}
+                            {% set row_no_call = no_call.get(r, {}).get(warning_patient) %}
+                            {% set row_mismatch = mismatch.get(r, {}).get(warning_patient) %}
+                            {% set row_not_found_count = row_not_found.split(',')|length if row_not_found else 0 %}
+                            {% set row_no_call_count = row_no_call.split(',')|length if row_no_call else 0 %}
+                            {% set row_mismatch_count = row_mismatch.split(',')|length if row_mismatch else 0 %}
+                            <div class="warning-chips">
+                              {% if row_not_found %}
+                                <span class="badge badge-danger warning-chip" data-toggle="tooltip" data-placement="top" title="{{ row_not_found }}">Not Found ({{ row_not_found_count }})</span>
+                              {% endif %}
+                              {% if row_no_call %}
+                                <span class="badge badge-warning warning-chip" data-toggle="tooltip" data-placement="top" title="{{ row_no_call }}">No Call ({{ row_no_call_count }})</span>
+                              {% endif %}
+                              {% if row_mismatch %}
+                                <span class="badge badge-info warning-chip" data-toggle="tooltip" data-placement="top" title="{{ row_mismatch }}">Mismatch ({{ row_mismatch_count }})</span>
+                              {% endif %}
+                              {% if not row_not_found and not row_no_call and not row_mismatch %}
+                                <span class="badge badge-success warning-chip warning-chip-ok">OK</span>
+                              {% endif %}
+                            </div>
+                          </td>
+                          <td>
+                            <form id="{{results[r][0][pz]['id']}}_form" action="{{ url_for('report_process', analysis_type=r, patient_id=results[r][0][pz]['id']) }}" method="POST">
 
                               {% if r =='Plus' or r=='Vita' or r=='Sport' or r=='Ageing' or r=='Mamma'%} <!-- or r=='Junior' SE POSSIAMO CAVALCARE IL PLUS MA SICURO NO-->
                                 <div class="form-group">
                                   <label for="intolleranzeshort_{{r}}_{{pz}}">Testo Intolleranze Breve</label>
-                                  <textarea class="form-control" name="intolleranzeshort_{{r}}_{{results[r][0][pz]['code']}}" 
-                                    id="intolleranzeshort_{{r}}_{{results[r][0][pz]['code']}}" rows="2" 
-                                    onkeyup="URLChange(this.value, 'intolleranzeshort', '{{results[r][0][pz]['code']}}', ['Vita', 'Sport', 'Ageing', 'Mamma', 'Junior']);" 
-                                    onchange="URLChange(this.value, 'intolleranzeshort', '{{results[r][0][pz]['code']}}', ['Vita', 'Sport', 'Ageing', 'Mamma', 'Junior']);">{{testi['Plus'][pz]['testo_breve']}}</textarea>
+                                  <textarea class="form-control" name="intolleranzeshort_{{r}}_{{results[r][0][pz]['id']}}" 
+                                    id="intolleranzeshort_{{r}}_{{results[r][0][pz]['id']}}" rows="2" 
+                                    onkeyup="URLChange(this.value, 'intolleranzeshort', '{{results[r][0][pz]['id']}}', ['Vita', 'Sport', 'Ageing', 'Mamma', 'Junior']);" 
+                                    onchange="URLChange(this.value, 'intolleranzeshort', '{{results[r][0][pz]['id']}}', ['Vita', 'Sport', 'Ageing', 'Mamma', 'Junior']);">{{testi['Plus'][pz]['testo_breve']}}</textarea>
                                   </div>
                                 <div class="form-group">
                                   <label for="intolleranzelong_{{r}}_{{pz}}">Testo Intolleranze Lungo</label>
-                                  <textarea class="form-control" name="intolleranzelong_{{r}}_{{results[r][0][pz]['code']}}" 
-                                  id="intolleranzelong_{{r}}_{{results[r][0][pz]['code']}}" rows="4" 
-                                  onkeyup="URLChange(this.value, 'intolleranzelong', '{{results[r][0][pz]['code']}}', ['Vita', 'Sport', 'Ageing', 'Mamma', 'Junior']);" 
-                                  onchange="URLChange(this.value, 'intolleranzelong', '{{results[r][0][pz]['code']}}', ['Vita', 'Sport', 'Ageing', 'Mamma', 'Junior']);">{{testi['Plus'][pz]['testo_lungo']}}</textarea>
+                                  <textarea class="form-control" name="intolleranzelong_{{r}}_{{results[r][0][pz]['id']}}" 
+                                  id="intolleranzelong_{{r}}_{{results[r][0][pz]['id']}}" rows="4" 
+                                  onkeyup="URLChange(this.value, 'intolleranzelong', '{{results[r][0][pz]['id']}}', ['Vita', 'Sport', 'Ageing', 'Mamma', 'Junior']);" 
+                                  onchange="URLChange(this.value, 'intolleranzelong', '{{results[r][0][pz]['id']}}', ['Vita', 'Sport', 'Ageing', 'Mamma', 'Junior']);">{{testi['Plus'][pz]['testo_lungo']}}</textarea>
                                 </div>
                               {% endif %}
 
                               {% if r=='Vita' or r=='Sport' or r=='Ageing' or r=='Mamma' %}
                                 <div class="form-group">
                                   <label for="metabolismoshort_{{r}}_{{pz}}">Testo Metabolismo Breve</label>
-                                  <textarea class="form-control" name="metabolismoshort_{{r}}_{{results[r][0][pz]['code']}}" 
-                                  id="metabolismoshort_{{r}}_{{results[r][0][pz]['code']}}" rows="2" 
-                                  onkeyup="URLChange(this.value, 'metabolismoshort', '{{results[r][0][pz]['code']}}', ['Sport', 'Ageing', 'Mamma']);" 
-                                  onchange="URLChange(this.value, 'metabolismoshort', '{{results[r][0][pz]['code']}}', ['Sport', 'Ageing', 'Mamma']);">{{testi['Vita'][pz]['testo_breve']}}</textarea>
+                                  <textarea class="form-control" name="metabolismoshort_{{r}}_{{results[r][0][pz]['id']}}" 
+                                  id="metabolismoshort_{{r}}_{{results[r][0][pz]['id']}}" rows="2" 
+                                  onkeyup="URLChange(this.value, 'metabolismoshort', '{{results[r][0][pz]['id']}}', ['Sport', 'Ageing', 'Mamma']);" 
+                                  onchange="URLChange(this.value, 'metabolismoshort', '{{results[r][0][pz]['id']}}', ['Sport', 'Ageing', 'Mamma']);">{{testi['Vita'][pz]['testo_breve']}}</textarea>
                                 </div>
                                 <div class="form-group">
                                   <label for="metabolismolong_{{r}}_{{pz}}">Testo Metabolismo Lungo</label>
-                                  <textarea class="form-control" name="metabolismolong_{{r}}_{{results[r][0][pz]['code']}}" 
-                                  id="metabolismolong_{{r}}_{{results[r][0][pz]['code']}}" rows="4" 
-                                  onkeyup="URLChange(this.value, 'metabolismolong', '{{results[r][0][pz]['code']}}', ['Sport', 'Ageing', 'Mamma']);" 
-                                  onchange="URLChange(this.value, 'metabolismolong', '{{results[r][0][pz]['code']}}', ['Sport', 'Ageing', 'Mamma']);">{{testi['Vita'][pz]['testo_lungo']}}</textarea>
+                                  <textarea class="form-control" name="metabolismolong_{{r}}_{{results[r][0][pz]['id']}}" 
+                                  id="metabolismolong_{{r}}_{{results[r][0][pz]['id']}}" rows="4" 
+                                  onkeyup="URLChange(this.value, 'metabolismolong', '{{results[r][0][pz]['id']}}', ['Sport', 'Ageing', 'Mamma']);" 
+                                  onchange="URLChange(this.value, 'metabolismolong', '{{results[r][0][pz]['id']}}', ['Sport', 'Ageing', 'Mamma']);">{{testi['Vita'][pz]['testo_lungo']}}</textarea>
                                 </div>
                               {% endif %}
 
                               {% if r=='Sport' or r=='Ageing' %}
                                 <div class="form-group">
                                   <label for="sportshort_{{r}}_{{pz}}">Testo Sport Breve</label>
-                                  <textarea class="form-control" name="sportshort_{{r}}_{{results[r][0][pz]['code']}}" 
-                                  id="sportshort_{{r}}_{{results[r][0][pz]['code']}}" rows="2" 
-                                  onkeyup="URLChange(this.value, 'sportshort', '{{results[r][0][pz]['code']}}', ['Ageing']);" 
-                                  onchange="URLChange(this.value, 'sportshort', '{{results[r][0][pz]['code']}}', ['Ageing']);" 
+                                  <textarea class="form-control" name="sportshort_{{r}}_{{results[r][0][pz]['id']}}" 
+                                  id="sportshort_{{r}}_{{results[r][0][pz]['id']}}" rows="2" 
+                                  onkeyup="URLChange(this.value, 'sportshort', '{{results[r][0][pz]['id']}}', ['Ageing']);" 
+                                  onchange="URLChange(this.value, 'sportshort', '{{results[r][0][pz]['id']}}', ['Ageing']);" 
                                   >{{testi['Sport'][pz]['testo_breve']}}</textarea>
                                 </div>
                                 <div class="form-group">
                                   <label for="sportlong_{{r}}_{{pz}}">Testo Sport Lungo</label>
-                                  <textarea class="form-control" name="sportlong_{{r}}_{{results[r][0][pz]['code']}}" 
-                                  id="sportlong_{{r}}_{{results[r][0][pz]['code']}}" rows="4" 
-                                  onkeyup="URLChange(this.value, 'sportlong', '{{results[r][0][pz]['code']}}', ['Ageing']);" 
-                                  onchange="URLChange(this.value, 'sportlong', '{{results[r][0][pz]['code']}}', ['Ageing']);">{{testi['Sport'][pz]['testo_lungo']}}</textarea>
+                                  <textarea class="form-control" name="sportlong_{{r}}_{{results[r][0][pz]['id']}}" 
+                                  id="sportlong_{{r}}_{{results[r][0][pz]['id']}}" rows="4" 
+                                  onkeyup="URLChange(this.value, 'sportlong', '{{results[r][0][pz]['id']}}', ['Ageing']);" 
+                                  onchange="URLChange(this.value, 'sportlong', '{{results[r][0][pz]['id']}}', ['Ageing']);">{{testi['Sport'][pz]['testo_lungo']}}</textarea>
                                 </div>
                               {% endif %}
 
                               {% if r=='Ageing' %}
                                 <div class="form-group">
                                   <label for="ageingshort_{{r}}_{{pz}}">Testo Ageing Breve</label>
-                                  <textarea class="form-control" name="ageingshort_{{r}}_{{results[r][0][pz]['code']}}" id="ageingshort_{{r}}_{{results[r][0][pz]['code']}}" rows="2">{{testi['Ageing'][pz]['testo_breve']}}</textarea>
+                                  <textarea class="form-control" name="ageingshort_{{r}}_{{results[r][0][pz]['id']}}" id="ageingshort_{{r}}_{{results[r][0][pz]['id']}}" rows="2">{{testi['Ageing'][pz]['testo_breve']}}</textarea>
                                 </div>
                                 <div class="form-group">
                                   <label for="ageinglong_{{r}}_{{pz}}">Testo Ageing Lungo</label>
-                                  <textarea class="form-control" name="ageinglong_{{r}}_{{results[r][0][pz]['code']}}" id="ageinglong_{{r}}_{{results[r][0][pz]['code']}}" rows="4">{{testi['Ageing'][pz]['testo_lungo']}}</textarea>
+                                  <textarea class="form-control" name="ageinglong_{{r}}_{{results[r][0][pz]['id']}}" id="ageinglong_{{r}}_{{results[r][0][pz]['id']}}" rows="4">{{testi['Ageing'][pz]['testo_lungo']}}</textarea>
                                 </div>
                               {% endif %}
 
                               {% if r=='Junior_carie' %}
                               <div class="form-group">
                                 <label for="juniorcarieshort_{{r}}_{{pz}}" style="font-size: 16px;">Testo <b>Carie</b> Breve</label>
-                                <textarea class="form-control" name="juniorcarieshort_{{r}}_{{results[r][0][pz]['code']}}" 
-                                id="juniorcarieshort_{{r}}_{{results[r][0][pz]['code']}}" rows="2">{{testi['Junior_carie'][pz]['testo_breve']}}</textarea>    
+                                <textarea class="form-control" name="juniorcarieshort_{{r}}_{{results[r][0][pz]['id']}}" 
+                                id="juniorcarieshort_{{r}}_{{results[r][0][pz]['id']}}" rows="2">{{testi['Junior_carie'][pz]['testo_breve']}}</textarea>    
                               </div>
                               <div class="form-group">
                                 <label for="juniorcarielong_{{r}}_{{pz}}" style="font-size: 16px;">Testo <b>Carie</b> Lungo</label>
-                                <textarea class="form-control" name="juniorcarielong_{{r}}_{{results[r][0][pz]['code']}}" id="juniorcarielong_{{r}}_{{results[r][0][pz]['code']}}" rows="4">{{testi['Junior_carie'][pz]['testo_lungo']}}</textarea>
+                                <textarea class="form-control" name="juniorcarielong_{{r}}_{{results[r][0][pz]['id']}}" id="juniorcarielong_{{r}}_{{results[r][0][pz]['id']}}" rows="4">{{testi['Junior_carie'][pz]['testo_lungo']}}</textarea>
                               </div>
                               {% endif %}  
 
                               {% if r=='Junior_sindrome_met' or  r=='Junior_carie' %}
                                 <div class="form-group">
                                   <label for="juniormetshort_{{r}}_{{pz}}" style="font-size: 16px;">Testo <b>Sindrome met</b> Breve</label>
-                                  <textarea class="form-control" name="juniormetshort_{{r}}_{{results[r][0][pz]['code']}}" id="juniormetshort_{{r}}_{{results[r][0][pz]['code']}}" rows="2"
-                                  onkeyup="URLChange(this.value, 'juniormetshort', '{{results[r][0][pz]['code']}}', ['Junior_carie']);" 
-                                  onchange="URLChange(this.value, 'juniormetshort', '{{results[r][0][pz]['code']}}', ['Junior_carie']);">{{testi['Junior_sindrome_met'][pz]['testo_breve']}}</textarea>
+                                  <textarea class="form-control" name="juniormetshort_{{r}}_{{results[r][0][pz]['id']}}" id="juniormetshort_{{r}}_{{results[r][0][pz]['id']}}" rows="2"
+                                  onkeyup="URLChange(this.value, 'juniormetshort', '{{results[r][0][pz]['id']}}', ['Junior_carie']);" 
+                                  onchange="URLChange(this.value, 'juniormetshort', '{{results[r][0][pz]['id']}}', ['Junior_carie']);">{{testi['Junior_sindrome_met'][pz]['testo_breve']}}</textarea>
                                 </div>
                                 <div class="form-group">
                                   <label for="juniormetlong_{{r}}_{{pz}}" style="font-size: 16px;">Testo <b>Sindrome met</b> Lungo</label>
-                                  <textarea class="form-control" name="juniormetlong_{{r}}_{{results[r][0][pz]['code']}}" id="juniormetlong_{{r}}_{{results[r][0][pz]['code']}}" rows="4"
-                                  onkeyup="URLChange(this.value, 'juniormetlong', '{{results[r][0][pz]['code']}}', ['Junior_carie']);" 
-                                  onchange="URLChange(this.value, 'juniormetlong', '{{results[r][0][pz]['code']}}', ['Junior_carie']);">{{testi['Junior_sindrome_met'][pz]['testo_lungo']}}</textarea>
+                                  <textarea class="form-control" name="juniormetlong_{{r}}_{{results[r][0][pz]['id']}}" id="juniormetlong_{{r}}_{{results[r][0][pz]['id']}}" rows="4"
+                                  onkeyup="URLChange(this.value, 'juniormetlong', '{{results[r][0][pz]['id']}}', ['Junior_carie']);" 
+                                  onchange="URLChange(this.value, 'juniormetlong', '{{results[r][0][pz]['id']}}', ['Junior_carie']);">{{testi['Junior_sindrome_met'][pz]['testo_lungo']}}</textarea>
                                 </div>
                               {% endif %}
 
                               {% if r=='Junior_fragilita' or r=='Junior_sindrome_met' or r=='Junior_carie' %}
                               <div class="form-group">
                                 <label for="juniorfragshort_{{r}}_{{pz}}" style="font-size: 16px;">Testo <b>Fragilita</b> Breve</label>
-                                <textarea class="form-control" name="juniorfragshort_{{r}}_{{results[r][0][pz]['code']}}" id="juniorfragshort_{{r}}_{{results[r][0][pz]['code']}}" rows="2"
-                                onkeyup="URLChange(this.value, 'juniorfragshort', '{{results[r][0][pz]['code']}}', ['Junior_sindrome_met', 'Junior_carie']);" 
-                                onchange="URLChange(this.value, 'juniorfragshort', '{{results[r][0][pz]['code']}}', ['Junior_sindrome_met', 'Junior_carie']);">{{testi['Junior_fragilita'][pz]['testo_breve']}}</textarea>
+                                <textarea class="form-control" name="juniorfragshort_{{r}}_{{results[r][0][pz]['id']}}" id="juniorfragshort_{{r}}_{{results[r][0][pz]['id']}}" rows="2"
+                                onkeyup="URLChange(this.value, 'juniorfragshort', '{{results[r][0][pz]['id']}}', ['Junior_sindrome_met', 'Junior_carie']);" 
+                                onchange="URLChange(this.value, 'juniorfragshort', '{{results[r][0][pz]['id']}}', ['Junior_sindrome_met', 'Junior_carie']);">{{testi['Junior_fragilita'][pz]['testo_breve']}}</textarea>
                               </div>
                               <div class="form-group">
                                 <label for="juniorfraglong_{{r}}_{{pz}}" style="font-size: 16px;">Testo <b>Fragilita</b> Lungo</label>
-                                <textarea class="form-control" name="juniorfraglong_{{r}}_{{results[r][0][pz]['code']}}" id="juniorfraglong_{{r}}_{{results[r][0][pz]['code']}}" rows="4"
-                                onkeyup="URLChange(this.value, 'juniorfraglong', '{{results[r][0][pz]['code']}}', ['Junior_sindrome_met', 'Junior_carie']);" 
-                                onchange="URLChange(this.value, 'juniorfraglong', '{{results[r][0][pz]['code']}}', ['Junior_sindrome_met', 'Junior_carie']);">{{testi['Junior_fragilita'][pz]['testo_lungo']}}</textarea>
+                                <textarea class="form-control" name="juniorfraglong_{{r}}_{{results[r][0][pz]['id']}}" id="juniorfraglong_{{r}}_{{results[r][0][pz]['id']}}" rows="4"
+                                onkeyup="URLChange(this.value, 'juniorfraglong', '{{results[r][0][pz]['id']}}', ['Junior_sindrome_met', 'Junior_carie']);" 
+                                onchange="URLChange(this.value, 'juniorfraglong', '{{results[r][0][pz]['id']}}', ['Junior_sindrome_met', 'Junior_carie']);">{{testi['Junior_fragilita'][pz]['testo_lungo']}}</textarea>
                               </div>
                               {% endif %}    
 
                               {% if r=='Junior_intolleranze' or r=='Junior_sindrome_met' or  r=='Junior_carie' or r=='Junior_fragilita' %}
                                 <div class="form-group">
                                   <label for="juniorintshort_{{r}}_{{pz}}" style="font-size: 16px;">Testo <b>Intolleranze</b> Breve</label>
-                                  <textarea class="form-control" name="juniorintshort_{{r}}_{{results[r][0][pz]['code']}}" id="juniorintshort_{{r}}_{{results[r][0][pz]['code']}}" rows="2"
-                                  onkeyup="URLChange(this.value, 'juniorintshort', '{{results[r][0][pz]['code']}}', ['Junior_sindrome_met', 'Junior_carie', 'Junior_fragilita']);" 
-                                  onchange="URLChange(this.value, 'juniorintshort', '{{results[r][0][pz]['code']}}', ['Junior_sindrome_met', 'Junior_carie', 'Junior_fragilita']);">{{testi['Junior_intolleranze'][pz]['testo_breve']}}</textarea>
+                                  <textarea class="form-control" name="juniorintshort_{{r}}_{{results[r][0][pz]['id']}}" id="juniorintshort_{{r}}_{{results[r][0][pz]['id']}}" rows="2"
+                                  onkeyup="URLChange(this.value, 'juniorintshort', '{{results[r][0][pz]['id']}}', ['Junior_sindrome_met', 'Junior_carie', 'Junior_fragilita']);" 
+                                  onchange="URLChange(this.value, 'juniorintshort', '{{results[r][0][pz]['id']}}', ['Junior_sindrome_met', 'Junior_carie', 'Junior_fragilita']);">{{testi['Junior_intolleranze'][pz]['testo_breve']}}</textarea>
                                 </div>
                                 <div class="form-group">
                                   <label for="juniorintlong_{{r}}_{{pz}}" style="font-size: 16px;">Testo <b>Intolleranze</b> Lungo</label>
-                                  <textarea class="form-control" name="juniorintlong_{{r}}_{{results[r][0][pz]['code']}}" id="juniorintlong_{{r}}_{{results[r][0][pz]['code']}}" rows="4"
-                                  onkeyup="URLChange(this.value, 'juniorintlong', '{{results[r][0][pz]['code']}}', ['Junior_sindrome_met', 'Junior_carie', 'Junior_fragilita']);" 
-                                  onchange="URLChange(this.value, 'juniorintlong', '{{results[r][0][pz]['code']}}', ['Junior_sindrome_met', 'Junior_carie', 'Junior_fragilita']);">{{testi['Junior_intolleranze'][pz]['testo_lungo']}}</textarea>
+                                  <textarea class="form-control" name="juniorintlong_{{r}}_{{results[r][0][pz]['id']}}" id="juniorintlong_{{r}}_{{results[r][0][pz]['id']}}" rows="4"
+                                  onkeyup="URLChange(this.value, 'juniorintlong', '{{results[r][0][pz]['id']}}', ['Junior_sindrome_met', 'Junior_carie', 'Junior_fragilita']);" 
+                                  onchange="URLChange(this.value, 'juniorintlong', '{{results[r][0][pz]['id']}}', ['Junior_sindrome_met', 'Junior_carie', 'Junior_fragilita']);">{{testi['Junior_intolleranze'][pz]['testo_lungo']}}</textarea>
                                 </div>
                               {% endif %}          
                         
                         {% if r != "Junior_fragilita" and r != "Junior_intolleranze" and r != "Junior_sindrome_met" %}
-                          <button id="downloadWord_{{results[r][0][pz]['code']}}" 
+                          <button id="downloadWord_{{results[r][0][pz]['id']}}" 
                           type="button" 
                           name="btn" 
                           value="Download Word">Run AI</button>
@@ -311,6 +356,12 @@ $(document).ready(function(){
     </div>
 
 </div>
+
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
 
 <!-- Loading Modal -->
 <div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">

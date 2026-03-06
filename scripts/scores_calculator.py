@@ -7,16 +7,16 @@ rules = {
         'non evidente':[-1,8]
     },
     'T2D': {
-        'alto': [21, 999],
-        'medio': [14, 20],
-        'lieve': [7, 13],
+        'alto': [20, 999],
+        'medio': [15, 19],
+        'lieve': [7, 14],
         'non evidente': [-1, 6]
     },
     'Cardio': {
-        'alto': [21, 999],
-        'medio': [11, 20],
-        'lieve': [5, 10],
-        'non evidente': [-15, 4]
+        'alto': [25, 999],
+        'medio': [17, 24],
+        'lieve': [10, 16],
+        'non evidente': [-15, 9]
     }
 }
 
@@ -29,6 +29,9 @@ def calculate_level(category, score_to_label, scoring_rules):
     return final_level
         
 def calc_scores(test_type, results, scores_tuples, debug='off'):
+    print("Calculating scores for", test_type)
+    print("Results:", results)
+    print("Scores tuples:", scores_tuples)
     if debug == 'on':
         print(results)
         print(test_type)

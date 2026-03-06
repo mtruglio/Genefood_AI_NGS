@@ -228,9 +228,11 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     
     now = datetime.now()
     print("DEBUG time", now)
+    print("RAW RESULTS:", raw_results)
+    print("DEBUG analysis_type:", analysis_type)
     print("TESTI")
     print(testi)
-    print(raw_results["Condizioni"])
+    print(raw_results[analysis_type][1][patient_id]["condizioni"])
     print(reports)
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     patient_number = patient_id
@@ -442,9 +444,9 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
 
         if testo_intolleranzeshort!="" and testo_intolleranzeshort!="NON SI EVIDENZIANO PREDISPOSIZIONI GENETICHE":
             diete_for_AI.append(testo_intolleranzeshort.lower().capitalize()+".")
-        if "INTOLLERANZA AL GLUTINE" not in testo_intolleranzeshort and not pd.isna(raw_results["Condizioni"][0][patient_number][0]) and "glutine" not in raw_results["Condizioni"][0][patient_number][0].lower() and "celiachia" not in raw_results["Condizioni"][0][patient_number][0].lower():
+        if "INTOLLERANZA AL GLUTINE" not in testo_intolleranzeshort and not pd.isna(raw_results[analysis_type][1][patient_id]["condizioni"]) and "glutine" not in raw_results[analysis_type][1][patient_id]["condizioni"] and "celiachia" not in raw_results[analysis_type][1][patient_id]["condizioni"].lower():
             diete_for_AI.append("No intolleranza al Glutine.")    
-        if "INTOLLERANZA AL LATTOSIO" not in testo_intolleranzeshort and not pd.isna(raw_results["Condizioni"][0][patient_number][0]) and "lattosio" not in raw_results["Condizioni"][0][patient_number][0].lower():
+        if "INTOLLERANZA AL LATTOSIO" not in testo_intolleranzeshort and not pd.isna(raw_results[analysis_type][1][patient_id]["condizioni"]) and "lattosio" not in raw_results[analysis_type][1][patient_id]["condizioni"].lower():
             diete_for_AI.append("No intolleranza al Lattosio.")
 
         if testo_assorbimentoshort!="" and testo_assorbimentoshort!="NON SI EVIDENZIANO PREDISPOSIZIONI GENETICHE":
@@ -1235,10 +1237,10 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
         for i in range(0, len(diete)):
             diete[i] = diete[i].replace('.pdf', '+'+reports[analysis_type][0][patient_number]['lim'][:-1].capitalize()+'.pdf')
     if reports[analysis_type][0][patient_number]['lim'].lower()!="no":
-        diete_for_AI.append(reports[analysis_type][0][patient_number]['lim'][:-1].capitalize()+'.')
+        diete_for_AI.append(raw_results[analysis_type][1][patient_number]['lim'][:-1].capitalize()+'.')
     diete.insert(0, original_pdf) # prepend the original results pdf at the beginning of pdf reports list
-    if not pd.isna(raw_results["Condizioni"][0][patient_number][0]):
-        diete_for_AI.append(raw_results["Condizioni"][0][patient_number][0]+".")
+    if not pd.isna(raw_results[analysis_type][1][patient_number]["condizioni"]):
+        diete_for_AI.append(raw_results[analysis_type][1][patient_number]["condizioni"]+".")
     print("######### Report: ", diete)
     final_pdf = original_pdf.replace('_result.pdf', '.pdf')
 
@@ -1267,17 +1269,17 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     diete_for_AI.append("\n1. Dammi la risposta in formato JSON, senza altro testo prima o dopo. Sanifica tutti i caratteri speciali, specialmente le virgolette.\n2. La struttura del JSON in output ricalchera' quella dei JSON di esempio.\n3. Per i pazienti VEGETARIANI, la chiave \"Proteine\" in \"raccomandazioni\" non conterra' le chiavi \"CARNE\" e \"PESCE\", ma solo \"ALIMENTI DI ORIGINE VEGETALE\", \"LEGUMI\", \"LATTICINI\" e \"UOVA\". Per i pazienti VEGANI, la sezione \"Proteine\" in \"raccomandazioni\" non conterra' le chiavi \"CARNE\", \"PESCE\", \"LATTICINI\" e \"UOVA\", ma solo \"ALIMENTI DI ORIGINE VEGETALE\" e \"LEGUMI\".\n4. Nella chiave \"raccomandazioni\" aggiungi eventuali integratori (SENZA SPECIFICARE LA MARCA COMMERCIALE), dosaggio e motivazione, sotto la chiave \"Integratori\", se necessari al paziente nelle sue condizioni. \"Integratori\" sara' strutturato nel seguente modo: \"Integratori\":[{ \"tipo\", \"dosaggio\", \"motivazione\" }].\n4.1 NON PRESCRIVERE INTEGRATORI A BASE DI CROMO. \n4.2 Se prescrivi integratori a base di Omega-3, nel dosaggio inserisci la nota \"La FDA consiglia di non superare un'assunzione totale di 3 grammi al giorno di EPA e DHA combinati (acidi grassi omega-3), con un massimo di 2 grammi provenienti da integratori alimentari.\".\n5. Per la sezione \"diagnosi\", approfondisci in maniera divulgativa ma estensivamente tutti gli aspetti e le eventuali predisposizioni/intolleranze, facendo cenni anche alla genetica, ricalcando i JSON di esempio quando disponibili per una particolare condizione, e solo partendo da questo testo ricalcato eventualmente espanderlo con osservazioni scientificamente fondate. Se nel JSON di esempio sono presenti \"raccomandazioni\" relative a una certa intolleranza/condizione, riportale, e poi espandile se necessario o se pensi di poter aggiungere informazioni importanti.\n6. Se consigli dispositivi medici o trattamenti terapeutici, inseriscili SEMPRE usando la dicitura \"Oltre alla dieta e all'esercizio, potrebbe essere necessaria la prescrizione da parte di un medico specialista di {dispositivo o trattamento suggerito}\" \n7. Nomina i geni solo se gia' presenti nel file JSON di esempio per quella condizione, non aggiungere altri geni non verificati nella tua risposta. Non inserire KCNJ11 tra i geni per il diabete, perche' al momento non lo indaghiamo. Tra i geni per le malattie cardiovascolari, nomina solo APOE e MTNR1B. \n8. Non menzionare cancro o tumore nella sezione \"Diagnosi\".\n9. Dopo aver generato il JSON, validane internamente la struttura prima di fornirmelo.\n10. Espandi le liste alimenti il piu' possibile, cerca di indicare almeno 5-10 alimenti per categoria di macronutrienti e livello di tollerabilita'.\n11. Dopo aver generato le liste di alimenti, confrontale di nuovo con le \"condizioni\" del paziente e correggi eventuali incoerenze.\n12. Hai oltre 8000 token disponibili, elabora estensivamente ogni condizione nella sezione Diagnosi.")
 
     prompt = ' '.join(diete_for_AI)
-    print(raw_results["Condizioni"][0][patient_number][0].lower())
-    if "vega" in raw_results["Condizioni"][1][patient_number]['lim'].lower() or "vega" in raw_results["Condizioni"][0][patient_number][0].lower():
+    print(raw_results[analysis_type][1][patient_id]["condizioni"].lower())
+    if "vega" in raw_results[analysis_type][1][patient_id]["lim"].lower() or "vega" in raw_results[analysis_type][1][patient_id]["condizioni"].lower():
         base_condition_filter.append("Vegano")
-    if "vege" in raw_results["Condizioni"][1][patient_number]['lim'].lower() or "vegetari" in raw_results["Condizioni"][0][patient_number][0].lower():
+    if "vege" in raw_results[analysis_type][1][patient_id]["lim"].lower() or "vegetari" in raw_results[analysis_type][1][patient_id]["condizioni"].lower():
         base_condition_filter.append("Vegetariano")    
     print(prompt)
     print(base_condition_filter)
     print(other_conditions_filter)
 
     gather_data('./static/consolidated_data_italian_with_subcategories.json', './static/consolidated_data_italian_with_subcategories_special.json', base_condition_filter, other_conditions_filter,'./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type))
-    # input("STOP")
+    # input("STOP PRIMA DI CLAUDE")
     ai_response = ask_claude('./ARCHIVIO/{0}_{1}_{2}_reduced.json'.format(name, patient_id, analysis_type), prompt, analysis_type)
     ai_response_text = ai_response[0].text if isinstance(ai_response, list) and ai_response else ai_response
 

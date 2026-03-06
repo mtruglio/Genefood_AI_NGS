@@ -6,7 +6,7 @@ import pandas as pd
 import io
 import os
 from pprint import pprint
-from scripts.xlsxreader import build_scores_dicts, read_query, get_testi_auto
+from scripts.xlsxreader import build_scores_dicts, read_query, read_NGS_results_from_file, get_testi_auto
 from scripts.scores_calculator import calc_scores
 from scripts.scores_calculator import rules as base_rules
 from scripts.scores_calculator import calculate_level
@@ -15,6 +15,7 @@ from scripts.assemble_report import assemble_report
 from pprint import pprint
 import werkzeug
 from utils import errors
+from utils import utilities
 from utils.errors import ValidationError as ValidationError
 import json
 import subprocess
@@ -27,7 +28,7 @@ from pathlib import Path
 debug = 'on'
 
 app = Flask(__name__)
-app.config.from_object("config.ProductionConfig")
+app.config.from_object("config.DevelopmentConfig")
 # app.config.from_object("config.DevelopmentConfig")
 app.register_error_handler(ValidationError, errors.handle_400_errors)
 app.config["SESSION_PERMANENT"] = False
@@ -38,6 +39,55 @@ Session(app)
 scores_peso, scores_t2d, scores_cardio, scores_mamma, notes_mamma, scores_plus, notes_plus, scores_vita, notes_vita, \
     scores_sport, notes_sport, scores_ageing, notes_ageing, scores_junior_intoll, notes_junior_intoll, scores_junior_frag, notes_junior_frag, \
     scores_junior_met, notes_junior_met, scores_junior_carie, notes_junior_carie = build_scores_dicts('static/GENEFOOD_variants_list.xlsx')
+
+# Build mapping of option -> gene -> rsID -> (ref, alt)
+ref_alt_file = 'static/GENEFOOD_variants_ref_alt.xlsx'
+variants_ref_alt = {}
+ref_alt_sheets = pd.read_excel(ref_alt_file, sheet_name=None)
+for sheet_name, sheet_df in ref_alt_sheets.items():
+    option_name = sheet_name.replace('Foglio', '').strip() or sheet_name
+    option_variants = {}
+    for _, row in sheet_df.iterrows():
+        gene = row.get('gene')
+        rs_id = row.get('rs_id')
+        wt = row.get('wt')
+        alt = row.get('alt')
+        if pd.isna(gene) or pd.isna(rs_id) or pd.isna(wt) or pd.isna(alt):
+            continue
+        gene_key = str(gene).strip()
+        rsid_key = str(rs_id).strip()
+        wt_val = str(wt).strip()
+        alt_val = str(alt).strip()
+        option_variants.setdefault(gene_key, {})[rsid_key] = (wt_val, alt_val)
+    variants_ref_alt[option_name] = option_variants
+
+print("VARIANTS REF ALT:")
+print(variants_ref_alt)
+# put all these scores and notes into a dictionary for easier passing around
+all_scores_notes = {
+    'scores_peso': scores_peso,
+    'scores_t2d': scores_t2d,
+    'scores_cardio': scores_cardio,
+    'scores_mamma': scores_mamma,
+    'notes_mamma': notes_mamma,
+    'scores_plus': scores_plus,
+    'notes_plus': notes_plus,
+    'scores_vita': scores_vita,
+    'notes_vita': notes_vita,
+    'scores_sport': scores_sport,
+    'notes_sport': notes_sport,
+    'scores_ageing': scores_ageing,
+    'notes_ageing': notes_ageing,
+    'scores_junior_intoll': scores_junior_intoll,
+    'notes_junior_intoll': notes_junior_intoll,
+    'scores_junior_frag': scores_junior_frag,
+    'notes_junior_frag': notes_junior_frag,
+    'scores_junior_met': scores_junior_met,
+    'notes_junior_met': notes_junior_met,
+    'scores_junior_carie': scores_junior_carie,
+    'notes_junior_carie': notes_junior_carie
+}
+
 
 @parser.error_handler
 def handle_request_parsing_error(err, req, schema, *, error_status_code, 
@@ -51,22 +101,193 @@ def handle_request_parsing_error(err, req, schema, *, error_status_code,
 def index():
     if request.method == 'POST':
         if request.form.get("Submit_file"):
-                    uploaded_file = request.files['input_file']
+                    metadata_file = request.files['metadata_file']
+                    variants_file = request.files['variants_file']
+                    print("files received:", metadata_file, variants_file)
                     options = request.form.getlist('optcheck')
+                    selected_options = list(options)
+                    print("Selected options:", selected_options)
                     session['json_results'] = {}
                     session['reports'] = {}
+                    session['warning_dicts'] = {'not_found': {}, 'no_call': {}, 'mismatch': {}}
+                    session['not_found'] = {}
+                    session['no_call'] = {}
+                    session['mismatch'] = {}
                     
-                    if uploaded_file.filename != '':
-                            all_results = read_query(uploaded_file, options)
+                    if metadata_file.filename != '' and variants_file.filename != '':
+                            metadata = read_query(metadata_file)
+                            print("METADATA:")
+                            pprint(metadata)
+
+
+                            ngs_variants_df = read_NGS_results_from_file(variants_file, options, all_scores_notes)
+                            print("NGS VARIANTS DF:")
+                            print(ngs_variants_df)
                             all_errors = []
                             print("ALL RESULTS")
-                            print(all_results)
+                            print(metadata)
+                            print(ngs_variants_df)
+                            print("CHECKING PATIENTS IN METADATA AGAINST NGS RESULTS...")
+                            print(metadata.keys())
+                            print(ngs_variants_df.index)
+                            # Validate that all patients in metadata exist in the NGS variants file
+                            missing_patients = [pid for pid in metadata.keys() if pid not in ngs_variants_df.index]
+                            print("Missing patients:", missing_patients)
+
+                            if missing_patients:
+                                error_message = (
+                                    "Errore: I seguenti pazienti sono presenti nei metadati ma assenti "
+                                    f"nei risultati NGS: {', '.join(missing_patients)}"
+                                )
+                                raise ValidationError(error_message)
+
+
+                            # selected_scores_notes is just a subset of variants_ref_alt which keeps only the options selected
+                            selected_variants_definition = utilities.subset_top_keys_safe(variants_ref_alt, selected_options, strict=False)
+                            
+                            # Build per-patient lookup to speed gene/rsID searches
+                            patient_variant_lookup = {}
+                            if isinstance(ngs_variants_df, pd.DataFrame):
+                                for patient in ngs_variants_df.index.unique():
+                                    patient_df = ngs_variants_df.loc[[patient]]
+                                    patient_variant_lookup[str(patient)] = {
+                                        (str(row["Gene"]).strip(), str(row["rsID"]).strip()): row
+                                        for _, row in patient_df.iterrows()
+                                    }
+
+                            no_call_list = []
+                            genes_not_found = []
+                            allele_mismatch_warnings = []
+                            not_found_dict = {}
+                            no_call_dict = {}
+                            mismatch_dict = {}
+                            selected_variants_dfs = {}
+
+                            def _add_warning_entry(warning_dict, option_label, patient_label, gene_key, rsid_key):
+                                option_bucket = warning_dict.setdefault(option_label, {})
+                                warning_value = f"{str(gene_key).strip()}({str(rsid_key).strip()})"
+                                existing = option_bucket.get(patient_label)
+                                if existing:
+                                    existing_values = [item.strip() for item in existing.split(",") if item.strip()]
+                                    if warning_value not in existing_values:
+                                        option_bucket[patient_label] = f"{existing}, {warning_value}"
+                                else:
+                                    option_bucket[patient_label] = warning_value
+
+                            def _allelic_call(row, patient_data, option_label, patient_label):
+                                """Return genotype plus warning messages for the caller to collect."""
+                                gene_key = str(row.Gene).strip()
+                                rsid_key = str(row.SNP).strip()
+                                wt_val = str(row.WT).strip()
+                                alt_val = str(row.alt).strip()
+                                gene_not_found_msg = None
+                                no_call_msg = None
+                                mismatch_msg = None
+                                record = patient_data.get((gene_key, rsid_key))
+                                if record is None:
+                                    genotype = wt_val + wt_val
+                                    gene_not_found_msg = f"{option_label} | {patient_label} | {gene_key} {rsid_key} not found"
+                                    return genotype, no_call_msg, gene_not_found_msg, mismatch_msg
+
+                                ref_val = str(record["Ref"]).strip()
+                                var_val = str(record["Variant"]).strip()
+                                if ref_val != wt_val or var_val != alt_val:
+                                    # let's try to reverse complement both and see if that matches
+                                    # if utilities.reverse_complement(ref_val) == wt_val and utilities.reverse_complement(var_val) == alt_val:
+                                        #
+                                    mismatch_msg = f"{option_label} | {patient_label} | {gene_key} {rsid_key} Ref/Alt {ref_val}/{var_val} expected {wt_val}/{alt_val}"
+
+
+                                call_value = str(record["Allele Call"]).strip().lower()
+                                if call_value == "absent":
+                                    genotype = wt_val + wt_val
+                                elif call_value == "homozygous":
+                                    genotype = alt_val + alt_val
+                                elif call_value == "heterozygous":
+                                    genotype = wt_val + alt_val
+                                elif call_value == "no call":
+                                    genotype = wt_val + wt_val
+                                    no_call_msg = f"{option_label} | {patient_label} | {gene_key} {rsid_key} marked No Call"
+                                else:
+                                    genotype = ''
+                                return genotype, no_call_msg, gene_not_found_msg, mismatch_msg
+
+
+                            patient_ids = list(patient_variant_lookup.keys())
+
+                            def _keep_patient_columns(df):
+                                keep_cols = [
+                                    col for col in df.columns
+                                    if col in ('Gene', 'SNP', 'WT', 'alt') or col in metadata.keys()
+                                ]
+                                return df.loc[:, keep_cols]
+
+                            # If any selected definition is already tabular, keep only valid patient columns.
+                            if isinstance(selected_variants_definition, dict):
+                                selected_variants_definition = {
+                                    key: _keep_patient_columns(value) if isinstance(value, pd.DataFrame) else value
+                                    for key, value in selected_variants_definition.items()
+                                }
+
+                            for option_name, genes in selected_variants_definition.items():
+                                rows = []
+                                for gene_name, rs_map in genes.items():
+                                    for rsid, (wt, alt) in rs_map.items():
+                                        rows.append({'Gene': gene_name, 'SNP': rsid, 'WT': wt, 'alt': alt})
+                                option_df = pd.DataFrame(rows, columns=['Gene', 'SNP', 'WT', 'alt'])
+
+                                for patient_id in patient_ids:
+                                    pdata = patient_variant_lookup.get(patient_id, {})
+                                    genotypes = []
+                                    for row in option_df.itertuples(index=False):
+                                        genotype, no_call_msg, gene_not_found_msg, mismatch_msg = _allelic_call(
+                                            row, pdata, option_name, patient_id
+                                        )
+                                        if no_call_msg:
+                                            no_call_list.append(no_call_msg)
+                                            _add_warning_entry(no_call_dict, option_name, patient_id, row.Gene, row.SNP)
+                                        if gene_not_found_msg:
+                                            genes_not_found.append(gene_not_found_msg)
+                                            _add_warning_entry(not_found_dict, option_name, patient_id, row.Gene, row.SNP)
+                                        if mismatch_msg:
+                                            allele_mismatch_warnings.append(mismatch_msg)
+                                            _add_warning_entry(mismatch_dict, option_name, patient_id, row.Gene, row.SNP)
+                                        genotypes.append(genotype)
+                                    option_df[patient_id] = genotypes
+
+                                option_df = _keep_patient_columns(option_df)
+                                selected_variants_dfs[option_name] = (option_df, metadata)
+
+
+                            print(selected_variants_definition)
+                            print("SELECTED VARIANTS DFs:")
+                            pprint(selected_variants_dfs)
+                            #print alll warnings collected
+                            if no_call_list:
+                                print("No Call Warnings:")
+                                for msg in no_call_list:
+                                    print(msg)
+                            if genes_not_found:
+                                print("Genes Not Found Warnings:")
+                                for msg in genes_not_found:
+                                    print(msg)
+                            if allele_mismatch_warnings:
+                                print("Allele Mismatch Warnings:")
+                                for msg in allele_mismatch_warnings:
+                                    print(msg)
+                            print("Warnings by dictionary:")
+                            pprint({
+                                'not_found': not_found_dict,
+                                'no_call': no_call_dict,
+                                'mismatch': mismatch_dict
+                            })
+
                             # input("FERMO")
                             # Decomposing Junior results into three different categories
-                            
+                            all_results = selected_variants_dfs.copy()
                             for r in all_results: 
-                                if debug=='on':
-                                    print(all_results[r][1])
+                                # if debug=='on':
+                                #     print(all_results[r][1])
                                     
                                 if r == 'Base':
                                     final_scores, final_levels, errors = calc_scores(r, all_results[r], [('Peso',scores_peso), ('T2D',scores_t2d), ('Cardio',scores_cardio)], debug=debug)
@@ -130,6 +351,15 @@ def index():
                                 
                             if all_errors:
                                 raise ValidationError(';'.join(set(all_errors)))
+
+                            session['warning_dicts'] = {
+                                'not_found': not_found_dict,
+                                'no_call': no_call_dict,
+                                'mismatch': mismatch_dict
+                            }
+                            session['not_found'] = not_found_dict
+                            session['no_call'] = no_call_dict
+                            session['mismatch'] = mismatch_dict
                             
                             if debug=='on':
                                 print("ALL RESULTS:")
@@ -142,6 +372,10 @@ def index():
 def results():
     results = session.get('reports', None)
     testi = {}
+    not_found = session.get('not_found', {})
+    no_call = session.get('no_call', {})
+    mismatch = session.get('mismatch', {})
+    warning_dicts = session.get('warning_dicts', {'not_found': {}, 'no_call': {}, 'mismatch': {}})
 
     # Sorting results, which is now in alphabetical order for some reason
     sorted_results = {}
@@ -150,7 +384,8 @@ def results():
             sorted_results[a] = results[a]
 
 
-
+    print("Sorted results:")
+    pprint(sorted_results)
     # Adding a new dictionary for short texts and long texts
     for a in ['Base','Plus','Vita','Sport','Ageing','Mamma','Junior_intolleranze','Junior_fragilita','Junior_sindrome_met','Junior_carie']:
         if a not in testi and a in sorted_results:
@@ -175,8 +410,8 @@ def results():
                     testo_breve = testo_breve[:last_comma_index] + " E" + testo_breve[last_comma_index + 1:]
 
                 if a != "Vita" and a != "Mamma":
-                    if (a == "Plus" or a== "Junior intolleranze") and sorted_results[a][2][r]['Glutine']!='No':
-                        testo_lungo = testo_breve.replace("AL GLUTINE", "AL GLUTINE ({})".format(sorted_results[a][1][r]['Glutine']))
+                    if (a == "Plus" or a== "Junior intolleranze") and sorted_results[a][0][r]['glutine']!='Normale':
+                        testo_lungo = testo_breve.replace("AL GLUTINE", "AL GLUTINE ({})".format(sorted_results[a][0][r]['glutine']))
                     else:
                         testo_lungo = testo_breve
 
@@ -227,7 +462,15 @@ def results():
             pprint(sorted_results[r][2])   
         print("##### Testi:")
         pprint(testi)
-    return render_template('results.html', results=sorted_results, testi=testi)
+    return render_template(
+        'results.html',
+        results=sorted_results,
+        testi=testi,
+        warning_dicts=warning_dicts,
+        not_found=not_found,
+        no_call=no_call,
+        mismatch=mismatch
+    )
 
 @app.route('/report_process/<analysis_type>/<patient_id>', methods=['GET', 'POST'])
 def report_process(analysis_type, patient_id):
@@ -278,6 +521,8 @@ def report_process(analysis_type, patient_id):
     # print(patient_id)
     # print(analysis_type)
     reports = session.get('reports', None)
+    print("REPORTS IN SESSION:")
+    print(reports)
     raw_results = session.get('json_results', None)
     # print(raw_results)
     print("Assembling report for ", analysis_type, patient_id)  
@@ -285,7 +530,6 @@ def report_process(analysis_type, patient_id):
     cf = reports[analysis_type][0][patient_id]['cf']
     email = reports[analysis_type][0][patient_id]['email']
     session['patient_data'] = session.get('patient_data', {})
-
     ai_response_dict, template_indicazioni, name, patient_id, analysis_type, committent, base_conditions, other_conditions = assemble_report(patient_id=patient_id, analysis_type=analysis_type, raw_results=raw_results, \
         reports=reports, scores_peso=scores_peso, scores_t2d=scores_t2d, scores_cardio=scores_cardio, \
         scores_mamma=scores_mamma, notes_mamma=notes_mamma, scores_plus=scores_plus, notes_plus=notes_plus, \
@@ -570,4 +814,3 @@ if __name__ == '__main__':
     # for s in [scores_junior, notes_junior]:
     #     pprint(s)
     app.run()
-

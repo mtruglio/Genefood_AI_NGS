@@ -1,6 +1,6 @@
 #utils/errors.py
 """Define custom error handlers for application."""
-from flask import jsonify, make_response
+from flask import jsonify, make_response, render_template
 from werkzeug.http import HTTP_STATUS_CODES
 
 class ValidationError(Exception):
@@ -26,5 +26,17 @@ def handle_404_errors(error):
     
 def handle_400_errors(error):
     """Handle 400 errors in resources."""
-    message = "Error(s):<br>"+'<br>'.join(str(error).split(';'))
-    return message
+    error_items = [item.strip() for item in str(error).split(';') if item.strip()]
+    if not error_items:
+        error_items = ["Si e' verificato un errore durante l'elaborazione dei file caricati."]
+
+    return make_response(
+        render_template(
+            'error.html',
+            status_code=400,
+            title="Impossibile completare il report",
+            subtitle="I file caricati contengono dati da correggere. Nessun punteggio e' stato calcolato.",
+            error_items=error_items,
+        ),
+        400,
+    )

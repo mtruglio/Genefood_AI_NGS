@@ -10,3 +10,5 @@ utils/__pycache__/*
 /home/utente/Desktop/GenefoodAI/flask_session/*
 log.txt
 .env
+*__pycache__*
+*.pyc

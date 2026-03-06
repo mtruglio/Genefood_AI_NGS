@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 import pandas as pd
 from pprint import pprint
-
+from .read_NGS_results import build_pandas_variant_db
 from utils.errors import ValidationError as ValidationError
 
 def check_missing_data(datadict, foglio, legend):
@@ -22,11 +22,11 @@ def check_missing_data(datadict, foglio, legend):
     else:
         return
         
-def check_wrong_data(paziente, foglio):
+def check_wrong_data(paziente):
     # print("Check foglio", foglio)
     # print(datadict)
 
-    return "Errore: Il codice di accettazione non e' corretto (deve essere 8 cifre). Paziente {0}, foglio {1}".format(paziente, foglio)
+    return "Errore: Il codice di accettazione non e' corretto (deve essere 8 cifre). Paziente {0}".format(paziente)
 
 
 def calc_weights_dict(df):
@@ -68,6 +68,7 @@ def get_notes_dict(df):
         if snp not in notes_dict[gene]:
                 notes_dict[gene][snp] = {}
         snp_notes=[]
+        # print("Note for gene {0} snp {1}: {2}".format(gene, snp, note))
         for n in note.split('+'):
             snp_notes.append(n.rstrip().lstrip())
         notes_dict[gene][snp] = snp_notes
@@ -133,6 +134,8 @@ def build_scores_dicts(variants_list_file):
     plus = cleansheet(plus)
     scores_plus = calc_weights_dict(plus)
     notes_plus = get_notes_dict(plus)
+    # print(scores_plus)
+    # print(notes_plus)
     # print(notes_plus)
 
 
@@ -190,94 +193,147 @@ def build_scores_dicts(variants_list_file):
         scores_junior_intoll, notes_junior_intoll, scores_junior_frag, notes_junior_frag, \
         scores_junior_met, notes_junior_met, scores_junior_carie, notes_junior_carie
 
-def read_query(filein, packages):
+
+def read_NGS_results_from_file(variants_file, packages, all_scores_notes, heet_name="Sheet1", as_dict=False,):
+    print(packages)
     #Add "Condizioni" to the 'packages' list
+    if "Base" in packages:
+        packages.append("peso")
+        packages.append("t2d")
+        packages.append("cardio")
+        packages.remove("Base")
+
     if "Junior" in packages:
         packages.append("Junior_sindrome_met")
         packages.append("Junior_intolleranze")
         packages.append("Junior_carie")
         packages.append("Junior_fragilita")
         packages.remove("Junior")
+    print("variants_file:", variants_file)
+    ngs_variants_df =build_pandas_variant_db(variants_file)
+    for pkg in packages:
+        if 'scores_'+pkg.lower() in all_scores_notes:
+            print("Applying scores for package:", pkg)
 
-        
-    packages.append("Condizioni")
 
+    return ngs_variants_df
+
+
+
+def read_query(metadata_file):      
+    p = 'Condizioni'
     # Packages is an array containing one or more from ['Base', 'Plus', 'Vita', 'Sport', 'Ageing', 'Mamma']
-    all_results = {}
     errors = []
     
-    for p in packages:
-
-        wb = load_workbook(filename = filein)
+    try:
+        wb = load_workbook(filename = metadata_file)
         parsed_sheet = wb['Foglio '+p]
-        # print("MAX COL",parsed_sheet.max_column)
-        rows_iter = parsed_sheet.iter_rows(min_col = 1, min_row = 3, max_col = parsed_sheet.max_column+10, max_row = 13)
-        # if p=='Vita':
-        #     for row in rows_iter:
-        #         for cell in list(row):
+    except KeyError:
+        errors.append("Errore: il foglio {0} non esiste nel file caricato".format(p))
 
-        #             print(cell.value())
-        #     input("VITA wait")
-        pazienti = [[cell.value for cell in list(row)[5:] if cell.value!=None] for row in rows_iter]
-  
+    except Exception as exc:
+        errors.append("Errore durante l'apertura del foglio {0}: {1}".format(p, exc))
 
 
+    print("Processing sheet Foglio", p)
+    # # print content of the sheet
+    # for row in parsed_sheet.iter_rows(min_row=3, max_row=14, min_col=1, max_col=parsed_sheet.max_column+10):
+    #     row_values = [cell.value for cell in row]
+    #     print(row_values)
+
+    try:
+        rows_iter = parsed_sheet.iter_rows(min_col = 1, min_row = 3, max_col = parsed_sheet.max_column+10, max_row = 15)
+        pazienti = [[cell.value for cell in list(row)[1:] if cell.value!=None] for row in rows_iter]
+    except Exception as exc:
+        errors.append("Errore durante la lettura dei dati nel foglio {0}: {1}".format(p, exc))
         
-        # re initialize iterator
-        rows_iter = parsed_sheet.iter_rows(min_col = 1, min_row = 3, max_col = parsed_sheet.max_column+10, max_row = 13)
-        legend = []
-        for row in rows_iter:
-            # print(row)
-            if list(row)[4].value!=None:
-                legend.append(list(row)[4].value)
 
-        error = check_missing_data(pazienti, p, legend)
-        if error: # in case something is missing   
-            errors.append(error)
-            continue #do not proceed further with the sheet
-        
-        pazienti_dict = {}
-        
-        for i in range(0, len(pazienti[0])):
+    print("PAZIENTI DATA EXTRACTED:")
+    print(pazienti)
 
+    if not pazienti:
+        errors.append("Errore: nessun paziente trovato nel foglio {0}".format(p))
+        
+
+    # Assert that all pazienti lists have the same length
+    legend = pazienti[0]  # Assuming the first row contains patient identifiers
+    print("LEGEND:")
+    print(legend)
+    if not all(len(row) == len(legend) for row in pazienti):
+        errors.append("Errore: qualcosa non va nel foglio Excel dei dati paziente. Controlla se qualcuno ha una cella vuota. ")
+        
+
+
+    # error = check_missing_data(pazienti, p, legend)
+    # if error: # in case something is missing   
+    #     errors.append(error)
+    #     continue #do not proceed further with the sheet
+    
+    pazienti_dict = {}
+    # print("Processing patients for sheet", p)
+    # print("Number of patients:", len(pazienti[0]))
+    # print(pazienti[0])
+    for i in range(0, len(pazienti[0])):
+        try:
+            print(pazienti[0][i])
             patient_code = str(pazienti[0][i])
+            print(patient_code)
             patient_id = str(pazienti[1][i])
+            print(patient_id)
             patient_name = pazienti[2][i]
+            print(patient_name)
             patient_email = pazienti[3][i]
+            print(patient_email)
             patient_cf = pazienti[4][i]
+            print(patient_cf)
             patient_weight = pazienti[5][i]
+            print(patient_weight)
             patient_height = pazienti[6][i]
-            patient_lim = pazienti[8][i].lower()
+            print(patient_height)
+            patient_lim_raw = pazienti[8][i]
+            patient_lim = patient_lim_raw.lower() if patient_lim_raw else ''
+            print(patient_lim)
             patient_dob = pazienti[9][i]
+            print(patient_dob)
             patient_committent = pazienti[10][i]
+            print(patient_committent)
+            patient_condizioni = pazienti[11][i]
+            print(patient_condizioni)
+            patient_glutine = pazienti[12][i]
+            print(patient_glutine)
 
             if len(patient_code) != 8:
-                error = check_wrong_data(patient_name, p)
-            if error: # in case something is missing   
-                errors.append(error)
+                print("Wrong patient code for", patient_name, "code:", patient_code)
+                errors.append(check_wrong_data(patient_name))
+                continue
             
             
             if p=='Mamma':
                 patient_gest = pazienti[7][i]
-                pazienti_dict[patient_code] = {'code':patient_code, 'id':patient_id, 'name':patient_name, 'email':patient_email, 'cf':patient_cf, ':peso':patient_weight, 'altezza':patient_height, 'gestazione':patient_gest, 'lim':patient_lim, 'DOB':patient_dob, 'committent': patient_committent} 
+                pazienti_dict[patient_id] = {'code':patient_code, 'id':patient_id, 'name':patient_name, 'email':patient_email, 'cf':patient_cf, ':peso':patient_weight, 'altezza':patient_height, 'gestazione':patient_gest, 'lim':patient_lim, 'DOB':patient_dob,  'committent': patient_committent , 'condizioni': patient_condizioni, 'glutine': patient_glutine} 
             else:
                 patient_sex = pazienti[7][i]
-                pazienti_dict[patient_code] = {'code':patient_code, 'id':patient_id, 'name':patient_name, 'email':patient_email, 'cf':patient_cf, 'peso':patient_weight, 'altezza':patient_height, 'sesso':patient_sex, 'lim':patient_lim, 'DOB':patient_dob, 'committent': patient_committent} 
-        
-        if p!='Condizioni':
-            sheet =  pd.read_excel(filein, sheet_name='Foglio '+p, skiprows=13, index_col=0, names=["Gene", "SNP", "WT", "alt"]+list(pazienti_dict.keys()))
-        else:
-            sheet =  pd.read_excel(filein, sheet_name='Foglio '+p, skiprows=12, nrows=1)
-            sheet = sheet.iloc[:, 5:]
-            names=list(pazienti_dict.keys())
-            sheet.columns = names
-            sheet = sheet.fillna(' ')
+                pazienti_dict[patient_id] = {'code':patient_code, 'id':patient_id, 'name':patient_name, 'email':patient_email, 'cf':patient_cf, 'peso':patient_weight, 'altezza':patient_height, 'sesso':patient_sex, 'lim':patient_lim, 'DOB':patient_dob, 'committent': patient_committent, 'condizioni': patient_condizioni, 'glutine': patient_glutine} 
+        except Exception as exc:
+            errors.append("Errore durante l'elaborazione del paziente {0} nel foglio {1}: {2}".format(i+1, p, exc))
+            continue
+    
+    # if p!='Condizioni':
+    #     sheet =  pd.read_excel(variants_file, sheet_name='Foglio '+p, skiprows=13, index_col=0, names=["Gene", "SNP", "WT", "alt"]+list(pazienti_dict.keys()))
+    # else:
+    #     sheet =  pd.read_excel(metadata_file, sheet_name='Foglio '+p, skiprows=12, nrows=1)
+    #     names=list(pazienti_dict.keys())
+    #     print("NAMES IN CONDIZIONI", names)
+    #     sheet.columns = names
+    #     sheet = sheet.fillna(' ')
+    #     print("SHEET IN CONDIZIONI")
+    #     print(sheet)
+    #     input("WAIT CONDIZIONI")
 
-        all_results[p] = (sheet, pazienti_dict)
-        print("THIS IS ALLRESULTS FROMM XLSXREADER for", p)
-        # print(pazienti_dict)
-        print(all_results[p])
-        # input("WAIT")
+    pazienti_dict
+    print("THIS IS ALLRESULTS FROMM XLSXREADER for", p)
+    print(pazienti_dict)
+
     if errors:
         raise ValidationError(';'.join(errors))
-    return all_results
+    return pazienti_dict

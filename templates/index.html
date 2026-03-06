@@ -80,9 +80,15 @@
 
             <form id="fileform" method="POST" action="" style="display: inline; margin-top: 60px;" enctype="multipart/form-data" >
               <div class="form-row align-items-center justify-content-center" style="margin-top: 10px; margin-bottom: 30px;">
-                <label style="padding-right: 19px; margin-bottom:0; padding-left: 90px;" for="input_file">File Excel da refertare:</label>
+                <label style="padding-right: 19px; margin-bottom:0; padding-left: 90px;" for="metadata_file">Info pazienti:</label>
                 <div style="display: inline-flex; vertical-align: middle;">
-                  <input type="file" class="form-control-file" name="input_file" id="input_file" accept=".csv, .xls, .xlsx" required>
+                  <input type="file" class="form-control-file" name="metadata_file" id="metadata_file" accept=".csv, .xls, .xlsx" required>
+                </div>
+              </div>
+              <div class="form-row align-items-center justify-content-center" style="margin-top: 10px; margin-bottom: 30px;">
+                <label style="padding-right: 19px; margin-bottom:0; padding-left: 90px;" for="variants_file">File Excel Risultati NGS:</label>
+                <div style="display: inline-flex; vertical-align: middle;">
+                  <input type="file" class="form-control-file" name="variants_file" id="variants_file" accept=".csv, .xls, .xlsx" required>
                 </div>
               </div>
               <div class="form-row justify-content-center" style="margin-top: 10px; margin-bottom: 30px;">

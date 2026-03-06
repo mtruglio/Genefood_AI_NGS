@@ -7,20 +7,23 @@ rules = {
         'Low Vitamin B12':[1,1000], 
         'Low Vitamin B6':[2,1000], 
         'Low Vitamin D':[3,1000], 
-        'Low Vitamin B9':[4,1000]},
+        'Low Vitamin B9':[4,1000],
+        'Low Potassium':[1, 999]},
     'Plus':{
         'Sens. Alcol' : [2, 999],
         'Fruttosio':[3,1000], 
         'Lattosio':[1,1000],  
-        'Nichel':[4,1000], 
+        'Nichel':[1,1000], 
         'Caffeina':{'Lento':[-999,-1], 'Veloce':[1,999]},
-        'Glutine':[1,1000]},
+        'Glutine':[1,1000]
+    },
     'Vita':{
         'Ferro Basso':[2, 999], 
         'Emocromatosi': {'No':[-999,0], 'Lieve_predisp':[1,1], 'True':[2,999]},
-        'Low Vitamin B9':[4,999], 
-        'Low Vitamin D':[3,10000], 
-        'Low Vitamin B12':[1,1000]},
+        'Low Vitamin B9':[2,999], 
+        'Low Vitamin D':[2,10000], 
+        'Low Vitamin B12':[3,1000],
+        'Low Vitamin A':[2,1000]},
     'Sport':{
         'Crampi-Debolezza Tendinea':[2,999],
         'Tendinopatie':[5,999],
@@ -42,9 +45,9 @@ rules = {
         'Sens. Alcol' : [2, 999],
         'Fruttosio':[2,1000], 
         'Lattosio':[1,1000],  
-        'Nichel':[2,1000], 
+        # 'Nichel':[2,1000], 
         'Caffeina':{'Lento':[-999,-1], 'Veloce':[1,999]},
-        'Glutine':[1,1000],
+        # 'Glutine':[1,1000],
     },
     'Junior_sindrome_met':{
         'Sindrome metabolica':{"No":[-999,9], "Lieve":[10,20], "Medio":[21,30], "Alto":[30,1000]},
@@ -58,7 +61,7 @@ rules = {
         # 'Low Vitamin D':[3,1000],
         # 'Fosforo Basso':[5,1000],
         # 'Calcio Alto':[5,1000],
-        'Emocromatosi': {'No':[-999,0], 'Lieve_predisp':[1,1], 'True':[2,999]},
+        'Emocromatosi': {'No':[-999,0], 'Lieve_predisp':[1,2], 'True':[3,999]},
         'Ferro Basso':[2, 999],
     },
 }
@@ -98,17 +101,19 @@ def calc_scores_categorized(test_type, results, scores_tuples, debug='on'):
     errors=[]
 
     for pz in pz_snps:
+        print("Calculating scores for patient", pz)
+        print("patient dictionary:", pz_dict[pz])
         final_scores[pz] = {}
         final_levels[pz] = {}
         if test_type == 'Mamma':
-            final_scores[pz] = {'Low Zinc':0, 'Sodium':0, 'Low Vitamin B12':0, 'Low Vitamin B6':0, 'Low Vitamin D':0, 'Low Vitamin B9':0}
-            final_levels[pz] = {'Low Zinc':'', 'Sodium':'', 'Low Vitamin B12':'', 'Low Vitamin B6':'', 'Low Vitamin D':'', 'Low Vitamin B9':''}
+            final_scores[pz] = {'Low Zinc':0, 'Sodium':0, 'Low Vitamin B12':0, 'Low Vitamin B6':0, 'Low Vitamin D':0, 'Low Vitamin B9':0, 'Low Potassium':0}
+            final_levels[pz] = {'Low Zinc':'', 'Sodium':'', 'Low Vitamin B12':'', 'Low Vitamin B6':'', 'Low Vitamin D':'', 'Low Vitamin B9':'', 'Low Potassium':''}
         elif test_type == 'Plus':
             final_scores[pz] = {'Sens. Alcol' :0, 'Fruttosio':0, 'Lattosio':0, 'Nichel':0, 'Caffeina':0,'Glutine':0}
             final_levels[pz] = {'Sens. Alcol' :'', 'Fruttosio':'', 'Lattosio':'', 'Nichel':'', 'Caffeina':'','Glutine':''}
         elif test_type == 'Vita':
-            final_scores[pz] = {'Ferro Basso':0, 'Emocromatosi':0, 'Low Vitamin B9':0, 'Low Vitamin D':0, 'Low Vitamin B12':0}
-            final_levels[pz] = {'Ferro Basso':'', 'Emocromatosi':'', 'Low Vitamin B9':'', 'Low Vitamin D':'', 'Low Vitamin B12':''} 
+            final_scores[pz] = {'Ferro Basso':0, 'Emocromatosi':0, 'Low Vitamin B9':0, 'Low Vitamin D':0, 'Low Vitamin B12':0, 'Low Vitamin A':0}
+            final_levels[pz] = {'Ferro Basso':'', 'Emocromatosi':'', 'Low Vitamin B9':'', 'Low Vitamin D':'', 'Low Vitamin B12':'', 'Low Vitamin A':''} 
         elif test_type == 'Sport':
             final_scores[pz] = {'Crampi-Debolezza Tendinea':0,'Tendinopatie':0,'Sport Resistenza-Potenza':0, 'Danno muscolare':0,'Osteoartrosi e fratture':0}
             final_levels[pz] = {'Crampi-Debolezza Tendinea':'','Tendinopatie':'','Sport Resistenza-Potenza':'', 'Danno muscolare':'','Osteoartrosi e fratture':''}
@@ -118,8 +123,8 @@ def calc_scores_categorized(test_type, results, scores_tuples, debug='on'):
             final_levels[pz] = {'Infiammazione Cronica':'','Invecchiamento Precoce':'','Calo att. antiossidante':'','Elast. Pelle':'','Idrat. Pelle':'', \
                         'Funzioni cognitive': '', 'Diabete e ipercolesterolemia':'','Rischio Cardio':''}
         elif test_type == 'Junior_intolleranze':
-            final_scores[pz] = {'Sens. Alcol' :0, 'Fruttosio':0, 'Lattosio':0, 'Nichel':0, 'Caffeina':0,'Glutine':0}
-            final_levels[pz] = {'Sens. Alcol' :'', 'Fruttosio':'', 'Lattosio':'', 'Nichel':'', 'Caffeina':'','Glutine':''}
+            final_scores[pz] = {'Sens. Alcol' :0, 'Fruttosio':0, 'Lattosio':0, 'Caffeina':0, 'Glutine':0} #'Nichel':0
+            final_levels[pz] = {'Sens. Alcol' :'', 'Fruttosio':'', 'Lattosio':'', 'Caffeina':'', 'Glutine':''} #'Nichel':''
         elif test_type == 'Junior_sindrome_met':
             final_scores[pz] = {'Sindrome metabolica':0}
             final_levels[pz] = {'Sindrome metabolica':''}
@@ -148,9 +153,7 @@ def calc_scores_categorized(test_type, results, scores_tuples, debug='on'):
                                 print('########## SNP ', snp, 'corresponds to ', category)    
                                 print(snp, "found in", pz)
 
-                            if category == ['Glutine'] and pz_snps[pz][snp].lower() != 'normale':
-                                final_scores[pz]['Glutine']=pz_snps[pz][snp]
-                                continue
+
 
                             if pz_snps[pz][snp] == 'NO':
                                 for c in category:
@@ -256,8 +259,9 @@ def calc_scores_categorized(test_type, results, scores_tuples, debug='on'):
                     print("Rules are", rules[scoring[0]][category])
                 score_to_label = final_scores[pz][category]
 
-                if category == 'Glutine' and final_scores[pz][category]!=0:
+                if category == 'Glutine' and pz_dict[pz]['glutine'] != 'Normale':
                     final_levels[pz][category] = 'True'
+                    final_scores[pz][category] = pz_dict[pz]['glutine']
 
                     continue
 

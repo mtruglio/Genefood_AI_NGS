@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genefood Reporter | Errore</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <style>
+        :root {
+            --bg: #f7f1e8;
+            --panel: rgba(255, 252, 247, 0.94);
+            --ink: #2e2a26;
+            --muted: #6a6259;
+            --danger: #a83f35;
+            --danger-soft: #f7d9d1;
+            --line: rgba(110, 83, 66, 0.18);
+            --shadow: 0 24px 60px rgba(74, 49, 39, 0.16);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 32%),
+                radial-gradient(circle at bottom right, rgba(230, 175, 142, 0.22), transparent 28%),
+                linear-gradient(135deg, #efe3d2 0%, #f7f1e8 46%, #f4ece2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 18px;
+        }
+
+        .shell {
+            width: 100%;
+            max-width: 880px;
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero {
+            padding: 36px 40px 22px;
+            border-bottom: 1px solid var(--line);
+            background:
+                linear-gradient(135deg, rgba(168, 63, 53, 0.08), rgba(255, 255, 255, 0)),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0));
+        }
+
+        .logo {
+            width: 124px;
+            max-width: 100%;
+            display: block;
+            margin-bottom: 18px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: var(--danger-soft);
+            color: var(--danger);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 18px 0 10px;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.05;
+        }
+
+        .subtitle {
+            margin: 0;
+            max-width: 620px;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .content {
+            padding: 30px 40px 36px;
+        }
+
+        .status-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .status-card {
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: #fff8f5;
+            border: 1px solid rgba(168, 63, 53, 0.14);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .status-card strong {
+            color: var(--danger);
+        }
+
+        .error-box {
+            border: 1px solid rgba(168, 63, 53, 0.14);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.76);
+            padding: 20px 22px;
+        }
+
+        .error-box h2 {
+            margin: 0 0 14px;
+            font-size: 18px;
+        }
+
+        .error-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 10px;
+        }
+
+        .error-list li {
+            position: relative;
+            padding: 14px 16px 14px 42px;
+            border-radius: 14px;
+            background: #fff;
+            border: 1px solid rgba(110, 83, 66, 0.12);
+            line-height: 1.5;
+        }
+
+        .error-list li::before {
+            content: "!";
+            position: absolute;
+            left: 14px;
+            top: 12px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--danger);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .actions {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            appearance: none;
+            text-decoration: none;
+            border-radius: 999px;
+            padding: 12px 18px;
+            font-weight: 700;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: var(--danger);
+            color: #fff;
+            box-shadow: 0 12px 26px rgba(168, 63, 53, 0.22);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--ink);
+            border: 1px solid var(--line);
+        }
+
+        .hint {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 640px) {
+            .hero,
+            .content {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+
+            .logo {
+                width: 96px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="shell">
+        <section class="panel">
+            <header class="hero">
+                <img class="logo" src="{{ url_for('static', filename='logoAI.png') }}" alt="Genefood AI">
+                <div class="eyebrow">Analisi interrotta</div>
+                <h1>{{ title }}</h1>
+                <p class="subtitle">{{ subtitle }}</p>
+            </header>
+
+            <div class="content">
+                <div class="status-row">
+                    <div class="status-card">
+                        Codice <strong>{{ status_code }}</strong>
+                    </div>
+                    <div class="status-card">
+                        {{ error_items|length }} {% if error_items|length == 1 %}controllo richiesto{% else %}controlli richiesti{% endif %}
+                    </div>
+                </div>
+
+                <section class="error-box" aria-labelledby="error-list-title">
+                    <h2 id="error-list-title">Cosa controllare nei file caricati</h2>
+                    <ul class="error-list">
+                        {% for item in error_items %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+
+                <div class="actions">
+                    <a class="btn btn-primary" href="{{ url_for('index') }}">Torna alla home</a>
+                    <a class="btn btn-secondary" href="javascript:history.back()">Pagina precedente</a>
+                </div>
+
+                <p class="hint">
+                    Dopo aver corretto i dati, ricarica i file e avvia di nuovo il report.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
