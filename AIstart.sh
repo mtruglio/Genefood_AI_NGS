@@ -1,2 +1,2 @@
 #!/bin/bash
-cd /home/utente/Desktop/GenefoodAI; /home/utente/Desktop/GenefoodAI/app.py >> /home/utente/Desktop/GenefoodAI/log.txt 2>&1
+cd /home/utente/Desktop/Genefood_AI_NGS; /home/utente/Desktop/Genefood_AI_NGS/app.py >> /home/utente/Desktop/Genefood_AI_NGS/log.txt 2>&1
