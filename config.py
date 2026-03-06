@@ -11,7 +11,7 @@ class Config(object):
 
 class ProductionConfig(Config):
     DEBUG = True
-    SERVER_NAME = "192.168.5.236:5001"
+    SERVER_NAME = "192.168.5.236:5002"
 
 
 class StagingConfig(Config):
