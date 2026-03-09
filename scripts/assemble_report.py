@@ -22,6 +22,32 @@ import ast
 from .fill_indicazioni_alimentari import fill_template_from_dict
 
 titles_dict = {'Base':'Base', "Plus":"Plus", "Vita":"Vita+", "Ageing":"Food, Aging & Sport", "Sport":"Food & Sport", "Mamma":"Mamma", "Junior_carie":"Junior"}
+
+def set_cell_border(cell, color="000000", size="8", val="single", space="0"):
+    """
+    Force all borders of a cell.
+    color: hex without '#', e.g. '000000' for black
+    size: border width in eighths of a point; '8' = 1 pt
+    """
+    tc = cell._tc
+    tcPr = tc.get_or_add_tcPr()
+
+    tcBorders = tcPr.first_child_found_in("w:tcBorders")
+    if tcBorders is None:
+        tcBorders = OxmlElement("w:tcBorders")
+        tcPr.append(tcBorders)
+
+    for edge in ("top", "left", "bottom", "right", "insideH", "insideV"):
+        element = tcBorders.find(qn(f"w:{edge}"))
+        if element is None:
+            element = OxmlElement(f"w:{edge}")
+            tcBorders.append(element)
+
+        element.set(qn("w:val"), val)
+        element.set(qn("w:sz"), size)
+        element.set(qn("w:space"), space)
+        element.set(qn("w:color"), color)
+
 def set_cell_margins(cell, **kwargs):
     """
     cell:  actual cell instance you want to modify
@@ -76,9 +102,9 @@ def clean_and_convert_to_dict(data):
         return None
 
 
-diz_traduttore_pop ={"Ferro Basso":"Carenza di Ferro", "Emocromatosi":'Emocromatosi', 'Low Vitamin B9':"Vitamina B9 (Acido Folico)", 'Low Vitamin D':'Vitamina D',
+diz_traduttore_pop ={"Ferro Basso":"Carenza di Ferro", "Emocromatosi":'Emocromatosi', 'Low Vitamin B9':"Vitamina B9 (Acido Folico)", 'Low Vitamin D':'Vitamina D', 'Low Vitamin A':'Vitamina A',
     "Low Vitamin B12":"Vitamina B12", "Low Vitamin B6":"Vitamina B6", "Low Zinc":"Zinco", "Sodium":"Sodio", 'Sens. Alcol' : "Alcool",'Fruttosio':"Fruttosio", 'Lattosio':'Lattosio','Solfiti':'Solfiti', 
-    'Nichel':'Nichel', 'Caffeina':'Caffeina','Glutine':'Glutine', "Crociato Anteriore":"Predisposizione genetica a danni al Legamento Crociato Anteriore", 
+    'Nichel':'Nichel', 'Caffeina':'Caffeina','Glutine':'Glutine', "Crociato Anteriore":"Predisposizione genetica a danni al Legamento Crociato Anteriore", "Low Potassium":"Potassio",
     "Crampi-Debolezza Tendinea":"Predisposizione genetica a Crampi/Debolezza Tendinea", "Tendinopatie":"Rischio Tendinopatie", 
     "Sport Resistenza-Potenza":"Predisposizione genetica a Sport Resistenza-Potenza",
     "Danno muscolare":"Rischio Danno muscolare", "Osteoartrosi e fratture":"Rischio Osteoartrosi e fratture", "Infiammazione Cronica":"Aumentata Infiammazione Cronica",
@@ -316,7 +342,7 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
     age = calculate_age(dob)
 
     if analysis_type=="Mamma":
-        gestazione = str(reports[analysis_type][0][patient_number]['gestazione'])
+        gestazione = str(reports[analysis_type][0][patient_number]['sesso'])
         sex = 'F'
     else:
         sex = reports[analysis_type][0][patient_number]['sesso']
@@ -926,6 +952,45 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
 
         if analysis_type in ['Plus', 'Vita', 'Sport', 'Ageing', 'Mamma'] and count==first_gen_table+7:
             if debug=='on':
+                print("Tabella Glutine")
+                print(raw_results['Plus'][1][patient_number])
+
+            cells = table.add_row().cells
+            
+            cells[0].text = "HLA_DQA1-B1"
+            if analysis_type!='Mamma':
+                shading = parse_xml(r'<w:shd {} w:fill="92CF50"/>'.format(nsdecls('w')))
+            else:
+                shading = parse_xml(r'<w:shd {} w:fill="C39291"/>'.format(nsdecls('w')))
+            cells[0]._tc.get_or_add_tcPr().append(shading) 
+
+            cells[1].text = "Normale"
+            cells[1].paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+            cells[2].text = "Rischio"
+            cells[2].paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+            cells[3].text =  raw_results['Plus'][1][patient_number]['glutine']
+            cells[3].paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+            run = cells[3].paragraphs[0].runs[0]
+            run.font.name = 'Arial'
+            run.font.bold = True
+
+            cells[4].text = 'Glutine'
+            cells[4].paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+            run = cells[4].paragraphs[0].runs[0]
+            run.font.name = 'Arial'
+            
+            run = cells[0].paragraphs[0].runs[0]
+            run.font.bold = True
+            run.font.color.rgb = RGBColor(255,255,255)                     
+            cells[3].paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER 
+            # Force borders to black for this row
+            for cell in cells:
+                set_cell_border(cell, color="000000", size="4")
+
+        if analysis_type in ['Plus', 'Vita', 'Sport', 'Ageing', 'Mamma'] and count==first_gen_table+8:
+            if debug=='on':
                 print("Tabella Caffeina")
             for i,row in raw_results['Plus'][0].iterrows():
                 # For each row
@@ -964,7 +1029,7 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
                     run.font.color.rgb = RGBColor(255,255,255)                     
                     cells[3].paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER 
 
-        if analysis_type in ['Vita', 'Sport', 'Ageing', 'Mamma'] and count==first_gen_table+8:
+        if analysis_type in ['Vita', 'Sport', 'Ageing', 'Mamma'] and count==first_gen_table+9:
             if debug=='on':
                 print("Tabella Assorbimento")
                 print(scores_vita)
@@ -1059,7 +1124,7 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
                 other_conditions_filter.append("Gravidanza")
 
 
-        if analysis_type in ['Vita', 'Sport', 'Ageing', 'Mamma'] and count==first_gen_table+9:
+        if analysis_type in ['Vita', 'Sport', 'Ageing', 'Mamma'] and count==first_gen_table+10:
             if debug=='on':
                 print("Tabella MTHFR vita")
                 print(scores_vita)
@@ -1098,7 +1163,7 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
                     run.font.color.rgb = RGBColor(255,255,255)                    
                     
 
-        if analysis_type in ['Sport', 'Ageing'] and count==first_gen_table+10:
+        if analysis_type in ['Sport', 'Ageing'] and count==first_gen_table+11:
             if debug=='on':
                 print("Tabella Sport")
                 print(scores_sport)
@@ -1150,7 +1215,7 @@ def assemble_report(analysis_type, patient_id, raw_results, reports, scores_peso
                     diete.append('./static/indicazioni_alimentari/{0}_{1}.pdf'.format(param.replace(' ',''), param_result_value))
                     other_conditions_filter.append(f"{param.replace(' ','')}_{param_result_value}")
 
-        if analysis_type in ['Ageing'] and count==first_gen_table+11:
+        if analysis_type in ['Ageing'] and count==first_gen_table+12:
             if debug=='on':
                 print("Tabella Ageing")
 
