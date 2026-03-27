@@ -45,7 +45,7 @@ rules = {
         'Sens. Alcol' : [2, 999],
         'Fruttosio':[2,1000], 
         'Lattosio':[1,1000],  
-        # 'Nichel':[2,1000], 
+        'Nichel':[2,1000], 
         'Caffeina':{'Lento':[-999,-1], 'Veloce':[1,999]},
         # 'Glutine':[1,1000],
     },
@@ -123,8 +123,8 @@ def calc_scores_categorized(test_type, results, scores_tuples, debug='on'):
             final_levels[pz] = {'Infiammazione Cronica':'','Invecchiamento Precoce':'','Calo att. antiossidante':'','Elast. Pelle':'','Idrat. Pelle':'', \
                         'Funzioni cognitive': '', 'Diabete e ipercolesterolemia':'','Rischio Cardio':''}
         elif test_type == 'Junior_intolleranze':
-            final_scores[pz] = {'Sens. Alcol' :0, 'Fruttosio':0, 'Lattosio':0, 'Caffeina':0, 'Glutine':0} #'Nichel':0
-            final_levels[pz] = {'Sens. Alcol' :'', 'Fruttosio':'', 'Lattosio':'', 'Caffeina':'', 'Glutine':''} #'Nichel':''
+            final_scores[pz] = {'Sens. Alcol' :0, 'Fruttosio':0, 'Lattosio':0, 'Caffeina':0, 'Glutine':0, 'Nichel':0 }
+            final_levels[pz] = {'Sens. Alcol' :'', 'Fruttosio':'', 'Lattosio':'', 'Caffeina':'', 'Glutine':'', 'Nichel':'' }
         elif test_type == 'Junior_sindrome_met':
             final_scores[pz] = {'Sindrome metabolica':0}
             final_levels[pz] = {'Sindrome metabolica':''}
