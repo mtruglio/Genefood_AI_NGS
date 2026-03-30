@@ -123,8 +123,8 @@ def calc_scores_categorized(test_type, results, scores_tuples, debug='on'):
             final_levels[pz] = {'Infiammazione Cronica':'','Invecchiamento Precoce':'','Calo att. antiossidante':'','Elast. Pelle':'','Idrat. Pelle':'', \
                         'Funzioni cognitive': '', 'Diabete e ipercolesterolemia':'','Rischio Cardio':''}
         elif test_type == 'Junior_intolleranze':
-            final_scores[pz] = {'Sens. Alcol' :0, 'Fruttosio':0, 'Lattosio':0, 'Caffeina':0, 'Glutine':0, 'Nichel':0 }
-            final_levels[pz] = {'Sens. Alcol' :'', 'Fruttosio':'', 'Lattosio':'', 'Caffeina':'', 'Glutine':'', 'Nichel':'' }
+            final_scores[pz] = {'Sens. Alcol' :0, 'Fruttosio':0, 'Lattosio':0, 'Caffeina':0, 'Nichel':0 }
+            final_levels[pz] = {'Sens. Alcol' :'', 'Fruttosio':'', 'Lattosio':'', 'Caffeina':'', 'Nichel':'' }
         elif test_type == 'Junior_sindrome_met':
             final_scores[pz] = {'Sindrome metabolica':0}
             final_levels[pz] = {'Sindrome metabolica':''}
